@@ -1,0 +1,52 @@
+{
+  "mol_id": "calicene",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 142,
+  "n_occ_act": 19,
+  "n_vir_act": 115,
+  "n_core_frozen": 8,
+  "rhf_converged": true,
+  "e_rhf_ha": -306.06558382,
+  "rhf_hl_gap_eV": 10.6346,
+  "E_S1_eV": 4.424955,
+  "E_T1_eV": 3.082727,
+  "dEST_eV": 1.342228,
+  "f_S1": 0.027756,
+  "pct_T1_S1": 91.107,
+  "pct_T2_S1": 8.893,
+  "pct_T1_T1": 94.238,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.1626141,
+      "energy_eV": 4.424955,
+      "pct_T1": 91.107,
+      "pct_T2": 8.893,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.027756,
+      "trans_dip_norm_au": 0.357793
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.11328814,
+      "energy_eV": 3.082727,
+      "pct_T1": 94.238,
+      "pct_T2": 5.762,
+      "converged": true,
+      "iters": 3
+    }
+  ],
+  "timings_s": {
+    "rhf": 60.23,
+    "build_M11": 3.3,
+    "singlet": 11.01,
+    "triplet": 5.25,
+    "total": 79.8
+  }
+}

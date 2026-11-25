@@ -1,0 +1,52 @@
+{
+  "mol_id": "melem",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 254,
+  "n_occ_act": 40,
+  "n_vir_act": 198,
+  "n_core_frozen": 16,
+  "rhf_converged": true,
+  "e_rhf_ha": -774.71306811,
+  "rhf_hl_gap_eV": 11.8037,
+  "E_S1_eV": 3.815893,
+  "E_T1_eV": 4.425516,
+  "dEST_eV": -0.609623,
+  "f_S1": 0.0,
+  "pct_T1_S1": 88.95,
+  "pct_T2_S1": 11.05,
+  "pct_T1_T1": 91.465,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.14023148,
+      "energy_eV": 3.815893,
+      "pct_T1": 88.95,
+      "pct_T2": 11.05,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.0,
+      "trans_dip_norm_au": 0.001507
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.16263471,
+      "energy_eV": 4.425516,
+      "pct_T1": 91.465,
+      "pct_T2": 8.535,
+      "converged": true,
+      "iters": 4
+    }
+  ],
+  "timings_s": {
+    "rhf": 32.24,
+    "build_M11": 116.61,
+    "singlet": 235.59,
+    "triplet": 259.53,
+    "total": 643.99
+  }
+}

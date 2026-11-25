@@ -1,0 +1,52 @@
+{
+  "mol_id": "BN_rim_cyclazine",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 227,
+  "n_occ_act": 31,
+  "n_vir_act": 183,
+  "n_core_frozen": 13,
+  "rhf_converged": true,
+  "e_rhf_ha": -517.14420245,
+  "rhf_hl_gap_eV": 8.0021,
+  "E_S1_eV": 2.026184,
+  "E_T1_eV": 1.856028,
+  "dEST_eV": 0.170156,
+  "f_S1": 0.03084,
+  "pct_T1_S1": 89.626,
+  "pct_T2_S1": 10.374,
+  "pct_T1_T1": 91.66,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.0744609,
+      "energy_eV": 2.026184,
+      "pct_T1": 89.626,
+      "pct_T2": 10.374,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.03084,
+      "trans_dip_norm_au": 0.557347
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.06820778,
+      "energy_eV": 1.856028,
+      "pct_T1": 91.66,
+      "pct_T2": 8.34,
+      "converged": true,
+      "iters": 4
+    }
+  ],
+  "timings_s": {
+    "rhf": 21.17,
+    "build_M11": 37.8,
+    "singlet": 130.95,
+    "triplet": 111.32,
+    "total": 301.24
+  }
+}

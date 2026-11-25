@@ -1,0 +1,615 @@
+{
+  "status": "complete",
+  "protocol": {
+    "hardware": "Apple M3 Max, strictly 1 CPU core (OMP/OPENBLAS/VECLIB/MKL_NUM_THREADS=1)",
+    "basis": "def2-svp",
+    "nroots_S": 8,
+    "nroots_T": 8,
+    "timing_metrics": "Both exact single-core CPU time (time.process_time(), immune to unrelated OS load) and wall-clock time (time.perf_counter()) are reported under identical conditions."
+  },
+  "power_law_fits_cpu": {
+    "Lehmann-TDDFT_8S8T": {
+      "exponent_alpha": 2.0762175384726635,
+      "prefactor_a": 0.0006028642427654146,
+      "log_log_R2": 0.9728120846347771,
+      "n_points": 9,
+      "n_ao_range": [
+        66,
+        590
+      ]
+    },
+    "SCS-PBE-QIDH_8S8T": {
+      "exponent_alpha": 2.974348140813537,
+      "prefactor_a": 8.768442084134292e-05,
+      "log_log_R2": 0.9879193682267607,
+      "n_points": 6,
+      "n_ao_range": [
+        66,
+        207
+      ]
+    },
+    "RI-EE-ADC2_8S8T": {
+      "exponent_alpha": 4.8009942132338645,
+      "prefactor_a": 1.3217113317355498e-08,
+      "log_log_R2": 0.9678194827076465,
+      "n_points": 6,
+      "n_ao_range": [
+        66,
+        207
+      ]
+    },
+    "EOM-EE-CCSD_8S8T": {
+      "exponent_alpha": 3.662939359034531,
+      "prefactor_a": 8.640836139962303e-06,
+      "log_log_R2": 0.9909137890640004,
+      "n_points": 3,
+      "n_ao_range": [
+        66,
+        114
+      ]
+    }
+  },
+  "power_law_fits_wall": {
+    "Lehmann-TDDFT_8S8T": {
+      "exponent_alpha": 1.7590798161231311,
+      "prefactor_a": 0.006163783510545754,
+      "log_log_R2": 0.9092558610963671,
+      "n_points": 9,
+      "n_ao_range": [
+        66,
+        590
+      ]
+    },
+    "SCS-PBE-QIDH_8S8T": {
+      "exponent_alpha": 2.5862516166926532,
+      "prefactor_a": 0.0012888558906787736,
+      "log_log_R2": 0.9803646172317294,
+      "n_points": 6,
+      "n_ao_range": [
+        66,
+        207
+      ]
+    },
+    "RI-EE-ADC2_8S8T": {
+      "exponent_alpha": 4.842036698603098,
+      "prefactor_a": 2.2418419795399755e-08,
+      "log_log_R2": 0.9676604877841702,
+      "n_points": 6,
+      "n_ao_range": [
+        66,
+        207
+      ]
+    },
+    "EOM-EE-CCSD_8S8T": {
+      "exponent_alpha": 3.7318686706830695,
+      "prefactor_a": 1.460159009706733e-05,
+      "log_log_R2": 0.9814481690671679,
+      "n_points": 3,
+      "n_ao_range": [
+        66,
+        114
+      ]
+    }
+  },
+  "records": [
+    {
+      "mol_id": "Glyoxal",
+      "xyz_path": "data/external/QUESTDB/geometries/xyz/glyoxal.xyz",
+      "n_atoms": 6,
+      "n_heavy": 4,
+      "n_ao": 66,
+      "basis": "def2-svp",
+      "nroots_S": 8,
+      "nroots_T": 8,
+      "lehmann_tddft_8S8T": {
+        "qm_wall_s": 13.383794541005045,
+        "qm_cpu_s": 4.963845,
+        "n_occ_act": 11,
+        "n_vir_act": 32,
+        "n_aux": 340,
+        "S1_tda_eV": 2.573663284971528,
+        "T1_tda_eV": 1.9023837626569473,
+        "nn_forward_cpu_ms": 7.9492,
+        "cpu_s": 4.9717942,
+        "wall_s": 13.393373153504218,
+        "total_s": 13.393373153504218,
+        "nn_forward_wall_ms": 9.578612499171868
+      },
+      "double_hybrid_scs_pbe_qidh_8S8T": {
+        "cpu_s": 24.666207999999997,
+        "wall_s": 65.55043116700836,
+        "total_s": 65.55043116700836,
+        "scf_wall_s": 4.632867417007219,
+        "tda_wall_s": 59.870601125003304,
+        "ri_cisd_wall_s": 1.0457755000097677,
+        "S1_eV": 2.9115005066973585,
+        "T1_eV": 2.3590750845886133,
+        "dEST_eV": 0.5524254221087452
+      },
+      "ri_ee_adc2_8S8T": {
+        "cpu_s": 11.927752000000002,
+        "wall_s": 23.195350750000216,
+        "total_s": 23.195350750000216,
+        "timings_wall_s": {
+          "rhf": 1.29,
+          "build_M11": 0.87,
+          "singlet": 12.77,
+          "triplet": 8.27,
+          "total": 23.19
+        },
+        "S1_eV": 2.914765,
+        "T1_eV": 2.425049,
+        "dEST_eV": 0.489716,
+        "all_converged": true
+      },
+      "eom_ee_ccsd_8S8T": {
+        "cpu_s": 42.288586,
+        "wall_s": 97.93982124998001,
+        "total_s": 97.93982124998001,
+        "timings_wall_s": {
+          "rhf": 1.86,
+          "ccsd": 5.37,
+          "eom_s": 42.88,
+          "eom_t": 47.69,
+          "total": 97.94
+        },
+        "S1_eV": 3.046022,
+        "T1_eV": 2.575467,
+        "dEST_eV": 0.470555
+      },
+      "speedups_cpu_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 4.961228684807589,
+        "vs_RI_EE_ADC2": 2.399084016792168,
+        "vs_EOM_EE_CCSD": 8.505699210156367
+      },
+      "speedups_wall_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 4.894243624494092,
+        "vs_RI_EE_ADC2": 1.7318527964653494,
+        "vs_EOM_EE_CCSD": 7.312558242607854
+      }
+    },
+    {
+      "mol_id": "Butadiene",
+      "xyz_path": "data/external/QUESTDB/geometries/xyz/butadiene.xyz",
+      "n_atoms": 10,
+      "n_heavy": 4,
+      "n_ao": 86,
+      "basis": "def2-svp",
+      "nroots_S": 8,
+      "nroots_T": 8,
+      "lehmann_tddft_8S8T": {
+        "qm_wall_s": 11.808860291959718,
+        "qm_cpu_s": 6.534996000000007,
+        "n_occ_act": 11,
+        "n_vir_act": 32,
+        "n_aux": 408,
+        "S1_tda_eV": 6.611454594731452,
+        "T1_tda_eV": 3.1164361814486097,
+        "nn_forward_cpu_ms": 10.152749999999989,
+        "cpu_s": 6.545148750000006,
+        "wall_s": 11.822581296108547,
+        "total_s": 11.822581296108547,
+        "nn_forward_wall_ms": 13.721004148828797
+      },
+      "double_hybrid_scs_pbe_qidh_8S8T": {
+        "cpu_s": 49.29211000000001,
+        "wall_s": 142.25173504202394,
+        "total_s": 142.25173504202394,
+        "scf_wall_s": 8.687788125011139,
+        "tda_wall_s": 132.2154631249723,
+        "ri_cisd_wall_s": 1.3464528329786845,
+        "S1_eV": 6.7426241850302455,
+        "T1_eV": 3.2834462246373066,
+        "dEST_eV": 3.459177960392939
+      },
+      "ri_ee_adc2_8S8T": {
+        "cpu_s": 18.819868000000014,
+        "wall_s": 39.505365875025745,
+        "total_s": 39.505365875025745,
+        "timings_wall_s": {
+          "rhf": 1.34,
+          "build_M11": 0.41,
+          "singlet": 25.77,
+          "triplet": 11.99,
+          "total": 39.5
+        },
+        "S1_eV": 6.683189,
+        "T1_eV": 3.448196,
+        "dEST_eV": 3.234993,
+        "all_converged": true
+      },
+      "eom_ee_ccsd_8S8T": {
+        "cpu_s": 94.284165,
+        "wall_s": 205.76972470904002,
+        "total_s": 205.76972470904002,
+        "timings_wall_s": {
+          "rhf": 3.59,
+          "ccsd": 16.95,
+          "eom_s": 83.04,
+          "eom_t": 101.72,
+          "total": 205.76
+        },
+        "S1_eV": 6.996989,
+        "T1_eV": 3.306681,
+        "dEST_eV": 3.690308
+      },
+      "speedups_cpu_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 7.531090870929398,
+        "vs_RI_EE_ADC2": 2.8753919458285795,
+        "vs_EOM_EE_CCSD": 14.405198201186781
+      },
+      "speedups_wall_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 12.032206121420092,
+        "vs_RI_EE_ADC2": 3.341517802717847,
+        "vs_EOM_EE_CCSD": 17.404805224453817
+      }
+    },
+    {
+      "mol_id": "Benzene",
+      "xyz_path": "data/external/QUESTDB/geometries/xyz/benzene.xyz",
+      "n_atoms": 12,
+      "n_heavy": 6,
+      "n_ao": 114,
+      "basis": "def2-svp",
+      "nroots_S": 8,
+      "nroots_T": 8,
+      "lehmann_tddft_8S8T": {
+        "qm_wall_s": 30.726776791969314,
+        "qm_cpu_s": 10.855756,
+        "n_occ_act": 14,
+        "n_vir_act": 32,
+        "n_aux": 558,
+        "S1_tda_eV": 5.6481923895243735,
+        "T1_tda_eV": 4.173193013341762,
+        "nn_forward_cpu_ms": 8.326200000000016,
+        "cpu_s": 10.8640822,
+        "wall_s": 30.7368778232194,
+        "total_s": 30.7368778232194,
+        "nn_forward_wall_ms": 10.101031250087544
+      },
+      "double_hybrid_scs_pbe_qidh_8S8T": {
+        "cpu_s": 94.007296,
+        "wall_s": 214.91425458301092,
+        "total_s": 214.91425458301092,
+        "scf_wall_s": 9.871454834006727,
+        "tda_wall_s": 201.46875516697764,
+        "ri_cisd_wall_s": 3.5731839159852825,
+        "S1_eV": 5.3305158897866525,
+        "T1_eV": 4.198999109062732,
+        "dEST_eV": 1.1315167807239206
+      },
+      "ri_ee_adc2_8S8T": {
+        "cpu_s": 62.20926299999999,
+        "wall_s": 124.61896541598253,
+        "total_s": 124.61896541598253,
+        "timings_wall_s": {
+          "rhf": 2.55,
+          "build_M11": 1.19,
+          "singlet": 63.89,
+          "triplet": 56.98,
+          "total": 124.62
+        },
+        "S1_eV": 6.837584,
+        "T1_eV": 4.370718,
+        "dEST_eV": 2.466866,
+        "all_converged": true
+      },
+      "eom_ee_ccsd_8S8T": {
+        "cpu_s": 311.99866599999996,
+        "wall_s": 749.1203915000078,
+        "total_s": 749.1203915000078,
+        "timings_wall_s": {
+          "rhf": 11.58,
+          "ccsd": 36.92,
+          "eom_s": 304.09,
+          "eom_t": 396.13,
+          "total": 749.11
+        },
+        "S1_eV": 5.297198,
+        "T1_eV": 4.008292,
+        "dEST_eV": 1.288906
+      },
+      "speedups_cpu_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 8.653036148787606,
+        "vs_RI_EE_ADC2": 5.726140676660196,
+        "vs_EOM_EE_CCSD": 28.718363894558895
+      },
+      "speedups_wall_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 6.9920652259826905,
+        "vs_RI_EE_ADC2": 4.054379437388474,
+        "vs_EOM_EE_CCSD": 24.37203920998455
+      }
+    },
+    {
+      "mol_id": "Pentalene",
+      "xyz_path": "data/external/QUESTDB/geometries/xyz/pentalene_1.xyz",
+      "n_atoms": 14,
+      "n_heavy": 8,
+      "n_ao": 142,
+      "basis": "def2-svp",
+      "nroots_S": 8,
+      "nroots_T": 8,
+      "lehmann_tddft_8S8T": {
+        "qm_wall_s": 57.75711499998579,
+        "qm_cpu_s": 17.016857000000016,
+        "n_occ_act": 14,
+        "n_vir_act": 32,
+        "n_aux": 708,
+        "S1_tda_eV": 1.873066500339804,
+        "T1_tda_eV": 0.8875651424082993,
+        "nn_forward_cpu_ms": 9.201750000000008,
+        "cpu_s": 17.026058750000015,
+        "wall_s": 57.769044324985586,
+        "total_s": 57.769044324985586,
+        "nn_forward_wall_ms": 11.929324999800883
+      },
+      "double_hybrid_scs_pbe_qidh_8S8T": {
+        "cpu_s": 252.68756299999995,
+        "wall_s": 577.1387826669961,
+        "total_s": 577.1387826669961,
+        "scf_wall_s": 25.365692291990854,
+        "tda_wall_s": 537.1800922080292,
+        "ri_cisd_wall_s": 14.584974958968814,
+        "S1_eV": 2.154945319631391,
+        "T1_eV": 1.2062142156516138,
+        "dEST_eV": 0.948731103979777
+      },
+      "ri_ee_adc2_8S8T": {
+        "cpu_s": 271.1054469999999,
+        "wall_s": 634.1973432499799,
+        "total_s": 634.1973432499799,
+        "timings_wall_s": {
+          "rhf": 4.32,
+          "build_M11": 3.45,
+          "singlet": 385.15,
+          "triplet": 241.27,
+          "total": 634.19
+        },
+        "S1_eV": 2.178592,
+        "T1_eV": 1.281377,
+        "dEST_eV": 0.897215,
+        "all_converged": true
+      },
+      "eom_ee_ccsd_8S8T": {
+        "skipped_reason": "skipped (previous size already used 312.0s single-core CPU >= 240s budget)"
+      },
+      "speedups_cpu_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 14.841224660992065,
+        "vs_RI_EE_ADC2": 15.922971427547768
+      },
+      "speedups_wall_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 9.99045058492302,
+        "vs_RI_EE_ADC2": 10.978151891906654
+      }
+    },
+    {
+      "mol_id": "Naphthalene",
+      "xyz_path": "data/external/QUESTDB/geometries/xyz/naphthalene.xyz",
+      "n_atoms": 18,
+      "n_heavy": 10,
+      "n_ao": 180,
+      "basis": "def2-svp",
+      "nroots_S": 8,
+      "nroots_T": 8,
+      "lehmann_tddft_8S8T": {
+        "qm_wall_s": 48.12433962500654,
+        "qm_cpu_s": 22.61793799999998,
+        "n_occ_act": 14,
+        "n_vir_act": 32,
+        "n_aux": 894,
+        "S1_tda_eV": 4.665921132013976,
+        "T1_tda_eV": 3.0863962544520036,
+        "nn_forward_cpu_ms": 7.998550000000003,
+        "cpu_s": 22.62593654999998,
+        "wall_s": 48.13346274375799,
+        "total_s": 48.13346274375799,
+        "nn_forward_wall_ms": 9.12311875144951
+      },
+      "double_hybrid_scs_pbe_qidh_8S8T": {
+        "cpu_s": 388.723939,
+        "wall_s": 752.5756656249869,
+        "total_s": 752.5756656249869,
+        "scf_wall_s": 23.246131041029003,
+        "tda_wall_s": 694.9507286669686,
+        "ri_cisd_wall_s": 34.37419383402448,
+        "S1_eV": 4.492767970954959,
+        "T1_eV": 3.202862528046639,
+        "dEST_eV": 1.2899054429083199
+      },
+      "ri_ee_adc2_8S8T": {
+        "cpu_s": 821.3191890000003,
+        "wall_s": 1557.8381299580215,
+        "total_s": 1557.8381299580215,
+        "timings_wall_s": {
+          "rhf": 4.82,
+          "build_M11": 11.63,
+          "singlet": 928.07,
+          "triplet": 613.32,
+          "total": 1557.84
+        },
+        "S1_eV": 5.088476,
+        "T1_eV": 3.352636,
+        "dEST_eV": 1.73584,
+        "all_converged": true
+      },
+      "eom_ee_ccsd_8S8T": {
+        "skipped_reason": "skipped (previous size already used 312.0s single-core CPU >= 180s budget)"
+      },
+      "speedups_cpu_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 17.180457398569,
+        "vs_RI_EE_ADC2": 36.29989800355915
+      },
+      "speedups_wall_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 15.635186473729897,
+        "vs_RI_EE_ADC2": 32.36497108573482
+      }
+    },
+    {
+      "mol_id": "5AP",
+      "xyz_path": "data/processed/invest_xyz/5AP.xyz",
+      "n_atoms": 18,
+      "n_heavy": 13,
+      "n_ao": 207,
+      "basis": "def2-svp",
+      "nroots_S": 8,
+      "nroots_T": 8,
+      "lehmann_tddft_8S8T": {
+        "qm_wall_s": 57.955110541020986,
+        "qm_cpu_s": 36.03556900000012,
+        "n_occ_act": 14,
+        "n_vir_act": 32,
+        "n_aux": 1075,
+        "S1_tda_eV": 2.4861219839216337,
+        "T1_tda_eV": 2.162538533909594,
+        "nn_forward_cpu_ms": 12.87275000000001,
+        "cpu_s": 36.04844175000012,
+        "wall_s": 57.973072709771806,
+        "total_s": 57.973072709771806,
+        "nn_forward_wall_ms": 17.96216875081882
+      },
+      "double_hybrid_scs_pbe_qidh_8S8T": {
+        "cpu_s": 774.7663269999998,
+        "wall_s": 1376.615006958018,
+        "total_s": 1376.615006958018,
+        "scf_wall_s": 34.11408545798622,
+        "tda_wall_s": 1249.8526861249702,
+        "ri_cisd_wall_s": 92.64144766697427,
+        "S1_eV": 2.2753722087882933,
+        "T1_eV": 2.398785244796736,
+        "dEST_eV": -0.12341303600844267
+      },
+      "ri_ee_adc2_8S8T": {
+        "cpu_s": 2582.840934,
+        "wall_s": 5541.746206082986,
+        "total_s": 5541.746206082986,
+        "timings_wall_s": {
+          "rhf": 9.33,
+          "build_M11": 32.49,
+          "singlet": 3199.42,
+          "triplet": 2300.46,
+          "total": 5541.72
+        },
+        "S1_eV": 2.13153,
+        "T1_eV": 2.320721,
+        "dEST_eV": -0.189191,
+        "all_converged": true
+      },
+      "eom_ee_ccsd_8S8T": {
+        "skipped_reason": "exceeds tractable single-core ~10 min / memory budget"
+      },
+      "speedups_cpu_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 21.49236664300468,
+        "vs_RI_EE_ADC2": 71.6491700782043
+      },
+      "speedups_wall_vs_lehmann": {
+        "vs_DH_SCS_PBE_QIDH": 23.745765794573437,
+        "vs_RI_EE_ADC2": 95.59172814293285
+      }
+    },
+    {
+      "mol_id": "Anthracene",
+      "xyz_path": "data/external/QUESTDB/geometries/xyz/anthracene.xyz",
+      "n_atoms": 24,
+      "n_heavy": 14,
+      "n_ao": 246,
+      "basis": "def2-svp",
+      "nroots_S": 8,
+      "nroots_T": 8,
+      "lehmann_tddft_8S8T": {
+        "qm_wall_s": 52.31543383304961,
+        "qm_cpu_s": 38.32163800000035,
+        "n_occ_act": 14,
+        "n_vir_act": 32,
+        "n_aux": 1230,
+        "S1_tda_eV": 3.7908115890783955,
+        "T1_tda_eV": 2.1438530318327134,
+        "nn_forward_cpu_ms": 8.352249999999994,
+        "cpu_s": 38.32999025000035,
+        "wall_s": 52.32780548929877,
+        "total_s": 52.32780548929877,
+        "nn_forward_wall_ms": 12.371656249160878
+      },
+      "double_hybrid_scs_pbe_qidh_8S8T": {
+        "skipped_reason": "skipped (previous size already used 774.8s single-core CPU >= 300s budget)"
+      },
+      "ri_ee_adc2_8S8T": {
+        "skipped_reason": "skipped (previous size already used 2582.8s single-core CPU >= 300s budget)"
+      },
+      "eom_ee_ccsd_8S8T": {
+        "skipped_reason": "exceeds tractable single-core ~10 min / memory budget"
+      },
+      "speedups_cpu_vs_lehmann": {},
+      "speedups_wall_vs_lehmann": {}
+    },
+    {
+      "mol_id": "hepta_CF3_CF3_CN",
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CF3-CF3-CN/2T-7N-CF3-CF3-CN.xyz",
+      "n_atoms": 23,
+      "n_heavy": 23,
+      "n_ao": 322,
+      "basis": "def2-svp",
+      "nroots_S": 8,
+      "nroots_T": 8,
+      "lehmann_tddft_8S8T": {
+        "qm_wall_s": 143.69882612500805,
+        "qm_cpu_s": 101.31264800000008,
+        "n_occ_act": 14,
+        "n_vir_act": 32,
+        "n_aux": 1753,
+        "S1_tda_eV": 2.8454045105911367,
+        "T1_tda_eV": 2.5648051976825577,
+        "nn_forward_cpu_ms": 10.673699999999986,
+        "cpu_s": 101.32332170000008,
+        "wall_s": 143.71208440210904,
+        "total_s": 143.71208440210904,
+        "nn_forward_wall_ms": 13.258277100976557
+      },
+      "double_hybrid_scs_pbe_qidh_8S8T": {
+        "skipped_reason": "skipped (previous size already used 774.8s single-core CPU >= 300s budget)"
+      },
+      "ri_ee_adc2_8S8T": {
+        "skipped_reason": "skipped (previous size already used 2582.8s single-core CPU >= 300s budget)"
+      },
+      "eom_ee_ccsd_8S8T": {
+        "skipped_reason": "exceeds tractable single-core ~10 min / memory budget"
+      },
+      "speedups_cpu_vs_lehmann": {},
+      "speedups_wall_vs_lehmann": {}
+    },
+    {
+      "mol_id": "HzTFEX2",
+      "xyz_path": "data/processed/invest_xyz/HzTFEX2.xyz",
+      "n_atoms": 55,
+      "n_heavy": 35,
+      "n_ao": 590,
+      "basis": "def2-svp",
+      "nroots_S": 8,
+      "nroots_T": 8,
+      "lehmann_tddft_8S8T": {
+        "qm_wall_s": 755.8259605420171,
+        "qm_cpu_s": 489.5918709999996,
+        "n_occ_act": 14,
+        "n_vir_act": 32,
+        "n_aux": 3007,
+        "S1_tda_eV": 3.2680426165722936,
+        "T1_tda_eV": 3.0234209803164993,
+        "nn_forward_cpu_ms": 13.254600000000005,
+        "cpu_s": 489.6051255999996,
+        "wall_s": 755.8439492253674,
+        "total_s": 755.8439492253674,
+        "nn_forward_wall_ms": 17.98868335026782
+      },
+      "double_hybrid_scs_pbe_qidh_8S8T": {
+        "skipped_reason": "skipped (previous size already used 774.8s single-core CPU >= 300s budget)"
+      },
+      "ri_ee_adc2_8S8T": {
+        "skipped_reason": "Intractable dense 4D t2/W memory (89^2 * 466^2 * 8 = 13.8 GB single tensor; >50 GB peak) and O(N^5) cost at N_AO=590"
+      },
+      "eom_ee_ccsd_8S8T": {
+        "skipped_reason": "exceeds tractable single-core ~10 min / memory budget"
+      },
+      "speedups_cpu_vs_lehmann": {},
+      "speedups_wall_vs_lehmann": {}
+    }
+  ]
+}

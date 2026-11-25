@@ -1,0 +1,39 @@
+{
+  "mol_id": "azulene",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 180,
+  "n_core_frozen": 10,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -384.34981499,
+  "E_S1_eV": 2.301355,
+  "E_T1_eV": 2.268419,
+  "dEST_eV": 0.032936,
+  "f_S1_R1": 0.014245,
+  "pct_R1_S1": 91.159,
+  "pct_R1_T1": 90.843,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.08457324,
+      "energy_eV": 2.301355,
+      "pct_R1": 91.159,
+      "osc_f_R1": 0.014245
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.08336286,
+      "energy_eV": 2.268419,
+      "pct_R1": 90.843
+    }
+  ],
+  "timings_s": {
+    "rhf": 118.35,
+    "ccsd": 366.35,
+    "eom_s": 493.83,
+    "eom_t": 449.16,
+    "total": 1428.13
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "mol_id": "VBI_0159_B0N_m",
+  "method": "SA3-CASSCF(6,6)+SC-NEVPT2/def2-svp",
+  "ok": true,
+  "ncas": 6,
+  "nelecas": 6,
+  "basis": "def2-svp",
+  "n_ao": 250,
+  "casscf_converged": true,
+  "pi_weights_init_occ": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "pi_weights_init_vir": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "sa3_noons": [
+    1.9374,
+    1.921,
+    1.4695,
+    0.5401,
+    0.0728,
+    0.0593
+  ],
+  "spin_square_S0": 0.0,
+  "spin_square_S1": 0.0,
+  "spin_square_T1": 2.0,
+  "E_S0_casscf_ha": -575.65387744,
+  "E_S0_nevpt2_ha": -577.55262074,
+  "CASSCF_E_S1_eV": 0.77131,
+  "CASSCF_E_T1_eV": 0.924521,
+  "CASSCF_dEST_eV": -0.153211,
+  "E_S1_eV": 0.838118,
+  "E_T1_eV": 1.069026,
+  "dEST_eV": -0.230909,
+  "f_S1_casscf": 0.247357,
+  "f_S1_nevpt2_energy": 0.268782,
+  "S1_cas_exc_weights": {
+    "w0": 0.6795,
+    "w1_singles": 0.0005,
+    "w2_doubles": 0.3051,
+    "w3plus": 0.015
+  },
+  "timings_s": {
+    "rhf": 44.65,
+    "casscf": 995.8,
+    "nevpt2": 217.08,
+    "total": 1257.64
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "mol_id": "VBI_0089_3N_13_pp",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 264,
+  "n_core_frozen": 16,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -760.56589426,
+  "E_S1_eV": 2.150801,
+  "E_T1_eV": 2.215388,
+  "dEST_eV": -0.064587,
+  "f_S1_R1": 0.015042,
+  "pct_R1_S1": 91.511,
+  "pct_R1_T1": 91.392,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.07904048,
+      "energy_eV": 2.150801,
+      "pct_R1": 91.511,
+      "osc_f_R1": 0.015042
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.08141402,
+      "energy_eV": 2.215388,
+      "pct_R1": 91.392
+    }
+  ],
+  "timings_s": {
+    "rhf": 236.39,
+    "ccsd": 5279.84,
+    "eom_s": 6824.27,
+    "eom_t": 9471.84,
+    "total": 21824.35
+  }
+}

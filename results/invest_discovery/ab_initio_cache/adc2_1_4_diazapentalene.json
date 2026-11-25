@@ -1,0 +1,52 @@
+{
+  "mol_id": "1_4_diazapentalene",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 132,
+  "n_occ_act": 19,
+  "n_vir_act": 105,
+  "n_core_frozen": 8,
+  "rhf_converged": true,
+  "e_rhf_ha": -338.07894601,
+  "rhf_hl_gap_eV": 9.1791,
+  "E_S1_eV": 2.61206,
+  "E_T1_eV": 1.586034,
+  "dEST_eV": 1.026026,
+  "f_S1": 0.0,
+  "pct_T1_S1": 91.944,
+  "pct_T2_S1": 8.056,
+  "pct_T1_T1": 94.014,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.09599144,
+      "energy_eV": 2.61206,
+      "pct_T1": 91.944,
+      "pct_T2": 8.056,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.0,
+      "trans_dip_norm_au": 1.4e-05
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.05828567,
+      "energy_eV": 1.586034,
+      "pct_T1": 94.014,
+      "pct_T2": 5.986,
+      "converged": true,
+      "iters": 3
+    }
+  ],
+  "timings_s": {
+    "rhf": 21.13,
+    "build_M11": 2.34,
+    "singlet": 7.84,
+    "triplet": 4.36,
+    "total": 35.67
+  }
+}

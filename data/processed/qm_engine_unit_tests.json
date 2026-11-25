@@ -1,0 +1,12 @@
+{
+  "phase_invariance_max_err": 0.0,
+  "phase_equivariance_max_err": 0.0,
+  "mo_rotation_scalar_max_err": 5.693223670277803e-13,
+  "mo_rotation_W_mag_max_err": 4.920508445138694e-13,
+  "size_intensivity_butadiene_He_100A_max_err": 3.869534811291376e-06,
+  "inter_fragment_W_SD_H2_He_100A_max": 4.309353494887591e-15,
+  "butadiene_osc_rel_err": 0.0037320289266969124,
+  "butadiene_e1_diff_eV": 0.01415300055201385,
+  "c2h_forbidden_Bu_T1T1_eV": 3.6138448472920893e-13,
+  "c2h_allowed_max_T1T1_eV": 1.16733685184416
+}

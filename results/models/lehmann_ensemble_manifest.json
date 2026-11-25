@@ -1,0 +1,17 @@
+{
+  "version": "v2.0_spin_complete_phys_D_anchor",
+  "n_models": 5,
+  "checkpoints": [
+    "results/models/lehmann_cv_fold0.pt",
+    "results/models/lehmann_cv_fold1.pt",
+    "results/models/lehmann_cv_fold2.pt",
+    "results/models/lehmann_cv_fold3.pt",
+    "results/models/lehmann_cv_fold4.pt"
+  ],
+  "architecture": {
+    "use_antisym_singlet_channel": true,
+    "antisym_version": 2,
+    "use_phys_D_anchor": true,
+    "max_delta_D_eV": 6.5
+  }
+}

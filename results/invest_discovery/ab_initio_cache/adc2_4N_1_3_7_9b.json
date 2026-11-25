@@ -1,0 +1,52 @@
+{
+  "mol_id": "4N_1_3_7_9b",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 212,
+  "n_occ_act": 31,
+  "n_vir_act": 168,
+  "n_core_frozen": 13,
+  "rhf_converged": true,
+  "e_rhf_ha": -561.66877891,
+  "rhf_hl_gap_eV": 8.5828,
+  "E_S1_eV": 1.879808,
+  "E_T1_eV": 2.057262,
+  "dEST_eV": -0.177454,
+  "f_S1": 0.000443,
+  "pct_T1_S1": 89.081,
+  "pct_T2_S1": 10.919,
+  "pct_T1_T1": 90.532,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.06908167,
+      "energy_eV": 1.879808,
+      "pct_T1": 89.081,
+      "pct_T2": 10.919,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.000443,
+      "trans_dip_norm_au": 0.069319
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.07560298,
+      "energy_eV": 2.057262,
+      "pct_T1": 90.532,
+      "pct_T2": 9.468,
+      "converged": true,
+      "iters": 4
+    }
+  ],
+  "timings_s": {
+    "rhf": 14.54,
+    "build_M11": 33.29,
+    "singlet": 115.6,
+    "triplet": 88.09,
+    "total": 251.51
+  }
+}

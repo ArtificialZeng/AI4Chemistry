@@ -1,0 +1,178 @@
+{
+  "questdb_summary": {
+    "n_molecules": 143,
+    "n_molecules_by_subset": {
+      "MAIN": 120,
+      "BIO": 5,
+      "CHROM": 18
+    },
+    "n_states_total": 1131,
+    "n_singlets": 693,
+    "n_triplets": 438,
+    "n_GD_states": 28,
+    "n_PD_states": 28,
+    "n_CT_states": 28,
+    "n_valence_states": 838,
+    "n_rydberg_states": 284,
+    "n_safe_states": 827,
+    "n_excluded_states": 10,
+    "charged_molecules": [
+      {
+        "mol_id": "quest_Phenolate",
+        "charge": -1,
+        "nelectron": 50
+      },
+      {
+        "mol_id": "quest_Pyridinium",
+        "charge": 1,
+        "nelectron": 42
+      },
+      {
+        "mol_id": "quest_Streptocyanine-C1",
+        "charge": 1,
+        "nelectron": 24
+      },
+      {
+        "mol_id": "quest_Streptocyanine-C3",
+        "charge": 1,
+        "nelectron": 38
+      },
+      {
+        "mol_id": "quest_Streptocyanine-C5",
+        "charge": 1,
+        "nelectron": 52
+      }
+    ]
+  },
+  "questdb_excluded_states": [
+    {
+      "mol_id": "quest_Acetylene",
+      "subset": "MAIN",
+      "state_label": "^1A_u [F]",
+      "special": "FL",
+      "tbe_avtz_eV": 3.641,
+      "reason": "Fluorescence transition evaluated at excited-state geometry (non-vertical)"
+    },
+    {
+      "mol_id": "quest_Acetylene",
+      "subset": "MAIN",
+      "state_label": "^1A_2 [F]",
+      "special": "FL",
+      "tbe_avtz_eV": 3.844,
+      "reason": "Fluorescence transition evaluated at excited-state geometry (non-vertical)"
+    },
+    {
+      "mol_id": "quest_BH",
+      "subset": "MAIN",
+      "state_label": "^1\\Pi [F]",
+      "special": "FL",
+      "tbe_avtz_eV": 2.898,
+      "reason": "Fluorescence transition evaluated at excited-state geometry (non-vertical)"
+    },
+    {
+      "mol_id": "quest_Cyanoacetylene",
+      "subset": "MAIN",
+      "state_label": "^1A'' [F]",
+      "special": "FL",
+      "tbe_avtz_eV": 3.538,
+      "reason": "Fluorescence transition evaluated at excited-state geometry (non-vertical)"
+    },
+    {
+      "mol_id": "quest_Cyanogen",
+      "subset": "MAIN",
+      "state_label": "^1\\Sigma_u^-  [F]",
+      "special": "FL",
+      "tbe_avtz_eV": 5.041,
+      "reason": "Fluorescence transition evaluated at excited-state geometry (non-vertical)"
+    },
+    {
+      "mol_id": "quest_Diazomethane",
+      "subset": "MAIN",
+      "state_label": "^1A'' [F]",
+      "special": "FL",
+      "tbe_avtz_eV": 0.647,
+      "reason": "Fluorescence transition evaluated at excited-state geometry (non-vertical)"
+    },
+    {
+      "mol_id": "quest_Formaldehyde",
+      "subset": "MAIN",
+      "state_label": "^1A'' [F]",
+      "special": "FL",
+      "tbe_avtz_eV": 2.83,
+      "reason": "Fluorescence transition evaluated at excited-state geometry (non-vertical)"
+    },
+    {
+      "mol_id": "quest_Ketene",
+      "subset": "MAIN",
+      "state_label": "^1A^'' [F]",
+      "special": "FL",
+      "tbe_avtz_eV": 0.9720000000000001,
+      "reason": "Fluorescence transition evaluated at excited-state geometry (non-vertical)"
+    },
+    {
+      "mol_id": "quest_Nitrosomethane",
+      "subset": "MAIN",
+      "state_label": "^1A'' [F]",
+      "special": "FL",
+      "tbe_avtz_eV": 1.66,
+      "reason": "Fluorescence transition evaluated at excited-state geometry (non-vertical)"
+    },
+    {
+      "mol_id": "quest_Thioformaldehyde",
+      "subset": "MAIN",
+      "state_label": "^1A_2[F]",
+      "special": "FL",
+      "tbe_avtz_eV": 1.945,
+      "reason": "Fluorescence transition evaluated at excited-state geometry (non-vertical)"
+    }
+  ],
+  "questdb_size_discrepancies": [
+    {
+      "mol": "HCCl",
+      "subset": "MAIN",
+      "quest_json_size": 3,
+      "xyz_n_heavy": 2,
+      "formula": "CHCl",
+      "note": "QUESTDB JSON Size typo; XYZ geometry verified exact."
+    },
+    {
+      "mol": "HCF",
+      "subset": "MAIN",
+      "quest_json_size": 3,
+      "xyz_n_heavy": 2,
+      "formula": "CHF",
+      "note": "QUESTDB JSON Size typo; XYZ geometry verified exact."
+    },
+    {
+      "mol": "Pentalene",
+      "subset": "MAIN",
+      "quest_json_size": 10,
+      "xyz_n_heavy": 8,
+      "formula": "C8H6",
+      "note": "QUESTDB JSON Size typo; XYZ geometry verified exact."
+    },
+    {
+      "mol": "Pentalene_D2h",
+      "subset": "MAIN",
+      "quest_json_size": 10,
+      "xyz_n_heavy": 8,
+      "formula": "C8H6",
+      "note": "QUESTDB JSON Size typo; XYZ geometry verified exact."
+    }
+  ],
+  "hepta_invest_summary": {
+    "n_molecules": 44,
+    "n_inverted": 37,
+    "n_non_inverted": 7,
+    "by_substitution_type": {
+      "mono": 15,
+      "di": 13,
+      "tri": 16
+    },
+    "delta_EST_min_eV": -0.2698,
+    "delta_EST_max_eV": 0.1971,
+    "cam_b3lyp_inverted_count": 0,
+    "cam_b3lyp_delta_EST_MAE_eV": 0.4133818181818182,
+    "n_with_f_S1_eomccsd": 44
+  }
+}

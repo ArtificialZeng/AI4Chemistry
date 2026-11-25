@@ -1,0 +1,16 @@
+{
+  "schnet3d_dimer_R100A": {
+    "mol_A": "quest_Heptazine",
+    "mol_B": "quest_Ethylene",
+    "E_S1_A_eV": 2.677671432495117,
+    "E_S1_AB_eV": 2.8381567001342773,
+    "abs_err_S1_eV": 0.16048526763916016,
+    "E_T1_A_eV": 3.0115456581115723,
+    "E_T1_AB_eV": 3.039980411529541,
+    "abs_err_T1_eV": 0.02843475341796875,
+    "dEST_A_eV": -0.3338742256164551,
+    "dEST_AB_eV": -0.20182371139526367,
+    "abs_err_dEST_eV": 0.1320505142211914,
+    "separation_angstrom": 100.0
+  }
+}

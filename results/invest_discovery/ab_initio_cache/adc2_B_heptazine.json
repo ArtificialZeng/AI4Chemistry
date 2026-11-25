@@ -1,0 +1,52 @@
+{
+  "mol_id": "B_heptazine",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 197,
+  "n_occ_act": 30,
+  "n_vir_act": 154,
+  "n_core_frozen": 13,
+  "rhf_converged": true,
+  "e_rhf_ha": -579.64341686,
+  "rhf_hl_gap_eV": 5.9102,
+  "E_S1_eV": 1.704215,
+  "E_T1_eV": 0.678762,
+  "dEST_eV": 1.025453,
+  "f_S1": 0.0,
+  "pct_T1_S1": 91.545,
+  "pct_T2_S1": 8.455,
+  "pct_T1_T1": 86.456,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.06262876,
+      "energy_eV": 1.704215,
+      "pct_T1": 91.545,
+      "pct_T2": 8.455,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.0,
+      "trans_dip_norm_au": 0.002214
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.02494404,
+      "energy_eV": 0.678762,
+      "pct_T1": 86.456,
+      "pct_T2": 13.544,
+      "converged": true,
+      "iters": 4
+    }
+  ],
+  "timings_s": {
+    "rhf": 22.55,
+    "build_M11": 20.86,
+    "singlet": 83.61,
+    "triplet": 121.16,
+    "total": 248.18
+  }
+}

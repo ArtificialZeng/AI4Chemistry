@@ -1,0 +1,304 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,multirow,array,longtable,graphicx}
+\usepackage{microtype,tocloft}
+\usepackage{xcolor,hyperref}
+\usepackage{caption}
+
+\setlength{\cftsecnumwidth}{13.2em}
+\definecolor{accent}{HTML}{005A9C}
+\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent}
+\captionsetup{font={small,sf},labelfont=bf}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thesection}{Supplementary Note \arabic{section}}
+
+\newtheorem{theorem}{Theorem}
+\newcommand{\leh}{{\rmfamily\scshape Lehmann}-TDDFT}
+\newcommand{\Hlift}{\mathcal{H}_\theta^{(\sigma)}}
+\newcommand{\Sig}{\mathbf{\Sigma}_{xc}^\theta}
+\newcommand{\SigR}{\mathbf{\Sigma}_{xc}^{\theta,R}}
+\newcommand{\dEST}{\Delta E_{ST}}
+\newcommand{\dSig}{\Delta\Sigma_{ST}}
+
+\title{\textbf{\sffamily Supplementary Information}\\[6pt]
+\large\sffamily Causal Neural Self-Energy Lifting Overcomes the Adiabatic Approximation in Time-Dependent Density Functional Theory}
+\author{\sffamily Zijian Zeng\\{\small Institute of Computer Science and Digital Innovation, UCSI University, Kuala Lumpur 56000, Malaysia}\\{\small Lehmann-TDDFT v2.0 Formal Proofs, Quantitative Tables, and Zero-Leak Audit}}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\vspace{8pt}
+\hrule
+\vspace{8pt}
+
+% ===========================================================================
+\section{Complete Formal Proofs of Theorems 1--5 and \texorpdfstring{$D_{3h}$}{D3h} Selection Rules}
+% ===========================================================================
+
+Let each spin sector $\sigma\in\{S,T\}$ consist of $N_\sigma$ orthonormal density-fitted hybrid RI-TDA single-exciton states $\{\Phi_I^{(\sigma)}\}_{I=1}^{N_\sigma}$ with bare energies $\boldsymbol{\omega}_\sigma=\mathrm{diag}(\omega_1^{(\sigma)},\dots,\omega_{N_\sigma}^{(\sigma)})$ and $N_{D,\sigma}$ spin-adapted bi-exciton basis states $\mu=(I,J,c)$ spanning symmetric $^1(TT)_+$, $^1(SS)_+$, and antisymmetric $^1(TT)_-$ channels for $\sigma=S$, and $^3(TT)$, $^3(ST)$ channels for $\sigma=T$.
+The lifted block operator is real symmetric (Hermitian):
+\begin{equation}
+\Hlift = \begin{pmatrix}
+\boldsymbol{\omega}_\sigma + \boldsymbol{\Delta}_\theta^{(\sigma)} & \mathbf{V}_\theta^{(\sigma)} \\
+(\mathbf{V}_\theta^{(\sigma)})^\top & \mathbf{D}_\theta^{(\sigma)}
+\end{pmatrix} \in \mathbb{R}^{(N_\sigma+N_{D,\sigma})\times(N_\sigma+N_{D,\sigma})},
+\end{equation}
+where $\mathbf{D}_\theta^{(\sigma)}=\mathrm{diag}(D_{\theta,1}^{(\sigma)},\dots,D_{\theta,N_{D,\sigma}}^{(\sigma)})$ is real diagonal and $\boldsymbol{\Delta}_\theta^{(\sigma)}=(\boldsymbol{\Delta}_\theta^{(\sigma)})^\top$.
+
+\subsection*{Proof of Theorem 1 (Exact Causality, Schur Equivalence, Spectral Positivity, and Parseval Dipole-Norm Conservation)}
+\begin{proof}
+\textbf{(i) Exact Schur Complement:} For any eigenvector $(c_n, d_n)^\top$ of $\Hlift$ with eigenvalue $E_n \notin \mathrm{spec}(\mathbf{D}_\theta^{(\sigma)})$, the second block row yields $d_n = (E_n \mathbf{I} - \mathbf{D}_\theta^{(\sigma)})^{-1} (\mathbf{V}_\theta^{(\sigma)})^\top c_n$. Substituting into the first block row produces the exact nonlinear frequency-dependent eigenvalue equation
+\begin{align}
+\bigl[\boldsymbol{\omega}_\sigma + \boldsymbol{\Delta}_\theta^{(\sigma)} + \Sig(E_n)\bigr] c_n &= E_n c_n, \\
+\Sig(\omega) = \mathbf{V}_\theta^{(\sigma)}(\omega\mathbf{I} - \mathbf{D}_\theta^{(\sigma)})^{-1}(\mathbf{V}_\theta^{(\sigma)})^\top &= \sum_{\mu=1}^{N_{D,\sigma}} \frac{\mathbf{v}_\mu \mathbf{v}_\mu^\top}{\omega - D_{\theta,\mu}^{(\sigma)}}.
+\end{align}
+\textbf{(ii) Analyticity, Causality, and Exact Kramers--Kronig Relations:} Define the retarded self-energy $\SigR(\omega) \equiv \Sig(\omega + i\eta)$ for any $\eta > 0$. Because every pole lies strictly in the lower half-plane at $z_\mu = D_{\theta,\mu}^{(\sigma)} - i\eta$, every matrix element $[\SigR(z)]_{IJ}$ is holomorphic on $\mathrm{Im}\,z > -\eta$ and decays as $O(|z|^{-1})$ as $|z|\to\infty$. Applying Cauchy's integral theorem to the closed upper-half-plane semicircle yields the exact Hilbert transform identities
+\begin{equation}
+\mathrm{Re}\,\SigR(\omega) = \frac{1}{\pi}\,\mathcal{P}\!\int_{-\infty}^{+\infty} \frac{\mathrm{Im}\,\SigR(\omega')}{\omega' - \omega}\,d\omega', \qquad
+\mathrm{Im}\,\SigR(\omega) = -\frac{1}{\pi}\,\mathcal{P}\!\int_{-\infty}^{+\infty} \frac{\mathrm{Re}\,\SigR(\omega')}{\omega' - \omega}\,d\omega'.
+\end{equation}
+Explicitly, for each term $1/(\omega - D_\mu + i\eta) = (\omega-D_\mu)/[(\omega-D_\mu)^2+\eta^2] - i\eta/[(\omega-D_\mu)^2+\eta^2]$, the real and imaginary parts form a Hilbert-transform pair identically.
+
+\textbf{(iii) Negative-Semidefinite Imaginary Part (Dissipative Passivity):} For every vector $\mathbf{u}\in\mathbb{C}^{N_\sigma}$ and $\eta > 0$,
+\begin{equation}
+\mathbf{u}^\dagger \mathrm{Im}\,\SigR(\omega)\,\mathbf{u} = -\eta \sum_{\mu=1}^{N_{D,\sigma}} \frac{|\mathbf{u}^\dagger \mathbf{v}_\mu|^2}{(\omega - D_{\theta,\mu}^{(\sigma)})^2 + \eta^2} \le 0,
+\end{equation}
+so every eigenvalue of $\mathrm{Im}\,\SigR(\omega)$ is strictly non-positive.
+
+\textbf{(iv) Monotonicity and Quasiparticle Weights:} Differentiating $\Sig(\omega)$ gives $\partial_\omega \Sig(\omega) = -\sum_\mu \mathbf{v}_\mu \mathbf{v}_\mu^\top / (\omega - D_{\theta,\mu}^{(\sigma)})^2 \preceq \mathbf{0}$. Normalization $\|c_n\|_2^2 + \|d_n\|_2^2 = 1$ with $d_n = (E_n \mathbf{I} - \mathbf{D}_\theta)^{-1}\mathbf{V}_\theta^\top c_n$ implies $Z_n \equiv \|c_n\|_2^2 = \bigl[1 - \hat{c}_n^\top (\partial_\omega \Sig(E_n))\hat{c}_n\bigr]^{-1} \in (0,1]$ whenever $\hat{c}_n \neq \mathbf{0}$, while $\sum_{n=1}^{N_\sigma+N_{D,\sigma}} Z_n = \mathrm{Tr}(\mathbf{P}_S \mathbf{U}\mathbf{U}^\top \mathbf{P}_S) = N_\sigma$.
+
+\textbf{(v) Parseval Unweighted Transition-Dipole-Squared Conservation:} Let $\mathbf{M}_0 \in \mathbb{R}^{N_S\times 3}$ hold the bare single-exciton transition dipoles and let $\mathbf{U} = \begin{pmatrix}\mathbf{C}_S \\ \mathbf{C}_D\end{pmatrix}$ be the orthogonal eigenvector matrix ($\mathbf{U}\mathbf{U}^\top = \mathbf{I}$), so $\mathbf{C}_S \mathbf{C}_S^\top = \mathbf{I}_{N_S}$. Then the dressed transition dipole matrix $\mathbf{M}^{\mathrm{dressed}} = \mathbf{C}_S^\top \mathbf{M}_0$ satisfies
+\begin{equation}
+\sum_{n=1}^{N_S + N_{D,S}} \|\boldsymbol{\mu}_{0n}^{\mathrm{dressed}}\|_2^2
+= \mathrm{Tr}\!\bigl(\mathbf{M}_0^\top \mathbf{C}_S \mathbf{C}_S^\top \mathbf{M}_0\bigr)
+= \mathrm{Tr}\!\bigl(\mathbf{M}_0^\top \mathbf{M}_0\bigr)
+= \sum_{I=1}^{N_S} \|\boldsymbol{\mu}_{0I}^{(0)}\|_2^2.
+\end{equation}
+Note that this is an exact algebraic Parseval identity on unweighted transition-dipole-squared norms; energy-weighted oscillator sums $\sum_n \frac{2}{3} E_n \|\boldsymbol{\mu}_{0n}^{\mathrm{dressed}}\|^2$ properly track spectral energy shifts.
+\end{proof}
+
+\subsection*{Proof of Theorem 2 ($\mathbb{Z}_2^K \times O(d_{\mathrm{deg}})$ Gauge Equivariance)}
+\begin{proof}
+Under any real orthogonal transformation $\mathbf{R} \in O(N_\sigma)$ acting on single-exciton eigenvectors ($\mathbf{X}_I \mapsto \sum_J R_{IJ}\mathbf{X}_J$), in particular arbitrary phase flips $\mathbf{R}_S=\mathrm{diag}(s_1,\dots,s_{N_S})$, $\mathbf{R}_T=\mathrm{diag}(t_1,\dots,t_{N_T})$ with $s_I, t_J \in \{\pm 1\}$, every single-exciton density $\rho_I(\mathbf{r})$ and invariant scalar descriptor $\mathbf{z}_{K,\mu}$ depends solely on quadratic norms, squared overlaps, energies, and absolute couplings $|W_{K,\mu}^{(r)}|$, which are strictly invariant under $\mathbf{R}_S,\mathbf{R}_T$. Conversely, each raw Slater--Condon RI tensor element transforms equivariantly: $W_{K,\mu}^{(r)} \mapsto s_K \pi_\mu W_{K,\mu}^{(r)}$ where $\pi_\mu = t_I t_J$ for $^1(T_I T_J)_\pm$ and $^3(T_I T_J)$, $\pi_\mu = s_I s_J$ for $^1(S_I S_J)_+$, and $\pi_\mu = s_I t_J$ for $^3(S_I T_J)$. Because $V_{\theta,K\mu} = \sum_{r=1}^4 g_\theta^{(r)}(\mathbf{z}_{K,\mu}) W_{K,\mu}^{(r)}$ multiplies invariant scalar coefficients by equivariant basis tensors, $\mathbf{V}_\theta \mapsto \mathbf{R}_S \mathbf{V}_\theta \mathbf{R}_D^\top$ and $\boldsymbol{\Delta}_\theta \mapsto \mathbf{R}_S \boldsymbol{\Delta}_\theta \mathbf{R}_S^\top$, so
+\begin{equation}
+\Hlift \mapsto \begin{pmatrix}\mathbf{R}_S & \mathbf{0} \\ \mathbf{0} & \mathbf{R}_D\end{pmatrix} \Hlift \begin{pmatrix}\mathbf{R}_S^\top & \mathbf{0} \\ \mathbf{0} & \mathbf{R}_D^\top\end{pmatrix},
+\end{equation}
+preserving every eigenvalue $E_n$, quasiparticle weight $Z_n$, and oscillator strength $f_n$ identically.
+\end{proof}
+
+\subsection*{Proof of Theorem 3 (Exact Size-Intensivity under Non-Interacting Separation)}
+\begin{proof}
+Consider two closed-shell monomers $A$ and $B$ separated by $R\to\infty$ so all inter-monomer atomic-orbital overlaps vanish exponentially ($O(e^{-\alpha R})$). The canonical Kohn--Sham orbitals and RI-TDA single excitations partition cleanly into $A$-localized and $B$-localized blocks with zero cross-monomer density overlaps ($S_{IJ}=0$ for $I\in A, J\in B$). Consequently:
+(1) All off-diagonal static couplings $C_{IJ}^{(c)}$ vanish for $I\in A, J\in B$.
+(2) All cross-monomer RI Slater--Condon couplings $W_{K,\mu}^{(r)}$ vanish identically whenever $K$ and $\mu=(I,J,c)$ do not reside on the same monomer, decoupling the cross-monomer bi-exciton states $(I_A, J_B)$ from all single excitations ($\mathbf{V}_{\theta,K,(I_A,J_B)}=0$).
+(3) Because the bi-exciton diagonal shift uses overlap gating $D_{\theta,\mu} = D_\mu^{\mathrm{phys}} + \tanh(S_\mu/0.05)\,\delta D_{\theta,\mu}$ and there is zero global pooling across states, every monomer-$A$ block element depends exclusively on monomer-$A$ tensors. Hence
+\begin{equation}
+\Hlift(A \oplus B) = \Hlift(A) \oplus \Hlift(B) \oplus \mathbf{D}_{\mathrm{cross}}(A \otimes B),
+\end{equation}
+whose single-exciton-coupled spectrum is the exact union $\mathrm{spec}(\Hlift(A)) \cup \mathrm{spec}(\Hlift(B))$ with zero size-intensivity drift.
+\end{proof}
+
+\subsection*{Proof of Theorem 4 (Exact Dynamical INVEST Phase Boundary) and $D_{3h}$ Selection Rules}
+\begin{proof}
+Writing $E_{S_1} = E_{S_1}^{\mathrm{stat}} - \Sigma_{S_1}^{\mathrm{dyn}}$ and $E_{T_1} = E_{T_1}^{\mathrm{stat}} - \Sigma_{T_1}^{\mathrm{dyn}}$ with $\Sigma_n^{\mathrm{dyn}} \equiv E_n^{\mathrm{stat}} - E_n$ (non-negative for the lowest root by the Hylleraas--Undheim--MacDonald interlacing theorem), subtracting gives
+\begin{equation}
+\dEST \equiv E_{S_1} - E_{T_1} = \dEST^{\mathrm{stat}} - \dSig, \qquad \dSig \equiv \Sigma_{S_1}^{\mathrm{dyn}} - \Sigma_{T_1}^{\mathrm{dyn}}.
+\end{equation}
+Thus $\dEST < 0$ if and only if $\dSig > \dEST^{\mathrm{stat}}$. For $D_{3h}$ heptazine ($S_1, T_1 \in A_2'$; degenerate triplet doublet $T_2, T_3 \in E'$), decomposing the direct product $E'\otimes E'$ into symmetric and antisymmetric parts via the $D_{3h}$ character table ($\chi(E)=2, \chi(C_3)=-1, \chi(C_2')=0, \chi(\sigma_h)=2, \chi(S_3)=-1, \chi(\sigma_v)=0$) gives:
+\begin{equation}
+[E'\otimes E']_S = A_1' \oplus E' \not\ni A_2', \qquad
+[E'\otimes E']_A = A_2'.
+\end{equation}
+Therefore, by the Wigner--Eckart theorem, the symmetric bi-exciton singlet $^1(T_2 T_3)_+$ has identically zero coupling to $S_1(A_2')$ (verified numerically on \texttt{quest\_Heptazine.npz}: $\|\mathbf{W}_{SD}^{(S)}[S_1,(T_2,T_3)_+]\| = 2.26\times 10^{-6}$\,eV), whereas the antisymmetric channel $^1(T_2 T_3)_-$ transforms as $A_2'$ and couples strongly ($\|\mathbf{W}_{SD}^{(T)}[T_1,(T_2,T_3)_-]\| = 1.4801$\,eV), explaining why spin-complete \leh{} v2.0 shifts 45/45 CV5 heptazines into the unified Dynamical-INVEST phase.
+\end{proof}
+
+\subsection*{Proof of Theorem 5 (Restoring $(3N-8)$ Codimension-2 Conical Intersections and $\gamma=\pi$)}
+\begin{proof}
+In adiabatic linear-response TD-DFT, Brillouin's theorem forces the reference-to-single coupling $H_{0I} \equiv 0$, collapsing the $S_0/S_1$ degeneracy condition to a single scalar equation $\omega_1(\mathbf{R}) = 0$ of codimension $1$ (dimension $3N-7$). Extending the singlet operator to include the ground state $|0\rangle$ coupled to the bi-exciton manifold via $\mathbf{v}_{0D}$ and applying exact Schur elimination of the bi-exciton block generates an effective $2\times 2$ $S_0/S_1$ Hamiltonian in the branching plane $(x_g, y_h)$:
+\begin{equation}
+\mathbf{H}_{\mathrm{eff}}(x_g,y_h) = \begin{pmatrix}
+E_0^{\mathrm{eff}}(x_g,y_h) & H_{01}^{\mathrm{eff}}(x_g,y_h) \\
+H_{01}^{\mathrm{eff}}(x_g,y_h) & E_1^{\mathrm{eff}}(x_g,y_h)
+\end{pmatrix}, \qquad
+H_{01}^{\mathrm{eff}} = -\mathbf{v}_{0D}^\top (\mathbf{D}_\theta^{(S)} - E\mathbf{I})^{-1} \mathbf{v}_{1D}.
+\end{equation}
+Simultaneous degeneracy now requires two independent real equations, $E_1^{\mathrm{eff}} - E_0^{\mathrm{eff}} = 0$ and $H_{01}^{\mathrm{eff}} = 0$, restoring exact codimension $2$ (seam dimension $3N-8$). Expanding linearly around an isolated apex $\mathbf{R}^*$ as $\frac{1}{2}(E_1^{\mathrm{eff}}-E_0^{\mathrm{eff}}) = g\,x_g$ and $H_{01}^{\mathrm{eff}} = h\,y_h$ yields the positive double cone $\Delta E = 2\sqrt{g^2 x_g^2 + h^2 y_h^2}$ and lower eigenvector $|\psi_0(\phi)\rangle = (\cos\frac{\phi}{2}, -\sin\frac{\phi}{2})^\top$ with $\tan\phi = h y_h / (g x_g)$. Traversing a closed loop $\phi\in[0,2\pi]$ yields $|\psi_0(2\pi)\rangle = -|\psi_0(0)\rangle$, i.e., quantized geometric Berry phase $\gamma = \pi$ ($W_{\mathrm{prod}} < 0$), whereas non-encircling loops yield $\gamma = 0$ ($W_{\mathrm{prod}} > 0$).
+\end{proof}
+
+% ===========================================================================
+\section{Fair Single-Core Matched-Root (\texorpdfstring{\texttt{8S+8T}}{8S+8T}) Computational Scaling}
+% ===========================================================================
+
+All timings in Supplementary Table~\ref{tab:s1} were measured sequentially on a single isolated Apple M3 Max CPU core (\texttt{OMP/OPENBLAS/MKL/VECLIB\_NUM\_THREADS=1}, \texttt{def2-SVP}, strictly matched 8 singlet + 8 triplet excited states) using \texttt{time.process\_time()}.
+
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Complete 9-molecule single-core matched-root (\texttt{8S+8T}, \texttt{def2-SVP}) CPU timing ladder.} \leh{} times include DF-PBE0 SCF, RI-TDA, RI bi-exciton tensor construction, and exact single-core PyTorch neural forward inference (shown in parentheses).}
+\label{tab:s1}
+\footnotesize\sffamily
+\resizebox{\textwidth}{!}{\begin{tabular}{@{}lccccccc@{}}
+\toprule
+\textbf{Molecule} & \textbf{Atoms (Heavy)} & \textbf{$N_{\mathrm{AO}}$} & \textbf{\leh{} (NN)} & \textbf{DH SCS-QIDH} & \textbf{RI-EE-ADC(2)} & \textbf{EOM-EE-CCSD} & \textbf{Speedup vs DH / ADC(2) / CCSD} \\
+ & & & \textbf{CPU s (ms)} & \textbf{CPU s} & \textbf{CPU s} & \textbf{CPU s} & \\
+\midrule
+\texttt{Glyoxal} & 6 (4) & 66 & 4.97 (7.9\,ms) & 24.67 & 11.93 & 42.29 & 5.0$\times$ / 2.4$\times$ / 8.5$\times$ \\
+\texttt{Butadiene} & 10 (4) & 86 & 6.55 (10.2\,ms) & 49.29 & 18.82 & 94.28 & 7.5$\times$ / 2.9$\times$ / 14.4$\times$ \\
+\texttt{Benzene} & 12 (6) & 114 & 10.86 (8.3\,ms) & 94.01 & 62.21 & 312.00 & 8.7$\times$ / 5.7$\times$ / 28.7$\times$ \\
+\texttt{Pentalene} & 14 (8) & 142 & 17.03 (9.2\,ms) & 252.69 & 271.11 & --- & 14.8$\times$ / 15.9$\times$ / --- \\
+\texttt{Naphthalene} & 18 (10) & 180 & 22.63 (8.0\,ms) & 388.72 & 821.32 & --- & 17.2$\times$ / 36.3$\times$ / --- \\
+\texttt{5AP} & 18 (13) & 207 & 36.05 (12.9\,ms) & 774.77 & 2582.84 & --- & 21.5$\times$ / 71.6$\times$ / --- \\
+\texttt{Anthracene} & 24 (14) & 246 & 38.33 (8.4\,ms) & --- & --- & --- & --- / --- / --- \\
+\texttt{hepta\_CF3\_CF3\_CN} & 23 (23) & 322 & 101.32 (10.7\,ms) & --- & --- & --- & --- / --- / --- \\
+\texttt{HzTFEX2} & 55 (35) & 590 & 489.61 (13.3\,ms) & --- & --- & --- & --- / --- / --- \\
+\midrule
+\textbf{CPU Power-Law $\alpha$ ($R^2$)} & --- & $66$--$590$ & \textbf{2.08} (0.973) & 2.97 (0.988) & 4.80 (0.968) & 3.66 (0.991) & $n=9/6/6/3$ \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ===========================================================================
+\section{Larger-Basis Convergence and DF-PBE0 \texorpdfstring{$S_0/T_1$}{S0/T1} Relaxation Robustness}
+% ===========================================================================
+
+Supplementary Table~\ref{tab:s2} documents all 25 independent RI-EE-ADC(2) checks across compact (\texttt{def2-SVP}), diffuse (\texttt{aug-cc-pVDZ}), and triple-zeta (\texttt{def2-TZVP}) basis sets plus fully relaxed DF-RKS $S_0$ and DF-UKS $T_1$ PBE0/def2-SVP minima.
+
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Complete larger-basis and relaxed-geometry RI-EE-ADC(2) robustness matrix (25/25 strictly inverted).} Values report $\dEST$ in eV with oscillator strength $f_{S_1}$ in parentheses; last column reports DF-UKS $T_1$ reorganization energy $\lambda_{T_1}$ (eV) and heavy-atom $S_0\to T_1$ RMSD (\AA).}
+\label{tab:s2}
+\footnotesize\sffamily
+\resizebox{\textwidth}{!}{\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\textbf{Molecule} & \textbf{def2-SVP (xTB)} & \textbf{aug-cc-pVDZ} & \textbf{def2-TZVP} & \textbf{PBE0 $S_0$ geom} & \textbf{PBE0 $T_1$ geom} & \textbf{$\lambda_{T_1}$ (eV) / RMSD (\AA)} \\
+\midrule
+\textbf{5AP (Calib. Ref.)} & $-0.1892$ (0.0020) & $-0.1357$ (0.0024) & $-0.1362$ (0.0027) & $-0.1970$ (0.0022) & $\mathbf{-0.1703}$ (0.0005) & 0.134 / 0.0214 \\
+\textbf{VBI-0089 (3N push--pull)} & $-0.1447$ (0.0116) & $-0.0906$ (0.0125) & $-0.0941$ (0.0126) & $-0.1505$ (0.0123) & $\mathbf{-0.1031}$ (0.0173) & 0.086 / 0.0170 \\
+\textbf{VBI-0210 (3N-azaph.)} & $-0.1126$ (0.0132) & $-0.0628$ (0.0140) & $-0.0646$ (0.0144) & $-0.1191$ (0.0139) & $\mathbf{-0.1012}$ (0.0155) & 0.069 / 0.0148 \\
+\textbf{VBI-0069 (3N push--pull)} & $-0.1056$ (0.0190) & $-0.0584$ (0.0187) & $-0.0598$ (0.0196) & $-0.1179$ (0.0189) & $\mathbf{-0.0262}$ (0.0271) & 0.106 / 0.0194 \\
+\textbf{VBI-0236 (6AP violet)} & $-0.2167$ (0.0180) & $-0.1599$ (0.0180) & $-0.1530$ (0.0188) & $-0.2237$ (0.0192) & $\mathbf{-0.0642}$ (0.0350) & 0.137 / 0.0273 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ===========================================================================
+\section{Complete Blind \texorpdfstring{\emph{De Novo}}{De Novo} Discovery Catalog and 23-Core External Benchmark}
+% ===========================================================================
+
+Supplementary Table~\ref{tab:s3} lists all 20 pre-registered blind \emph{de novo} INVEST candidates (zero InChIKey-14 overlap with all 187 CV molecules and 34 benchmark cores), and Supplementary Table~\ref{tab:s4} details all 23 strictly novel external scaffolds against four $O(N^5)$ double-hybrid functionals.
+
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Complete Top-20 blind \emph{de novo} INVEST discovery verification catalog (sorted by EOM-EE-CCSD and RI-EE-ADC(2) $\dEST$).} All energies in eV; oscillator strengths $f_{S_1}$ in parentheses.}
+\label{tab:s3}
+\scriptsize\sffamily
+\resizebox{\textwidth}{!}{\begin{tabular}{@{}lllccccc@{}}
+\toprule
+\textbf{ID} & \textbf{Formula} & \textbf{Scaffold Family} & \textbf{Leh.\ v2 $\dEST$} & \textbf{ADC(2) $\dEST$ ($f$)} & \textbf{EOM-CCSD $\dEST$ ($f$)} & \textbf{SC-NEVPT2 $\dEST$} & \textbf{InChIKey-14} \\
+\midrule
+\texttt{VBI-0213} & C14H7BN2 & boraphenalene bn & $-0.227\pm0.053$ & $-0.207$ (0.0002) & $-0.118$ (0.0002) & $-0.201$ & \texttt{\tiny JMFXUBCPPIASTH} \\
+\texttt{VBI-0236} & C8H6FN7O & push pull azaphenalene & $-0.055\pm0.015$ & $-0.217$ (0.0180) & $-0.086$ (0.0196) & $-0.041$ (SA4) & \texttt{\tiny DUEPESGFGUNVJG} \\
+\texttt{VBI-0089} & C11H8FN3O & push pull azaphenalene & $-0.023\pm0.054$ & $-0.145$ (0.0116) & $-0.065$ (0.0150) & $-0.102$ (SA4) & \texttt{\tiny CUIAHAZWAKOERY} \\
+\texttt{VBI-0210} & C10H7N3O & substituted azaphenalene & $-0.001\pm0.040$ & $-0.113$ (0.0132) & $-0.034$ (0.0176) & $+0.008$ (SA4) & \texttt{\tiny NYVDTFUXFWMPMA} \\
+\texttt{VBI-0060} & C11H9N3O & substituted azaphenalene & $+0.005\pm0.048$ & $-0.113$ (0.0119) & $-0.032$ (0.0163) & $+0.000$ (SA4) & \texttt{\tiny KDIQDBFHTZQACG} \\
+\texttt{VBI-0293} & C9H7N5 & substituted azaphenalene & $+0.022\pm0.045$ & $-0.125$ (0.0148) & $-0.031$ (0.0169) & $+0.044$ & \texttt{\tiny OJZWABNPHZORNM} \\
+\texttt{VBI-0159} & C13H8BN & boraphenalene bn & $-0.242\pm0.051$ & $-0.142$ (0.0004) & $-0.029$ (0.0004) & $-0.231$ & \texttt{\tiny NOMCWXPANLPKRI} \\
+\texttt{VBI-0069} & C10H7FN4 & push pull azaphenalene & $+0.038\pm0.038$ & $-0.106$ (0.0190) & $-0.019$ (0.0233) & $-0.003$ (SA4) & \texttt{\tiny BEAIHEFRPRKTMI} \\
+\texttt{VBI-0324} & C11H6N4O & push pull azaphenalene & $+0.002\pm0.073$ & $-0.073$ (0.0256) & $+0.015$ (0.0291) & --- & \texttt{\tiny MDWBKVMKYQPWGK} \\
+\texttt{VBI-0230} & C8H6BFN4 & bn rim triangulene & $-0.035\pm0.047$ & $-0.024$ (0.0265) & $+0.086$ (0.0242) & --- & \texttt{\tiny QRNRRXWRAJUTKG} \\
+\texttt{VBI-0246} & C8H7BN4 & bn rim triangulene & $-0.031\pm0.048$ & $-0.007$ (0.0186) & $+0.095$ (0.0205) & --- & \texttt{\tiny ACYHIWKWZOKNKR} \\
+\texttt{VBI-0274} & C11H7FN2 & non alternant indacene & $+0.036\pm0.043$ & $-0.030$ (0.0109) & $+0.107$ (0.0125) & --- & \texttt{\tiny BLXUQLQNECBJJN} \\
+\texttt{VBI-0034} & C12H9NO & non alternant azulene & $-0.034\pm0.048$ & $-0.060$ (0.0054) & $+0.149$ (0.0100) & --- & \texttt{\tiny AOVKCKYTEVTWPA} \\
+\texttt{VBI-0308} & C10H6FN3O & push pull azaphenalene & $-0.015\pm0.033$ & $-0.138$ (0.0127) & --- & --- & \texttt{\tiny UFRLYUUISJFOGT} \\
+\texttt{VBI-0138} & C10H6FN3 & substituted azaphenalene & $-0.056\pm0.049$ & $-0.134$ (0.0081) & --- & --- & \texttt{\tiny NOLMTKWFBYCNGP} \\
+\texttt{VBI-0174} & C11H9N3 & substituted azaphenalene & $-0.029\pm0.046$ & $-0.124$ (0.0091) & --- & --- & \texttt{\tiny PPQDCINBSMPWKE} \\
+\texttt{VBI-0110} & C13H13N3 & substituted azaphenalene & $-0.006\pm0.042$ & $-0.110$ (0.0118) & --- & --- & \texttt{\tiny CQWLMOVKLWABLJ} \\
+\texttt{VBI-0244} & C11H5FN4 & push pull azaphenalene & $-0.072\pm0.069$ & $-0.109$ (0.0155) & --- & --- & \texttt{\tiny BRKBZCHKQKIQBS} \\
+\texttt{VBI-0099} & C12H8N4O & push pull azaphenalene & $+0.017\pm0.082$ & $-0.075$ (0.0259) & --- & --- & \texttt{\tiny PQVVMYSETIVRCB} \\
+\texttt{VBI-0278} & C8H6BFN4 & bn rim triangulene & $+0.005\pm0.041$ & $+0.028$ (0.0254) & --- & --- & \texttt{\tiny MWMNVWWYNFUHHC} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Complete 23 strictly novel external multi-scaffold core benchmark comparing $O(N^3)$ \leh{} v2.0 against four $O(N^5)$ double-hybrid RI-CIS(D) functionals.} Reference is independent frozen-core RI-EE-ADC(2)/def2-SVP (all $\dEST$ in eV).}
+\label{tab:s4}
+\scriptsize\sffamily
+\resizebox{\textwidth}{!}{\begin{tabular}{@{}lccccccc@{}}
+\toprule
+\textbf{Novel External Core} & \textbf{RI-ADC(2)} & \textbf{DF-PBE0 TDA} & \textbf{\leh{} v2.0} & \textbf{B2PLYP} & \textbf{PBE-QIDH} & \textbf{SCS-PBE-QIDH} & \textbf{SOS-PBE-QIDH} \\
+\midrule
+\texttt{1\_3\_4\_6\_tetraazapentalene} & +0.223 & +0.457 & \textbf{+0.242} & +0.340 & +0.562 & +0.417 & +0.402 \\
+\texttt{1\_3\_diazaazulene} & +0.183 & +0.712 & \textbf{+0.469} & +0.345 & +0.631 & +0.372 & +0.318 \\
+\texttt{1\_4\_diazapentalene} & +1.026 & +1.195 & \textbf{+0.948} & +1.061 & +1.182 & +1.141 & +1.138 \\
+\texttt{1\_5\_diaza\_s\_indacene} & +0.639 & +0.713 & \textbf{+0.505} & +0.588 & +0.723 & +0.664 & +0.657 \\
+\texttt{2N\_1\_9b} & -0.130 & +0.290 & \textbf{-0.110} & +0.049 & +0.068 & -0.064 & -0.095 \\
+\texttt{2\_5\_diazapentalene} & -0.162 & +0.646 & \textbf{+0.394} & +0.430 & +0.497 & +0.377 & +0.352 \\
+\texttt{3N\_1\_3\_9b} & -0.162 & +0.308 & \textbf{-0.109} & +0.038 & +0.055 & -0.087 & -0.121 \\
+\texttt{3N\_1\_4\_9b} & -0.083 & +0.334 & \textbf{-0.098} & +0.085 & +0.116 & -0.019 & -0.049 \\
+\texttt{4N\_1\_3\_7\_9b} & -0.177 & +0.299 & \textbf{-0.113} & +0.023 & +0.035 & -0.114 & -0.149 \\
+\texttt{4N\_1\_4\_7\_9b} & -0.054 & +0.362 & \textbf{-0.061} & +0.111 & +0.149 & +0.009 & -0.022 \\
+\texttt{4N\_2\_5\_8\_9b} & -0.107 & +0.333 & \textbf{-0.105} & +0.088 & +0.105 & -0.021 & -0.051 \\
+\texttt{5AP} & -0.189 & +0.324 & \textbf{-0.063} & +0.017 & +0.034 & -0.123 & -0.159 \\
+\texttt{5N\_1\_3\_4\_7\_9b} & -0.158 & +0.325 & \textbf{-0.079} & +0.040 & +0.061 & -0.095 & -0.130 \\
+\texttt{6N\_1\_3\_4\_6\_7\_9b} & -0.225 & +0.299 & \textbf{-0.115} & -0.012 & -0.002 & -0.170 & -0.208 \\
+\texttt{B3N3\_rim\_phenalene} & +0.179 & +0.456 & \textbf{+0.183} & +0.205 & +0.397 & +0.276 & +0.261 \\
+\texttt{BN\_rim\_cyclazine} & +0.170 & +0.571 & \textbf{+0.140} & +0.312 & +0.385 & +0.264 & +0.239 \\
+\texttt{B\_3N\_asym} & +0.195 & +0.774 & \textbf{+0.224} & -0.032 & +0.131 & +0.048 & +0.037 \\
+\texttt{B\_4AP} & +0.226 & +0.662 & \textbf{+0.286} & +0.369 & +0.565 & +0.420 & +0.413 \\
+\texttt{B\_5AP} & +0.097 & +0.185 & \textbf{-0.053} & -0.172 & -0.194 & -0.368 & -0.364 \\
+\texttt{B\_cyclazine} & -0.029 & +0.311 & \textbf{-0.163} & +0.101 & +0.143 & +0.021 & -0.007 \\
+\texttt{B\_heptazine} & +1.025 & +0.571 & \textbf{+0.476} & +0.092 & +0.194 & +0.153 & +0.143 \\
+\texttt{calicene} & +1.342 & +0.812 & \textbf{+0.729} & +0.763 & +1.537 & +1.457 & +1.448 \\
+\texttt{heptalene} & +0.711 & +0.709 & \textbf{+0.464} & +0.627 & +0.781 & +0.745 & +0.748 \\
+\midrule
+\textbf{23-Core MAE (eV) / MCC} & Ref. & 0.395 & \textbf{0.146 (0.826)} & 0.227 (-0.112) & 0.260 (+0.013) & 0.162 (+0.659) & 0.142 (+0.826) \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ===========================================================================
+\section{Complete \texorpdfstring{$3\times 3$}{3x3} LOMO Transfer Matrix and PSB3 Blind MECI}
+% ===========================================================================
+
+Supplementary Table~\ref{tab:s5} reports all 9 held-out zero-manual-$\beta$ LOMO and single-molecule cross-transfer evaluations across ethylene, methanimine, and fulvene. For the unseen 14-atom cationic retinal model PSB3 ($\mathrm{C}_5\mathrm{H}_6\mathrm{NH}_2^+$), blind Nelder--Mead optimization starting at $q_0$ ($1.664$\,eV SC-NEVPT2 / $1.894$\,eV SA2-CASSCF gap) converges to $q_{\mathrm{opt}} = (1.3406\,\text{\AA}, 0.0455\,\text{\AA}, 90.37^\circ)$ with independent gaps $0.1016$\,eV (SC-NEVPT2) and $0.0303$\,eV (SA2-CASSCF(6,6)), achieving $0.0023$\,\AA{} heavy-atom RMSD ($0.0035$\,\AA{} all-atom RMSD) relative to the independent SA2-CASSCF(6,6) MECI $q_{\mathrm{ref}} = (1.3400\,\text{\AA}, 0.0487\,\text{\AA}, 90.07^\circ)$. On the blind PSB3 Berry loop, \leh{} gives $\gamma=\pi$ (continuous) ($W_{\mathrm{prod}}=-0.1348$, $\min|S|=0.4095$) versus continuous $\gamma=0$ on the shifted control ($W_{\mathrm{prod}}=+0.9986$, $\min|S|=0.9998$). Across all three LOMO branching-plane surfaces (300-trajectory Tully FSSH, $50$\,fs, EDC decoherence), \leh{} reproduces ultrafast internal conversion with zero negative-gap entries on ethylene (\leh{} LOMO $S_0$ yield $63.0\%$, $P_{S_1}$ MAE $0.136$ vs SC-NEVPT2 $49.7\%$ and adiabatic PBE0 $0.0\%$, MAE $0.468$); methanimine (\leh{} LOMO $S_0$ yield $36.3\%$, $P_{S_1}$ MAE $0.283$ vs SC-NEVPT2 $55.0\%$ and adiabatic PBE0 $0.0\%$, MAE $0.518$); fulvene (\leh{} LOMO $S_0$ yield $58.7\%$, $P_{S_1}$ MAE $0.189$ vs SC-NEVPT2 $34.7\%$ and adiabatic PBE0 $0.0\%$, MAE $0.440$).
+
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Complete zero-manual-$\beta$ LOMO and single-molecule cross-transfer conical-intersection matrix (9/9 exact $\gamma=\pi$, 9/9 $\gamma=0$ controls, 0 negative gaps).} All PES errors evaluated vs SC-NEVPT2/def2-SVP.}
+\label{tab:s5}
+\scriptsize\sffamily
+\resizebox{\textwidth}{!}{\begin{tabular}{@{}llcccccc@{}}
+\toprule
+\textbf{Transfer Protocol} & \textbf{Unseen Target} & \textbf{$\beta_{\mathrm{coul}}$} & \textbf{2-Sheet MAE} & \textbf{Gap MAE} & \textbf{$x_g$-ray $R^2$} & \textbf{Encircling Loop $\gamma$} & \textbf{No-CI Control $\gamma$} \\
+\midrule
+LOMO (Met+Ful $\to$ Eth) & \textbf{Ethylene} & 0.716 & 0.2368 & 0.3797 & 0.9997 & $\pi$ ($-0.355$, $\min|S|=0.605$) & 0 ($+0.998$) \\
+LOMO (Eth+Ful $\to$ Met) & \textbf{Methanimine} & 0.662 & 0.1705 & 0.2372 & 0.9956 & $\pi$ ($-0.672$, $\min|S|=0.854$) & 0 ($+0.997$) \\
+LOMO (Eth+Met $\to$ Ful) & \textbf{Fulvene} & 0.716 & 0.0832 & 0.1650 & 0.9960 & $\pi$ ($-0.155$, $\min|S|=0.422$) & 0 ($+0.998$) \\
+Single (Eth $\to$ Met, Ful) & \textbf{Methanimine} & 0.660 & 0.1705 & 0.2371 & 0.9956 & $\pi$ ($-0.672$, $\min|S|=0.854$) & 0 ($+0.997$) \\
+Single (Eth $\to$ Met, Ful) & \textbf{Fulvene} & 0.660 & 0.0846 & 0.1682 & 0.9960 & $\pi$ ($-0.121$, $\min|S|=0.373$) & 0 ($+0.998$) \\
+Single (Met $\to$ Eth, Ful) & \textbf{Ethylene} & 0.754 & 0.2378 & 0.3833 & 0.9997 & $\pi$ ($-0.365$, $\min|S|=0.613$) & 0 ($+0.998$) \\
+Single (Met $\to$ Eth, Ful) & \textbf{Fulvene} & 0.754 & 0.0825 & 0.1632 & 0.9960 & $\pi$ ($-0.185$, $\min|S|=0.459$) & 0 ($+0.998$) \\
+Single (Ful $\to$ Eth, Met) & \textbf{Ethylene} & 0.664 & 0.2355 & 0.3750 & 0.9997 & $\pi$ ($-0.341$, $\min|S|=0.592$) & 0 ($+0.998$) \\
+Single (Ful $\to$ Eth, Met) & \textbf{Methanimine} & 0.664 & 0.1705 & 0.2373 & 0.9956 & $\pi$ ($-0.672$, $\min|S|=0.853$) & 0 ($+0.997$) \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+% ===========================================================================
+\section{Zero-Leak Adversarial Audit Certificate}
+% ===========================================================================
+
+All splits, theorems, caches, and headline statistics were independently verified by \texttt{src/lehmann\_tddft/audit.py} (full log in \texttt{results/audit\_report.md}):
+\begin{itemize}
+  \item \textbf{Zero Data Leakage:} 0 cross-fold InChIKey-14 duplicates across all 187 CV5 molecules; 0 train--test InChIKey-14 leaks across all 6 OOD splits (\texttt{OOD1}--\texttt{OOD3C}); 0 overlaps across the 23 novel external cores; 0 overlaps across all 520 generated, 320 screened, and 20 verified blind discovery candidates.
+  \item \textbf{Zero Coordinate Shortcut:} Random coordinate ($\sigma=50$\,\AA) and atomic-number scrambling changes trained v2.0 predictions by identically $0.000\times 10^0$\,eV.
+  \item \textbf{Exact Cache \& Statistical Synchronization:} 0 mismatches across all RI-EE-ADC(2), EOM-EE-CCSD, and SC-NEVPT2 raw caches (\texttt{rel\_diff = 0.0}).
+\end{itemize}
+
+\end{document}

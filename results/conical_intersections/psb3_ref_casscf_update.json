@@ -1,0 +1,13 @@
+{
+  "q_ref_casscf_meci": [
+    1.34,
+    0.04870817782633767,
+    90.06698258302045
+  ],
+  "ref_casscf_meci_gap_eV": 0.0034564975145932463,
+  "ref_nevpt2_meci_gap_eV": 0.367469228056263,
+  "heavy_atom_RMSD_vs_CASSCF_MECI_A": 0.0022929435271574756,
+  "all_atom_RMSD_vs_CASSCF_MECI_A": 0.003493960575535142,
+  "n_cas_evals": 28,
+  "wall_s": 640.7003626823425
+}

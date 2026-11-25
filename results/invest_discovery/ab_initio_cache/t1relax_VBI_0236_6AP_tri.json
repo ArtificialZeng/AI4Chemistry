@@ -1,0 +1,29 @@
+{
+  "mol_id": "VBI_0236_6AP_tri",
+  "ok": true,
+  "s0_opt_converged": true,
+  "t1_opt_converged": true,
+  "heavy_rmsd_xtb_vs_pbe0S0_A": 0.018,
+  "heavy_rmsd_pbe0S0_vs_pbe0T1_A": 0.0273,
+  "uks_T1_reorg_lambda_eV": 0.1367,
+  "rks_S0_strain_at_T1_eV": 0.2447,
+  "uks_spin_square_vert": 2.0111,
+  "uks_spin_square_opt": 2.0208,
+  "uks_E_T1_vert_eV": 3.189,
+  "uks_E_T1_adia_eV": 3.0523,
+  "adc2_at_pbe0_S0_geom": {
+    "E_S1_eV": 3.168323,
+    "E_T1_eV": 3.392065,
+    "dEST_eV": -0.223742,
+    "f_S1": 0.019216
+  },
+  "adc2_at_pbe0_T1_geom": {
+    "E_S1_eV": 2.925833,
+    "E_T1_eV": 2.99001,
+    "dEST_at_T1_geom_eV": -0.064177,
+    "f_S1_at_T1_geom": 0.035016
+  },
+  "s0_opt_xyz": "results/invest_discovery/relaxed_xyz/VBI_0236_6AP_tri_S0_pbe0.xyz",
+  "t1_opt_xyz": "results/invest_discovery/relaxed_xyz/VBI_0236_6AP_tri_T1_pbe0.xyz",
+  "total_time_s": 5876.8
+}

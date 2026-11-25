@@ -1,0 +1,167 @@
+{
+  "project": "Lehmann-TDDFT v2.0",
+  "status": "FROZEN_SUBMISSION_READY_ZERO_BLOCKERS",
+  "frozen_utc": "2026-11-25T18:32:19Z",
+  "audit_status": "0_LEAKS_0_BLOCKERS_12_OF_12_UNITTESTS_PASS",
+  "highlights_v2_final_freeze": {
+    "larger_basis_and_t1_relaxation": "25/25 strictly inverted (5AP + VBI-0089 + VBI-0210 + VBI-0069 + VBI-0236 across def2-SVP, aug-cc-pVDZ, def2-TZVP, DF-PBE0 S0 min, DF-UKS PBE0 T1 min)",
+    "conical_intersection_fssh": "3/3 LOMO branching-plane systems (Ethylene, Methanimine, Fulvene; 300 trajectories each, 50 fs, 0% negative-gap entries)",
+    "latex_build_hygiene": "0 errors, 0 warnings, 0 overfull hboxes for both main manuscript (17 pp.) and Supplementary Information (5 pp.)"
+  },
+  "external_upstream_datasets_excluded_from_git": {
+    "QUESTDB": {
+      "url": "https://github.com/pfloos/QUESTDB.git",
+      "commit": "1b184aec1ad435e3f0833ee23ebc7de564b69102"
+    },
+    "HEPTA-INVEST": {
+      "url": "https://github.com/varunrishi/HEPTA-INVEST.git",
+      "commit": "f0de90190f400686a374f66ca95d1371d242a627"
+    }
+  },
+  "deliverables": {
+    "README.md": {
+      "bytes": 7400,
+      "sha256": "2acfeeeb9ba9144ca588dbc54bc39a24bc66d45d3c119784bfb9d485e867f7e9"
+    },
+    ".gitignore": {
+      "bytes": 541,
+      "sha256": "7af580c26bbf6edffc008ca3bb4dd3bbd2d9cef6483f355087a285251138a6d0"
+    },
+    "manuscript/lehmann_tddft_nature.pdf": {
+      "bytes": 1337172,
+      "sha256": "4cf280ca2798b3f8bc1c5faf1eb32f1dc4131e962e424449dad4d6b2628e3c8a"
+    },
+    "manuscript/lehmann_tddft_nature.tex": {
+      "bytes": 84149,
+      "sha256": "da219c358eee4669a2cdb7ae1c56f6e8bc1e678013bcfed8e1841f7a52ffbea1"
+    },
+    "manuscript/lehmann_tddft_SI.pdf": {
+      "bytes": 743532,
+      "sha256": "ed03db6f855a3d15ac93cb0854372740abcf93fb5243a3e753355ea3eac5cc2c"
+    },
+    "manuscript/lehmann_tddft_SI.tex": {
+      "bytes": 30072,
+      "sha256": "c74ac640c3dfb0d2d75a6442fe74df5b5c772b006c23d992cec609f078713da5"
+    },
+    "manuscript/references.bib": {
+      "bytes": 42222,
+      "sha256": "eba95586501e1fb65a8bca61da2ea0964c98b3e125fc443b5855ecad56d8276a"
+    },
+    "manuscript/EXECUTIVE_SUMMARY.md": {
+      "bytes": 10937,
+      "sha256": "d2c7499a4f0949d18f50dac6f9345be0aa67c222878c30e21d7439217f3e04e4"
+    },
+    "manuscript/NATCOMPUTSCI-26-5124/cover_letter.pdf": {
+      "bytes": 77100,
+      "sha256": "e092e7c52e5f48dfd3df5b491752d4657029f8525ad89d2cf85d778f6f5df353"
+    },
+    "manuscript/NATCOMPUTSCI-26-5124/lehmann_tddft_nature_submission.pdf": {
+      "bytes": 1346043,
+      "sha256": "e2605b09a79a0de8e7adb5e00e1eeb0f4e100ba182a1acedce850136bd8f7b58"
+    },
+    "manuscript/NATCOMPUTSCI-26-5124/lehmann_tddft_SI.pdf": {
+      "bytes": 743532,
+      "sha256": "ed03db6f855a3d15ac93cb0854372740abcf93fb5243a3e753355ea3eac5cc2c"
+    },
+    "manuscript/NATCOMPUTSCI-26-5124/lehmann_tddft_source_for_review.zip": {
+      "bytes": 317432,
+      "sha256": "d7f126288c7f413f09208bd6d98b73d3f8c08b8f64aa6c3ed7c17433d68f43d1"
+    },
+    "results/audit_report.md": {
+      "bytes": 36557,
+      "sha256": "1603e3db5b45d535ca2a3eae83c4e67391df0d8658653ff1cd05fa79c0734944"
+    },
+    "results/audit_report.json": {
+      "bytes": 179340,
+      "sha256": "84f06331c1b4570f5192ba6a4fb5eb86b681b6522a764e9d5c1f973e243be17c"
+    },
+    "results/benchmarks/cv5_summary.json": {
+      "bytes": 13965,
+      "sha256": "023f8d5118266a7523effcf7115bac9a9a6a1c487a136e2da4011a5170dce073"
+    },
+    "results/benchmarks/matched_root_scaling.json": {
+      "bytes": 18859,
+      "sha256": "a3d89601996b4f2bc6a3fa113bff0abbfd7005a9b1d33276c36b6d600257fa2e"
+    },
+    "results/benchmarks/rydberg_def2svpd_proof.json": {
+      "bytes": 4177,
+      "sha256": "0beee9a93d3763a78cb924114f4a1b00cc5c5c57d1a6de074f45b710e8f898d0"
+    },
+    "results/benchmarks/blind_family_out_doubles.json": {
+      "bytes": 68150,
+      "sha256": "067bfa70dacbbc0eabff7bf707188d06b65a4055b907593e20ba0013f40f72bd"
+    },
+    "results/benchmarks/double_hybrid_baseline.json": {
+      "bytes": 842089,
+      "sha256": "d7d1f6d6cfed14bfdc984fc7031698956c60f18fc125d3c92aabe414e70c0ab9"
+    },
+    "results/conical_intersections/ci_lomo_transfer.json": {
+      "bytes": 175450,
+      "sha256": "328ecf15341e00521876560fcf69978d5c8b9ddc685d1edfb00a01d38c7594f4"
+    },
+    "results/conical_intersections/blind_meci_search.json": {
+      "bytes": 29875,
+      "sha256": "922af4c5b89de7dbba102adf8263241e83fb5015b09b6ed7d66b6561b0ac416f"
+    },
+    "results/conical_intersections/fssh_dynamics.json": {
+      "bytes": 1243778,
+      "sha256": "486064e229b18817ebf75daf689039c8f71861f60450ce0e25458dad7c6bf06c"
+    },
+    "results/invest_discovery/blind_verification_summary.json": {
+      "bytes": 58963,
+      "sha256": "9730567c7a98ca93a775336015ed654e0b8317075770d2bf0e0e9ae92b7cce2b"
+    },
+    "results/invest_discovery/nevpt2_triple_verification.json": {
+      "bytes": 23227,
+      "sha256": "9dd152011eddd39ada97cc6bf20f62e77a27ad60485f340f1926a054d38ca51f"
+    },
+    "results/invest_discovery/basis_and_adiabatic_check.json": {
+      "bytes": 25684,
+      "sha256": "edc695ac63e44fe4d7c9593b1c27759204382082e5b32250c6298f21a22b6fea"
+    },
+    "figures/fig1_framework_theorems.pdf": {
+      "bytes": 135538,
+      "sha256": "2803b76886f5c0d4afed393878c5aaf2b2586385ff50c63b12d3ed79074170a1"
+    },
+    "figures/fig2_questdb_doubles.pdf": {
+      "bytes": 122245,
+      "sha256": "f1b791fc9bbf52d92be9278ad3479ea4dbea6fe0de7c898d8e17dacd538d099b"
+    },
+    "figures/fig3_conical_intersections.pdf": {
+      "bytes": 133781,
+      "sha256": "23e371eb0ad21210c3db679d671691e17c5b50c1c61a143f366fdf265f7afc28"
+    },
+    "figures/fig4_invest_discovery.pdf": {
+      "bytes": 249262,
+      "sha256": "12c5bcd63c652de9b50266a3e9fb296e5f44d4e8b3335af3f9d371d7966e977b"
+    },
+    "figures/fig5_scaling_diagnostics.pdf": {
+      "bytes": 90612,
+      "sha256": "b966bd35f0d87ec8f8acbf5a61ab9ec49995aad9bac2bd4d7d74062b4f8004b2"
+    },
+    "figures/fig6_extended_ci_ablations.pdf": {
+      "bytes": 147913,
+      "sha256": "f82767ed5025d11e66ad7ba181e654c4e64ad5edffcc6f0c63cf0647ba3fd474"
+    },
+    "tests/test_lehmann_reproducibility.py": {
+      "bytes": 12887,
+      "sha256": "ea296c3792daa1075282a9cac89ec1ec376c1877bb8f8c2bea46cf26a5005ed3"
+    },
+    "scripts/make_figures.py": {
+      "bytes": 116222,
+      "sha256": "4eeeac5eca0ba11dc2ca677578bda2724e045cc841cbb75b05f0cd0fe6c2a8ad"
+    },
+    "scripts/build_supplementary_info.py": {
+      "bytes": 34289,
+      "sha256": "c9b52e2cbdacdde50c20d69b16f97726e95e9d50d1b4e45309f5635b51eff55b"
+    },
+    "src/lehmann_tddft/v2_triple_verification.py": {
+      "bytes": 34564,
+      "sha256": "1a36b1ff57fa3e5192598a502e446f21bc7e6a72c1aa94caa50ddb33ed149688"
+    },
+    "src/lehmann_tddft/fssh_dynamics.py": {
+      "bytes": 23835,
+      "sha256": "025f9b23af956891b3886c7376c1a9f31e1a3dc4f83fa8035a13a16b02bc3e79"
+    }
+  }
+}

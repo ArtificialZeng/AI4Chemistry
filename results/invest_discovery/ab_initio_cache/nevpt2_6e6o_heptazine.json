@@ -1,0 +1,53 @@
+{
+  "mol_id": "heptazine",
+  "method": "SA3-CASSCF(6,6)+SC-NEVPT2/def2-svp",
+  "ok": true,
+  "ncas": 6,
+  "nelecas": 6,
+  "basis": "def2-svp",
+  "n_ao": 197,
+  "casscf_converged": true,
+  "pi_weights_init_occ": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "pi_weights_init_vir": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "sa3_noons": [
+    1.9481,
+    1.93,
+    1.3181,
+    0.6763,
+    0.0705,
+    0.0571
+  ],
+  "spin_square_S0": 0.0,
+  "spin_square_S1": 0.0,
+  "spin_square_T1": 2.0,
+  "E_S0_casscf_ha": -609.66288694,
+  "E_S0_nevpt2_ha": -611.5010244,
+  "CASSCF_E_S1_eV": 2.996749,
+  "CASSCF_E_T1_eV": 3.294596,
+  "CASSCF_dEST_eV": -0.297847,
+  "E_S1_eV": 2.856504,
+  "E_T1_eV": 2.994452,
+  "dEST_eV": -0.137948,
+  "f_S1_casscf": 1.016034,
+  "f_S1_nevpt2_energy": 0.968485,
+  "S1_cas_exc_weights": {
+    "w0": 0.1117,
+    "w1_singles": 0.6607,
+    "w2_doubles": 0.1989,
+    "w3plus": 0.0288
+  },
+  "timings_s": {
+    "rhf": 17.93,
+    "casscf": 593.65,
+    "nevpt2": 66.99,
+    "total": 678.6
+  }
+}

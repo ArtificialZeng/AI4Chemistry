@@ -1,0 +1,52 @@
+{
+  "mol_id": "heptalene",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 218,
+  "n_occ_act": 29,
+  "n_vir_act": 177,
+  "n_core_frozen": 12,
+  "rhf_converged": true,
+  "e_rhf_ha": -459.81058006,
+  "rhf_hl_gap_eV": 8.721,
+  "E_S1_eV": 2.873091,
+  "E_T1_eV": 2.161956,
+  "dEST_eV": 0.711135,
+  "f_S1": 0.000641,
+  "pct_T1_S1": 90.842,
+  "pct_T2_S1": 9.158,
+  "pct_T1_T1": 93.4,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.10558414,
+      "energy_eV": 2.873091,
+      "pct_T1": 90.842,
+      "pct_T2": 9.158,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.000641,
+      "trans_dip_norm_au": 0.067455
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.0794504,
+      "energy_eV": 2.161956,
+      "pct_T1": 93.4,
+      "pct_T2": 6.6,
+      "converged": true,
+      "iters": 3
+    }
+  ],
+  "timings_s": {
+    "rhf": 15.37,
+    "build_M11": 30.87,
+    "singlet": 68.84,
+    "triplet": 36.76,
+    "total": 151.84
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "n_matched_molecules": 64,
+  "matched_mol_ids": [
+    "quest_Acetone",
+    "quest_Acrolein",
+    "quest_Ammonia",
+    "quest_Aniline",
+    "quest_Benzene",
+    "quest_Benzonitrile",
+    "quest_Benzoquinone",
+    "quest_Beryllium",
+    "quest_Borole",
+    "quest_Butadiene",
+    "quest_Carbon_dioxyde",
+    "quest_Carbon_monoxide",
+    "quest_Carbonic_acid",
+    "quest_Chlorobenzene",
+    "quest_Cyclopentadiene",
+    "quest_Cyclopentadienone",
+    "quest_Cyclopropene",
+    "quest_Cyclopropenethione",
+    "quest_Cyclopropenone",
+    "quest_Cytosine",
+    "quest_Diazete",
+    "quest_Diazirine",
+    "quest_Diazomethane",
+    "quest_Difluorodiazirine",
+    "quest_Dinitrogen",
+    "quest_Ethylene",
+    "quest_Fluorobenzene",
+    "quest_Formaldehyde",
+    "quest_Formamide",
+    "quest_Furan",
+    "quest_Furofuran",
+    "quest_Glyoxal",
+    "quest_HNC",
+    "quest_Hexatriene",
+    "quest_Hydrogen_peroxide",
+    "quest_Hydrogen_sulfide",
+    "quest_Imidazole",
+    "quest_Isobutene",
+    "quest_Ketene",
+    "quest_Maleimide",
+    "quest_Methylenecyclopropene",
+    "quest_Nitrosomethane",
+    "quest_Nitrous_acid",
+    "quest_Nitrous_oxide",
+    "quest_Nitroxyl",
+    "quest_Oxalyl_fluoride",
+    "quest_Phenol",
+    "quest_Phenolate",
+    "quest_Pyranone",
+    "quest_Pyrazine",
+    "quest_Pyridazine",
+    "quest_Pyridine",
+    "quest_Pyrimidine",
+    "quest_Pyrrole",
+    "quest_PyrroloPyrrole",
+    "quest_Tetrazine",
+    "quest_Thienothiophene",
+    "quest_Thioacetone",
+    "quest_Thioformaldehyde",
+    "quest_Thiophene",
+    "quest_Triazapentalene",
+    "quest_Triazine",
+    "quest_Uracil",
+    "quest_Water"
+  ],
+  "Rydberg_states": {
+    "n_states": 233,
+    "Lehmann_def2SVP": {
+      "mean": 0.5065025098661496,
+      "ci95_low": 0.4387885764126103,
+      "ci95_high": 0.5784640400409699,
+      "n": 233
+    },
+    "Lehmann_def2SVPD": {
+      "mean": 0.2217671336800244,
+      "ci95_low": 0.19163626767330408,
+      "ci95_high": 0.2537450163740968,
+      "n": 233
+    },
+    "reduction_factor_SVP_over_SVPD": 2.283938568629174,
+    "wilcoxon_p_SVPD_vs_SVP": 1.7810340950439883e-17,
+    "Bare_TDA_def2SVP_MAE_eV": 0.9398229469659503,
+    "Bare_TDA_def2SVPD_MAE_eV": 0.41043949073169367
+  },
+  "Valence_states": {
+    "n_states": 403,
+    "Lehmann_def2SVP": {
+      "mean": 0.17773628942404432,
+      "ci95_low": 0.15859766812158288,
+      "ci95_high": 0.1982726253907556,
+      "n": 403
+    },
+    "Lehmann_def2SVPD": {
+      "mean": 0.13238129282447303,
+      "ci95_low": 0.11725742175705672,
+      "ci95_high": 0.14826230846149446,
+      "n": 403
+    },
+    "reduction_factor_SVP_over_SVPD": 1.3426088054579461,
+    "wilcoxon_p_SVPD_vs_SVP": 3.576293933629724e-07,
+    "Bare_TDA_def2SVP_MAE_eV": 0.41017167347185035,
+    "Bare_TDA_def2SVPD_MAE_eV": 0.29708872312952456
+  },
+  "All_states": {
+    "n_states": 643,
+    "Lehmann_def2SVP": {
+      "mean": 0.3031482076925216,
+      "ci95_low": 0.27216641832495553,
+      "ci95_high": 0.33753396210227377,
+      "n": 643
+    },
+    "Lehmann_def2SVPD": {
+      "mean": 0.1666766154990782,
+      "ci95_low": 0.15149625428651398,
+      "ci95_high": 0.1826406760776321,
+      "n": 643
+    },
+    "reduction_factor_SVP_over_SVPD": 1.8187806776901956,
+    "wilcoxon_p_SVPD_vs_SVP": 3.6904133264868116e-21,
+    "Bare_TDA_def2SVP_MAE_eV": 0.6193416619407219,
+    "Bare_TDA_def2SVPD_MAE_eV": 0.3429649551657173
+  },
+  "Phenolate_anion_states": {
+    "n_states": 9,
+    "Lehmann_def2SVP": {
+      "mean": 1.1950369387732611,
+      "ci95_low": 0.6999318848556946,
+      "ci95_high": 1.7357095798704356,
+      "n": 9
+    },
+    "Lehmann_def2SVPD": {
+      "mean": 0.9207036206987169,
+      "ci95_low": 0.6377526389227977,
+      "ci95_high": 1.2053342477586533,
+      "n": 9
+    },
+    "reduction_factor_SVP_over_SVPD": 1.297960507493556,
+    "wilcoxon_p_SVPD_vs_SVP": 0.8203125,
+    "Bare_TDA_def2SVP_MAE_eV": 2.1292109201219347,
+    "Bare_TDA_def2SVPD_MAE_eV": 1.366384265475803
+  },
+  "Phenolate_S1": {
+    "ref_S1_eV": 2.6100000000000003,
+    "def2SVP_pred_S1_eV": 3.7618789672851562,
+    "def2SVPD_pred_S1_eV": 3.6072371006011963,
+    "def2SVP_err_eV": 1.151878967285156,
+    "def2SVPD_err_eV": 0.997237100601196
+  }
+}

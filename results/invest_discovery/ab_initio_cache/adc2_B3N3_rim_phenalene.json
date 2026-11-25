@@ -1,0 +1,52 @@
+{
+  "mol_id": "B3N3_rim_phenalene",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 227,
+  "n_occ_act": 31,
+  "n_vir_act": 183,
+  "n_core_frozen": 13,
+  "rhf_converged": true,
+  "e_rhf_ha": -524.06375743,
+  "rhf_hl_gap_eV": 10.1865,
+  "E_S1_eV": 3.621009,
+  "E_T1_eV": 3.44223,
+  "dEST_eV": 0.178779,
+  "f_S1": 0.0,
+  "pct_T1_S1": 90.368,
+  "pct_T2_S1": 9.632,
+  "pct_T1_T1": 93.283,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.13306962,
+      "energy_eV": 3.621009,
+      "pct_T1": 90.368,
+      "pct_T2": 9.632,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.0,
+      "trans_dip_norm_au": 1e-06
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.12649961,
+      "energy_eV": 3.44223,
+      "pct_T1": 93.283,
+      "pct_T2": 6.717,
+      "converged": true,
+      "iters": 3
+    }
+  ],
+  "timings_s": {
+    "rhf": 20.57,
+    "build_M11": 40.27,
+    "singlet": 129.66,
+    "triplet": 83.64,
+    "total": 274.14
+  }
+}

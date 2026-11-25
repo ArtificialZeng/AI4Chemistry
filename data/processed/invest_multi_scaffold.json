@@ -1,0 +1,2893 @@
+{
+  "description": "Multi-scaffold experimental & high-level INVEST benchmark for Lehmann-TDDFT Pillar 3",
+  "n_molecules": 34,
+  "family_counts": {
+    "experimental_invest": 9,
+    "azaphenalene_nonhept": 8,
+    "bn_triangulene": 7,
+    "non_alternant": 10
+  },
+  "geometry_method": "RDKit ETKDGv3 + tblite GFN2-xTB (ASE BFGS fmax=0.02 eV/A)",
+  "molecules": [
+    {
+      "mol_id": "5AP",
+      "name": "1,3,4,6,9b-Pentaazaphenalene (5AP)",
+      "family": "experimental_invest",
+      "symmetry_class": "C2v",
+      "lit_ref": {
+        "source": "Wilson et al. JACS 2024",
+        "exp_dEST_eV": -0.047,
+        "exp_dEST_err_eV": 0.007,
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC2=NC=NC3=NC=NC(=C1)N23",
+      "inchikey": "QIYNFQCKZJNEJE-UHFFFAOYSA-N",
+      "inchikey_14": "QIYNFQCKZJNEJE",
+      "formula": "C8H5N5",
+      "n_heavy": 13,
+      "n_atoms": 18,
+      "n_electrons": 88,
+      "mw": 171.163,
+      "qed": 0.5243,
+      "sa_score": 4.517,
+      "xyz_path": "data/processed/invest_xyz/5AP.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -934.021445,
+      "gfn2_xtb_fmax_eV_A": 0.01592,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 3.8595,
+      "opt_time_s": 3.705,
+      "adc2_def2svp": {
+        "mol_id": "5AP",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 207,
+        "n_occ_act": 31,
+        "n_vir_act": 163,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -577.65966788,
+        "rhf_hl_gap_eV": 8.9987,
+        "E_S1_eV": 2.13153,
+        "E_T1_eV": 2.320721,
+        "dEST_eV": -0.189191,
+        "f_S1": 0.00198,
+        "pct_T1_S1": 88.994,
+        "pct_T2_S1": 11.006,
+        "pct_T1_T1": 90.52,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.07833227,
+            "energy_eV": 2.13153,
+            "pct_T1": 88.994,
+            "pct_T2": 11.006,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.00198,
+            "trans_dip_norm_au": 0.137703
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.08528493,
+            "energy_eV": 2.320721,
+            "pct_T1": 90.52,
+            "pct_T2": 9.48,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 11.89,
+          "build_M11": 26.9,
+          "singlet": 143.66,
+          "triplet": 78.41,
+          "total": 260.86
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "5AP",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 207,
+        "n_core_frozen": 13,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -579.48091809,
+        "E_S1_eV": 2.265165,
+        "E_T1_eV": 2.365997,
+        "dEST_eV": -0.100832,
+        "f_S1_R1": 0.004075,
+        "pct_R1_S1": 91.382,
+        "pct_R1_T1": 91.065,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.08324329,
+            "energy_eV": 2.265165,
+            "pct_R1": 91.382,
+            "osc_f_R1": 0.004075
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.08694879,
+            "energy_eV": 2.365997,
+            "pct_R1": 91.065
+          }
+        ],
+        "timings_s": {
+          "rhf": 68.29,
+          "ccsd": 2209.69,
+          "eom_s": 1282.97,
+          "eom_t": 1527.49,
+          "total": 5091.22
+        }
+      }
+    },
+    {
+      "mol_id": "cyclazine",
+      "name": "Cycl[3.3.3]azine (9b-Azaphenalene)",
+      "family": "experimental_invest",
+      "symmetry_class": "D3h",
+      "lit_ref": {
+        "source": "QUESTDB TBE / Leupin 1980",
+        "questdb_TBE_dEST_eV": -0.131,
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC2=CC=CC3=CC=CC(=C1)N23",
+      "inchikey": "NYGOXVYQBYCRRU-UHFFFAOYSA-N",
+      "inchikey_14": "NYGOXVYQBYCRRU",
+      "formula": "C12H9N",
+      "n_heavy": 13,
+      "n_atoms": 22,
+      "n_electrons": 88,
+      "mw": 167.211,
+      "qed": 0.5358,
+      "sa_score": 3.9213,
+      "xyz_path": "data/processed/invest_xyz/cyclazine.xyz",
+      "source_geom": "questdb_ccsd_t_init",
+      "gfn2_xtb_energy_eV": -903.302386,
+      "gfn2_xtb_fmax_eV_A": 0.01652,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0003,
+      "opt_time_s": 2.296,
+      "adc2_def2svp": {
+        "mol_id": "cyclazine",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 227,
+        "n_occ_act": 31,
+        "n_vir_act": 183,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -513.68888396,
+        "rhf_hl_gap_eV": 7.1956,
+        "E_S1_eV": 1.092257,
+        "E_T1_eV": 1.263067,
+        "dEST_eV": -0.17081,
+        "f_S1": 0.0,
+        "pct_T1_S1": 89.354,
+        "pct_T2_S1": 10.646,
+        "pct_T1_T1": 90.672,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.0401397,
+            "energy_eV": 1.092257,
+            "pct_T1": 89.354,
+            "pct_T2": 10.646,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 9e-06
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.04641686,
+            "energy_eV": 1.263067,
+            "pct_T1": 90.672,
+            "pct_T2": 9.328,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 18.74,
+          "build_M11": 58.52,
+          "singlet": 150.58,
+          "triplet": 86.69,
+          "total": 314.54
+        }
+      }
+    },
+    {
+      "mol_id": "heptazine",
+      "name": "Heptazine (1,3,4,6,7,9,9b-Heptaazaphenalene)",
+      "family": "experimental_invest",
+      "symmetry_class": "D3h",
+      "lit_ref": {
+        "source": "QUESTDB TBE / HEPTA-INVEST",
+        "questdb_TBE_dEST_eV": -0.219,
+        "hepta_eom_dEST_eV": -0.1729,
+        "run_ab_initio": true
+      },
+      "smiles": "C1=NC2=NC=NC3=NC=NC(=N1)N23",
+      "inchikey": "DKZXTOPFCDDGGX-UHFFFAOYSA-N",
+      "inchikey_14": "DKZXTOPFCDDGGX",
+      "formula": "C6H3N7",
+      "n_heavy": 13,
+      "n_atoms": 16,
+      "n_electrons": 88,
+      "mw": 173.139,
+      "qed": 0.4852,
+      "sa_score": 4.7504,
+      "xyz_path": "data/processed/invest_xyz/heptazine.xyz",
+      "source_geom": "questdb_ccsd_t_init",
+      "gfn2_xtb_energy_eV": -949.026275,
+      "gfn2_xtb_fmax_eV_A": 0.01419,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0,
+      "opt_time_s": 1.622,
+      "adc2_def2svp": {
+        "mol_id": "heptazine",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 197,
+        "n_occ_act": 31,
+        "n_vir_act": 153,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -609.63143895,
+        "rhf_hl_gap_eV": 10.1744,
+        "E_S1_eV": 2.610147,
+        "E_T1_eV": 2.902423,
+        "dEST_eV": -0.292276,
+        "f_S1": 0.0,
+        "pct_T1_S1": 88.736,
+        "pct_T2_S1": 11.264,
+        "pct_T1_T1": 90.052,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.09592112,
+            "energy_eV": 2.610147,
+            "pct_T1": 88.736,
+            "pct_T2": 11.264,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 0.0
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.10666209,
+            "energy_eV": 2.902423,
+            "pct_T1": 90.052,
+            "pct_T2": 9.948,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 11.51,
+          "build_M11": 22.78,
+          "singlet": 112.5,
+          "triplet": 60.56,
+          "total": 207.34
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "heptazine",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 197,
+        "n_core_frozen": 13,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -611.48087246,
+        "E_S1_eV": 2.796052,
+        "E_T1_eV": 2.993388,
+        "dEST_eV": -0.197336,
+        "f_S1_R1": 0.0,
+        "pct_R1_S1": 91.271,
+        "pct_R1_T1": 90.605,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.10275303,
+            "energy_eV": 2.796052,
+            "pct_R1": 91.271,
+            "osc_f_R1": 0.0
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.11000499,
+            "energy_eV": 2.993388,
+            "pct_R1": 90.605
+          }
+        ],
+        "timings_s": {
+          "rhf": 210.73,
+          "ccsd": 1205.79,
+          "eom_s": 904.89,
+          "eom_t": 818.39,
+          "total": 3140.61
+        }
+      }
+    },
+    {
+      "mol_id": "melem",
+      "name": "Melem (2,5,8-Triaminoheptazine)",
+      "family": "experimental_invest",
+      "symmetry_class": "D3h",
+      "lit_ref": {
+        "source": "HEPTA-INVEST (2T-7N-NH2-NH2-NH2)",
+        "hepta_eom_dEST_eV": -0.2698,
+        "run_ab_initio": true
+      },
+      "smiles": "NC1=NC2=NC(N)=NC3=NC(N)=NC(=N1)N23",
+      "inchikey": "YSRVJVDFHZYRPA-UHFFFAOYSA-N",
+      "inchikey_14": "YSRVJVDFHZYRPA",
+      "formula": "C6H6N10",
+      "n_heavy": 16,
+      "n_atoms": 22,
+      "n_electrons": 112,
+      "mw": 218.184,
+      "qed": 0.4052,
+      "sa_score": 4.0399,
+      "xyz_path": "data/processed/invest_xyz/melem.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -1231.686177,
+      "gfn2_xtb_fmax_eV_A": 0.01789,
+      "planarity_rmsd_A": 0.0044,
+      "gfn2_dipole_debye": 0.1784,
+      "opt_time_s": 12.252,
+      "adc2_def2svp": {
+        "mol_id": "melem",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 254,
+        "n_occ_act": 40,
+        "n_vir_act": 198,
+        "n_core_frozen": 16,
+        "rhf_converged": true,
+        "e_rhf_ha": -774.71306811,
+        "rhf_hl_gap_eV": 11.8037,
+        "E_S1_eV": 3.815893,
+        "E_T1_eV": 4.425516,
+        "dEST_eV": -0.609623,
+        "f_S1": 0.0,
+        "pct_T1_S1": 88.95,
+        "pct_T2_S1": 11.05,
+        "pct_T1_T1": 91.465,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.14023148,
+            "energy_eV": 3.815893,
+            "pct_T1": 88.95,
+            "pct_T2": 11.05,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 0.001507
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.16263471,
+            "energy_eV": 4.425516,
+            "pct_T1": 91.465,
+            "pct_T2": 8.535,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 32.24,
+          "build_M11": 116.61,
+          "singlet": 235.59,
+          "triplet": 259.53,
+          "total": 643.99
+        }
+      }
+    },
+    {
+      "mol_id": "HzTFEX2_core",
+      "name": "2-(2,2,2-Trifluoroethoxy)-5,8-dimethylheptazine (HzTFEX2 core model)",
+      "family": "experimental_invest",
+      "symmetry_class": "Cs",
+      "lit_ref": {
+        "source": "Compact electronic core of Aizawa Nature 2022 HzTFEX2",
+        "run_ab_initio": false
+      },
+      "smiles": "CC1=NC2=NC(C)=NC3=NC(OCC(F)(F)F)=NC(=N1)N23",
+      "inchikey": "QVRYJKFJIVJSHR-UHFFFAOYSA-N",
+      "inchikey_14": "QVRYJKFJIVJSHR",
+      "formula": "C10H8F3N7O",
+      "n_heavy": 21,
+      "n_atoms": 29,
+      "n_electrons": 152,
+      "mw": 299.216,
+      "qed": 0.7273,
+      "sa_score": 4.1119,
+      "xyz_path": "data/processed/invest_xyz/HzTFEX2_core.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -1750.391225,
+      "gfn2_xtb_fmax_eV_A": 0.01342,
+      "planarity_rmsd_A": 0.3317,
+      "gfn2_dipole_debye": 4.4712,
+      "opt_time_s": 7.967
+    },
+    {
+      "mol_id": "HzTFE3_model",
+      "name": "2,5,8-Trimethoxyheptazine (HzTFE3 compact model)",
+      "family": "experimental_invest",
+      "symmetry_class": "C3h",
+      "lit_ref": {
+        "source": "Compact electronic core of Liu JPCC 2026 HzTFE3",
+        "run_ab_initio": false
+      },
+      "smiles": "COC1=NC2=NC(OC)=NC3=NC(OC)=NC(=N1)N23",
+      "inchikey": "JQSQVJAMBLYEDY-UHFFFAOYSA-N",
+      "inchikey_14": "JQSQVJAMBLYEDY",
+      "formula": "C9H9N7O3",
+      "n_heavy": 19,
+      "n_atoms": 28,
+      "n_electrons": 136,
+      "mw": 263.217,
+      "qed": 0.5816,
+      "sa_score": 4.1038,
+      "xyz_path": "data/processed/invest_xyz/HzTFE3_model.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -1541.286595,
+      "gfn2_xtb_fmax_eV_A": 0.0198,
+      "planarity_rmsd_A": 0.0002,
+      "gfn2_dipole_debye": 0.005,
+      "opt_time_s": 7.916
+    },
+    {
+      "mol_id": "HzDA3",
+      "name": "2,5,8-Tris(dimethylamino)heptazine (HzDA3)",
+      "family": "experimental_invest",
+      "symmetry_class": "D3h",
+      "lit_ref": {
+        "source": "Liu et al. JPCC 2026",
+        "lit_eom_dEST_eV": -0.244,
+        "exp_tau_DF_ns": 76,
+        "run_ab_initio": false
+      },
+      "smiles": "CN(C)C1=NC2=NC(N(C)C)=NC3=NC(N(C)C)=NC(=N1)N23",
+      "inchikey": "IXVWDBFJHFWWGN-UHFFFAOYSA-N",
+      "inchikey_14": "IXVWDBFJHFWWGN",
+      "formula": "C12H18N10",
+      "n_heavy": 22,
+      "n_atoms": 40,
+      "n_electrons": 160,
+      "mw": 302.346,
+      "qed": 0.583,
+      "sa_score": 4.0178,
+      "xyz_path": "data/processed/invest_xyz/HzDA3.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -1749.273617,
+      "gfn2_xtb_fmax_eV_A": 0.01787,
+      "planarity_rmsd_A": 0.0586,
+      "gfn2_dipole_debye": 0.2799,
+      "opt_time_s": 37.105
+    },
+    {
+      "mol_id": "HzTFE3",
+      "name": "2,5,8-Tris(2,2,2-trifluoroethoxy)heptazine (HzTFE3)",
+      "family": "experimental_invest",
+      "symmetry_class": "C3",
+      "lit_ref": {
+        "source": "Liu et al. JPCC 2026",
+        "lit_eom_dEST_eV": -0.238,
+        "exp_tau_DF_ns": 341,
+        "run_ab_initio": false
+      },
+      "smiles": "FC(F)(F)COC1=NC2=NC(OCC(F)(F)F)=NC3=NC(OCC(F)(F)F)=NC(=N1)N23",
+      "inchikey": "QJQTYAZUHRBZLW-UHFFFAOYSA-N",
+      "inchikey_14": "QJQTYAZUHRBZLW",
+      "formula": "C12H6F9N7O3",
+      "n_heavy": 31,
+      "n_atoms": 37,
+      "n_electrons": 232,
+      "mw": 467.208,
+      "qed": 0.5939,
+      "sa_score": 3.9141,
+      "xyz_path": "data/processed/invest_xyz/HzTFE3.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -2834.020688,
+      "gfn2_xtb_fmax_eV_A": 0.01858,
+      "planarity_rmsd_A": 0.4726,
+      "gfn2_dipole_debye": 0.0077,
+      "opt_time_s": 17.254
+    },
+    {
+      "mol_id": "HzTFEX2",
+      "name": "2-(2,2,2-Trifluoroethoxy)-5,8-bis(2,4-xylyl)heptazine (HzTFEX2)",
+      "family": "experimental_invest",
+      "symmetry_class": "C1",
+      "lit_ref": {
+        "source": "Aizawa et al. Nature 2022",
+        "exp_dEST_eV": -0.011,
+        "run_ab_initio": false
+      },
+      "smiles": "Cc1ccc(C2=NC3=NC(OCC(F)(F)F)=NC4=NC(c5ccc(C)cc5C)=NC(=N2)N34)c(C)c1",
+      "inchikey": "MVDYWGQVSFSDEL-UHFFFAOYSA-N",
+      "inchikey_14": "MVDYWGQVSFSDEL",
+      "formula": "C24H20F3N7O",
+      "n_heavy": 35,
+      "n_atoms": 55,
+      "n_electrons": 248,
+      "mw": 479.466,
+      "qed": 0.651,
+      "sa_score": 3.6158,
+      "xyz_path": "data/processed/invest_xyz/HzTFEX2.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -2733.266222,
+      "gfn2_xtb_fmax_eV_A": 0.01967,
+      "planarity_rmsd_A": 0.387,
+      "gfn2_dipole_debye": 6.6541,
+      "opt_time_s": 36.719
+    },
+    {
+      "mol_id": "2N_1_9b",
+      "name": "1,9b-Diazaphenalene",
+      "family": "azaphenalene_nonhept",
+      "symmetry_class": "Cs",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC2=CC=CC3=CC=NC(=C1)N23",
+      "inchikey": "KHIDMFKWCYMIAR-UHFFFAOYSA-N",
+      "inchikey_14": "KHIDMFKWCYMIAR",
+      "formula": "C11H8N2",
+      "n_heavy": 13,
+      "n_atoms": 21,
+      "n_electrons": 88,
+      "mw": 168.199,
+      "qed": 0.5406,
+      "sa_score": 4.158,
+      "xyz_path": "data/processed/invest_xyz/2N_1_9b.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -911.000768,
+      "gfn2_xtb_fmax_eV_A": 0.01443,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 2.4061,
+      "opt_time_s": 6.078,
+      "adc2_def2svp": {
+        "mol_id": "2N_1_9b",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 222,
+        "n_occ_act": 31,
+        "n_vir_act": 178,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -529.68257557,
+        "rhf_hl_gap_eV": 7.6721,
+        "E_S1_eV": 1.409659,
+        "E_T1_eV": 1.539293,
+        "dEST_eV": -0.129634,
+        "f_S1": 0.000479,
+        "pct_T1_S1": 89.273,
+        "pct_T2_S1": 10.727,
+        "pct_T1_T1": 90.718,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.05180402,
+            "energy_eV": 1.409659,
+            "pct_T1": 89.273,
+            "pct_T2": 10.727,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.000479,
+            "trans_dip_norm_au": 0.083269
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.05656798,
+            "energy_eV": 1.539293,
+            "pct_T1": 90.718,
+            "pct_T2": 9.282,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 18.83,
+          "build_M11": 28.88,
+          "singlet": 107.9,
+          "triplet": 100.23,
+          "total": 255.85
+        }
+      }
+    },
+    {
+      "mol_id": "3N_1_3_9b",
+      "name": "1,3,9b-Triazaphenalene",
+      "family": "azaphenalene_nonhept",
+      "symmetry_class": "C2v",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC2=CC=CC3=NC=NC(=C1)N23",
+      "inchikey": "IBWYLWCEMXYSCN-UHFFFAOYSA-N",
+      "inchikey_14": "IBWYLWCEMXYSCN",
+      "formula": "C10H7N3",
+      "n_heavy": 13,
+      "n_atoms": 20,
+      "n_electrons": 88,
+      "mw": 169.187,
+      "qed": 0.5409,
+      "sa_score": 4.2406,
+      "xyz_path": "data/processed/invest_xyz/3N_1_3_9b.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -918.774242,
+      "gfn2_xtb_fmax_eV_A": 0.01737,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 3.6067,
+      "opt_time_s": 7.158,
+      "adc2_def2svp": {
+        "mol_id": "3N_1_3_9b",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 217,
+        "n_occ_act": 31,
+        "n_vir_act": 173,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -545.67923752,
+        "rhf_hl_gap_eV": 8.0735,
+        "E_S1_eV": 1.634296,
+        "E_T1_eV": 1.796751,
+        "dEST_eV": -0.162455,
+        "f_S1": 0.001978,
+        "pct_T1_S1": 89.166,
+        "pct_T2_S1": 10.834,
+        "pct_T1_T1": 90.613,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.06005926,
+            "energy_eV": 1.634296,
+            "pct_T1": 89.166,
+            "pct_T2": 10.834,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.001978,
+            "trans_dip_norm_au": 0.157145
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.06602938,
+            "energy_eV": 1.796751,
+            "pct_T1": 90.613,
+            "pct_T2": 9.387,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 13.9,
+          "build_M11": 35.59,
+          "singlet": 121.96,
+          "triplet": 92.41,
+          "total": 263.86
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "3N_1_3_9b",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 217,
+        "n_core_frozen": 13,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -547.47173635,
+        "E_S1_eV": 1.722262,
+        "E_T1_eV": 1.814326,
+        "dEST_eV": -0.092064,
+        "f_S1_R1": 0.003777,
+        "pct_R1_S1": 91.484,
+        "pct_R1_T1": 91.131,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.06329194,
+            "energy_eV": 1.722262,
+            "pct_R1": 91.484,
+            "osc_f_R1": 0.003777
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.06667526,
+            "energy_eV": 1.814326,
+            "pct_R1": 91.131
+          }
+        ],
+        "timings_s": {
+          "rhf": 99.41,
+          "ccsd": 1431.13,
+          "eom_s": 816.29,
+          "eom_t": 1299.13,
+          "total": 3646.61
+        }
+      }
+    },
+    {
+      "mol_id": "3N_1_4_9b",
+      "name": "1,4,9b-Triazaphenalene",
+      "family": "azaphenalene_nonhept",
+      "symmetry_class": "Cs",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC2=CC=NC3=CC=NC(=C1)N23",
+      "inchikey": "IVPLGOXOOGXJFJ-UHFFFAOYSA-N",
+      "inchikey_14": "IVPLGOXOOGXJFJ",
+      "formula": "C10H7N3",
+      "n_heavy": 13,
+      "n_atoms": 20,
+      "n_electrons": 88,
+      "mw": 169.187,
+      "qed": 0.5409,
+      "sa_score": 4.3946,
+      "xyz_path": "data/processed/invest_xyz/3N_1_4_9b.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -918.666332,
+      "gfn2_xtb_fmax_eV_A": 0.01809,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 2.4141,
+      "opt_time_s": 4.207,
+      "adc2_def2svp": {
+        "mol_id": "3N_1_4_9b",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 217,
+        "n_occ_act": 31,
+        "n_vir_act": 173,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -545.67519493,
+        "rhf_hl_gap_eV": 8.1838,
+        "E_S1_eV": 1.75237,
+        "E_T1_eV": 1.835358,
+        "dEST_eV": -0.082988,
+        "f_S1": 0.000479,
+        "pct_T1_S1": 89.229,
+        "pct_T2_S1": 10.771,
+        "pct_T1_T1": 90.827,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.06439842,
+            "energy_eV": 1.75237,
+            "pct_T1": 89.229,
+            "pct_T2": 10.771,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.000479,
+            "trans_dip_norm_au": 0.074656
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.06744817,
+            "energy_eV": 1.835358,
+            "pct_T1": 90.827,
+            "pct_T2": 9.173,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 19.39,
+          "build_M11": 31.38,
+          "singlet": 125.52,
+          "triplet": 104.8,
+          "total": 281.09
+        }
+      }
+    },
+    {
+      "mol_id": "4N_1_4_7_9b",
+      "name": "1,4,7,9b-Tetraazaphenalene (4AP)",
+      "family": "azaphenalene_nonhept",
+      "symmetry_class": "C3h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=NC2=CC=NC3=CC=NC(=C1)N23",
+      "inchikey": "WSDSSINLQPHRND-UHFFFAOYSA-N",
+      "inchikey_14": "WSDSSINLQPHRND",
+      "formula": "C9H6N4",
+      "n_heavy": 13,
+      "n_atoms": 19,
+      "n_electrons": 88,
+      "mw": 170.175,
+      "qed": 0.5356,
+      "sa_score": 4.6313,
+      "xyz_path": "data/processed/invest_xyz/4N_1_4_7_9b.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -926.293193,
+      "gfn2_xtb_fmax_eV_A": 0.01259,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0,
+      "opt_time_s": 3.684,
+      "adc2_def2svp": {
+        "mol_id": "4N_1_4_7_9b",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 212,
+        "n_occ_act": 31,
+        "n_vir_act": 168,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -561.66617074,
+        "rhf_hl_gap_eV": 8.7148,
+        "E_S1_eV": 2.07677,
+        "E_T1_eV": 2.130711,
+        "dEST_eV": -0.053941,
+        "f_S1": 0.0,
+        "pct_T1_S1": 89.174,
+        "pct_T2_S1": 10.826,
+        "pct_T1_T1": 90.88,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.07631989,
+            "energy_eV": 2.07677,
+            "pct_T1": 89.174,
+            "pct_T2": 10.826,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 1e-06
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.07830217,
+            "energy_eV": 2.130711,
+            "pct_T1": 90.88,
+            "pct_T2": 9.12,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 15.3,
+          "build_M11": 23.59,
+          "singlet": 107.92,
+          "triplet": 90.25,
+          "total": 237.06
+        }
+      }
+    },
+    {
+      "mol_id": "4N_1_3_7_9b",
+      "name": "1,3,7,9b-Tetraazaphenalene",
+      "family": "azaphenalene_nonhept",
+      "symmetry_class": "Cs",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC2=NC=NC3=CC=NC(=C1)N32",
+      "inchikey": "MAEGTYLEMVJXMV-UHFFFAOYSA-N",
+      "inchikey_14": "MAEGTYLEMVJXMV",
+      "formula": "C9H6N4",
+      "n_heavy": 13,
+      "n_atoms": 19,
+      "n_electrons": 88,
+      "mw": 170.175,
+      "qed": 0.5356,
+      "sa_score": 4.4773,
+      "xyz_path": "data/processed/invest_xyz/4N_1_3_7_9b.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -926.369628,
+      "gfn2_xtb_fmax_eV_A": 0.01819,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 1.4595,
+      "opt_time_s": 3.806,
+      "adc2_def2svp": {
+        "mol_id": "4N_1_3_7_9b",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 212,
+        "n_occ_act": 31,
+        "n_vir_act": 168,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -561.66877891,
+        "rhf_hl_gap_eV": 8.5828,
+        "E_S1_eV": 1.879808,
+        "E_T1_eV": 2.057262,
+        "dEST_eV": -0.177454,
+        "f_S1": 0.000443,
+        "pct_T1_S1": 89.081,
+        "pct_T2_S1": 10.919,
+        "pct_T1_T1": 90.532,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.06908167,
+            "energy_eV": 1.879808,
+            "pct_T1": 89.081,
+            "pct_T2": 10.919,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.000443,
+            "trans_dip_norm_au": 0.069319
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.07560298,
+            "energy_eV": 2.057262,
+            "pct_T1": 90.532,
+            "pct_T2": 9.468,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 14.54,
+          "build_M11": 33.29,
+          "singlet": 115.6,
+          "triplet": 88.09,
+          "total": 251.51
+        }
+      }
+    },
+    {
+      "mol_id": "5N_1_3_4_7_9b",
+      "name": "1,3,4,7,9b-Pentaazaphenalene (5AP-asym)",
+      "family": "azaphenalene_nonhept",
+      "symmetry_class": "Cs",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=NC2=CC=NC3=NC=NC(=C1)N23",
+      "inchikey": "UGZHKGQQSAUXIO-UHFFFAOYSA-N",
+      "inchikey_14": "UGZHKGQQSAUXIO",
+      "formula": "C8H5N5",
+      "n_heavy": 13,
+      "n_atoms": 18,
+      "n_electrons": 88,
+      "mw": 171.163,
+      "qed": 0.5243,
+      "sa_score": 4.6541,
+      "xyz_path": "data/processed/invest_xyz/5N_1_3_4_7_9b.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -933.907196,
+      "gfn2_xtb_fmax_eV_A": 0.01425,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 2.7191,
+      "opt_time_s": 4.072,
+      "adc2_def2svp": {
+        "mol_id": "5N_1_3_4_7_9b",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 207,
+        "n_occ_act": 31,
+        "n_vir_act": 163,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -577.65464168,
+        "rhf_hl_gap_eV": 9.0835,
+        "E_S1_eV": 2.170998,
+        "E_T1_eV": 2.328638,
+        "dEST_eV": -0.15764,
+        "f_S1": 0.001439,
+        "pct_T1_S1": 88.986,
+        "pct_T2_S1": 11.014,
+        "pct_T1_T1": 90.558,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.0797827,
+            "energy_eV": 2.170998,
+            "pct_T1": 88.986,
+            "pct_T2": 11.014,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.001439,
+            "trans_dip_norm_au": 0.116288
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.08557586,
+            "energy_eV": 2.328638,
+            "pct_T1": 90.558,
+            "pct_T2": 9.442,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 18.87,
+          "build_M11": 38.44,
+          "singlet": 101.44,
+          "triplet": 119.82,
+          "total": 278.56
+        }
+      }
+    },
+    {
+      "mol_id": "6N_1_3_4_6_7_9b",
+      "name": "1,3,4,6,7,9b-Hexaazaphenalene (6AP)",
+      "family": "azaphenalene_nonhept",
+      "symmetry_class": "Cs",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=NC2=CC=NC3=NC=NC(=N1)N23",
+      "inchikey": "FVHMYFABPKUJKH-UHFFFAOYSA-N",
+      "inchikey_14": "FVHMYFABPKUJKH",
+      "formula": "C7H4N6",
+      "n_heavy": 13,
+      "n_atoms": 17,
+      "n_electrons": 88,
+      "mw": 172.151,
+      "qed": 0.5072,
+      "sa_score": 4.6938,
+      "xyz_path": "data/processed/invest_xyz/6N_1_3_4_6_7_9b.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -941.487821,
+      "gfn2_xtb_fmax_eV_A": 0.01353,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 2.7722,
+      "opt_time_s": 3.704,
+      "adc2_def2svp": {
+        "mol_id": "6N_1_3_4_6_7_9b",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 202,
+        "n_occ_act": 31,
+        "n_vir_act": 158,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -593.64327593,
+        "rhf_hl_gap_eV": 9.5613,
+        "E_S1_eV": 2.360642,
+        "E_T1_eV": 2.585494,
+        "dEST_eV": -0.224852,
+        "f_S1": 0.001546,
+        "pct_T1_S1": 88.86,
+        "pct_T2_S1": 11.14,
+        "pct_T1_T1": 90.349,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.086752,
+            "energy_eV": 2.360642,
+            "pct_T1": 88.86,
+            "pct_T2": 11.14,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.001546,
+            "trans_dip_norm_au": 0.115594
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.09501515,
+            "energy_eV": 2.585494,
+            "pct_T1": 90.349,
+            "pct_T2": 9.651,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 17.36,
+          "build_M11": 25.8,
+          "singlet": 97.44,
+          "triplet": 105.55,
+          "total": 246.15
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "6N_1_3_4_6_7_9b",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 202,
+        "n_core_frozen": 13,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -595.47887343,
+        "E_S1_eV": 2.526028,
+        "E_T1_eV": 2.653005,
+        "dEST_eV": -0.126977,
+        "f_S1_R1": 0.002532,
+        "pct_R1_S1": 91.29,
+        "pct_R1_T1": 90.918,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.09282981,
+            "energy_eV": 2.526028,
+            "pct_R1": 91.29,
+            "osc_f_R1": 0.002532
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.09749615,
+            "energy_eV": 2.653005,
+            "pct_R1": 90.918
+          }
+        ],
+        "timings_s": {
+          "rhf": 77.97,
+          "ccsd": 542.15,
+          "eom_s": 967.86,
+          "eom_t": 1466.7,
+          "total": 3055.25
+        }
+      }
+    },
+    {
+      "mol_id": "4N_2_5_8_9b",
+      "name": "2,5,8,9b-Tetraazaphenalene (Sublattice-B control)",
+      "family": "azaphenalene_nonhept",
+      "symmetry_class": "D3h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=NC=C2C=NC=C3C=NC=C1N23",
+      "inchikey": "WNVRJBRDYRTYPK-UHFFFAOYSA-N",
+      "inchikey_14": "WNVRJBRDYRTYPK",
+      "formula": "C9H6N4",
+      "n_heavy": 13,
+      "n_atoms": 19,
+      "n_electrons": 88,
+      "mw": 170.175,
+      "qed": 0.5356,
+      "sa_score": 4.7052,
+      "xyz_path": "data/processed/invest_xyz/4N_2_5_8_9b.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -925.166493,
+      "gfn2_xtb_fmax_eV_A": 0.01814,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0006,
+      "opt_time_s": 3.074,
+      "adc2_def2svp": {
+        "mol_id": "4N_2_5_8_9b",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 212,
+        "n_occ_act": 31,
+        "n_vir_act": 168,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -561.58651598,
+        "rhf_hl_gap_eV": 6.5872,
+        "E_S1_eV": 0.755379,
+        "E_T1_eV": 0.862867,
+        "dEST_eV": -0.107488,
+        "f_S1": 0.0,
+        "pct_T1_S1": 89.12,
+        "pct_T2_S1": 10.88,
+        "pct_T1_T1": 90.531,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.02775968,
+            "energy_eV": 0.755379,
+            "pct_T1": 89.12,
+            "pct_T2": 10.88,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 1.8e-05
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.03170977,
+            "energy_eV": 0.862867,
+            "pct_T1": 90.531,
+            "pct_T2": 9.469,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 15.13,
+          "build_M11": 27.3,
+          "singlet": 112.45,
+          "triplet": 89.0,
+          "total": 243.87
+        }
+      }
+    },
+    {
+      "mol_id": "B_cyclazine",
+      "name": "9b-Boraphenalene (Cycl[3.3.3]borane)",
+      "family": "bn_triangulene",
+      "symmetry_class": "D3h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC2=CC=CC3=CC=CC(=C1)B23",
+      "inchikey": "DRBACTCWXDUEPO-UHFFFAOYSA-N",
+      "inchikey_14": "DRBACTCWXDUEPO",
+      "formula": "C12H9B",
+      "n_heavy": 13,
+      "n_atoms": 22,
+      "n_electrons": 86,
+      "mw": 164.016,
+      "qed": 0.4824,
+      "sa_score": 4.7911,
+      "xyz_path": "data/processed/invest_xyz/B_cyclazine.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -855.202086,
+      "gfn2_xtb_fmax_eV_A": 0.01877,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0011,
+      "opt_time_s": 4.036,
+      "adc2_def2svp": {
+        "mol_id": "B_cyclazine",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 227,
+        "n_occ_act": 30,
+        "n_vir_act": 184,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -483.95696972,
+        "rhf_hl_gap_eV": 6.8835,
+        "E_S1_eV": 1.026332,
+        "E_T1_eV": 1.054953,
+        "dEST_eV": -0.028621,
+        "f_S1": 0.0,
+        "pct_T1_S1": 89.259,
+        "pct_T2_S1": 10.741,
+        "pct_T1_T1": 91.044,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.03771701,
+            "energy_eV": 1.026332,
+            "pct_T1": 89.259,
+            "pct_T2": 10.741,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 2.3e-05
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.03876882,
+            "energy_eV": 1.054953,
+            "pct_T1": 91.044,
+            "pct_T2": 8.956,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 23.76,
+          "build_M11": 40.65,
+          "singlet": 121.53,
+          "triplet": 97.75,
+          "total": 283.71
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "B_cyclazine",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 227,
+        "n_core_frozen": 13,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -485.63913238,
+        "E_S1_eV": 1.127377,
+        "E_T1_eV": 1.016377,
+        "dEST_eV": 0.111,
+        "f_S1_R1": 0.0,
+        "pct_R1_S1": 90.032,
+        "pct_R1_T1": 91.546,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.04143036,
+            "energy_eV": 1.127377,
+            "pct_R1": 90.032,
+            "osc_f_R1": 0.0
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.03735116,
+            "energy_eV": 1.016377,
+            "pct_R1": 91.546
+          }
+        ],
+        "timings_s": {
+          "rhf": 98.12,
+          "ccsd": 790.92,
+          "eom_s": 1016.94,
+          "eom_t": 2170.21,
+          "total": 4077.74
+        }
+      }
+    },
+    {
+      "mol_id": "B_heptazine",
+      "name": "1,3,4,6,7,9-Hexaaza-9b-boraphenalene (B-Heptazine)",
+      "family": "bn_triangulene",
+      "symmetry_class": "D3h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=NC2=NC=NC3=NC=NC(=N1)B23",
+      "inchikey": "QQXOXCIQKIPZBB-UHFFFAOYSA-N",
+      "inchikey_14": "QQXOXCIQKIPZBB",
+      "formula": "C6H3BN6",
+      "n_heavy": 13,
+      "n_atoms": 16,
+      "n_electrons": 86,
+      "mw": 169.944,
+      "qed": 0.4359,
+      "sa_score": 5.3955,
+      "xyz_path": "data/processed/invest_xyz/B_heptazine.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -900.71291,
+      "gfn2_xtb_fmax_eV_A": 0.0145,
+      "planarity_rmsd_A": 0.0012,
+      "gfn2_dipole_debye": 2.4344,
+      "opt_time_s": 18.2,
+      "adc2_def2svp": {
+        "mol_id": "B_heptazine",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 197,
+        "n_occ_act": 30,
+        "n_vir_act": 154,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -579.64341686,
+        "rhf_hl_gap_eV": 5.9102,
+        "E_S1_eV": 1.704215,
+        "E_T1_eV": 0.678762,
+        "dEST_eV": 1.025453,
+        "f_S1": 0.0,
+        "pct_T1_S1": 91.545,
+        "pct_T2_S1": 8.455,
+        "pct_T1_T1": 86.456,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.06262876,
+            "energy_eV": 1.704215,
+            "pct_T1": 91.545,
+            "pct_T2": 8.455,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 0.002214
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.02494404,
+            "energy_eV": 0.678762,
+            "pct_T1": 86.456,
+            "pct_T2": 13.544,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 22.55,
+          "build_M11": 20.86,
+          "singlet": 83.61,
+          "triplet": 121.16,
+          "total": 248.18
+        }
+      }
+    },
+    {
+      "mol_id": "B_5AP",
+      "name": "1,3,4,6-Tetraaza-9b-boraphenalene (B-5AP)",
+      "family": "bn_triangulene",
+      "symmetry_class": "C2v",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC2=NC=NC3=NC=NC(=C1)B23",
+      "inchikey": "LMVRCNOKHMKQBA-UHFFFAOYSA-N",
+      "inchikey_14": "LMVRCNOKHMKQBA",
+      "formula": "C8H5BN4",
+      "n_heavy": 13,
+      "n_atoms": 18,
+      "n_electrons": 86,
+      "mw": 167.968,
+      "qed": 0.4719,
+      "sa_score": 5.2251,
+      "xyz_path": "data/processed/invest_xyz/B_5AP.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -885.628521,
+      "gfn2_xtb_fmax_eV_A": 0.01951,
+      "planarity_rmsd_A": 0.0037,
+      "gfn2_dipole_debye": 0.0798,
+      "opt_time_s": 13.184,
+      "adc2_def2svp": {
+        "mol_id": "B_5AP",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 207,
+        "n_occ_act": 30,
+        "n_vir_act": 164,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -547.69850104,
+        "rhf_hl_gap_eV": 5.2178,
+        "E_S1_eV": -0.473377,
+        "E_T1_eV": -0.570466,
+        "dEST_eV": 0.097089,
+        "f_S1": -1e-06,
+        "pct_T1_S1": 86.129,
+        "pct_T2_S1": 13.871,
+        "pct_T1_T1": 86.763,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": -0.01739627,
+            "energy_eV": -0.473377,
+            "pct_T1": 86.129,
+            "pct_T2": 13.871,
+            "converged": true,
+            "iters": 4,
+            "osc_f": -1e-06,
+            "trans_dip_norm_au": 0.006862
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": -0.02096423,
+            "energy_eV": -0.570466,
+            "pct_T1": 86.763,
+            "pct_T2": 13.237,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 28.62,
+          "build_M11": 24.81,
+          "singlet": 144.9,
+          "triplet": 102.19,
+          "total": 300.51
+        }
+      }
+    },
+    {
+      "mol_id": "B_4AP",
+      "name": "1,4,7-Triaza-9b-boraphenalene (B-4AP)",
+      "family": "bn_triangulene",
+      "symmetry_class": "C3h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=NC2=CC=NC3=CC=NC(=C1)B23",
+      "inchikey": "QVGLJUVFAAYPHS-UHFFFAOYSA-N",
+      "inchikey_14": "QVGLJUVFAAYPHS",
+      "formula": "C9H6BN3",
+      "n_heavy": 13,
+      "n_atoms": 19,
+      "n_electrons": 86,
+      "mw": 166.98,
+      "qed": 0.4824,
+      "sa_score": 5.178,
+      "xyz_path": "data/processed/invest_xyz/B_4AP.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -877.29201,
+      "gfn2_xtb_fmax_eV_A": 0.01701,
+      "planarity_rmsd_A": 0.1217,
+      "gfn2_dipole_debye": 1.0327,
+      "opt_time_s": 30.794,
+      "adc2_def2svp": {
+        "mol_id": "B_4AP",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 212,
+        "n_occ_act": 30,
+        "n_vir_act": 169,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -531.81623746,
+        "rhf_hl_gap_eV": 6.8314,
+        "E_S1_eV": 0.908612,
+        "E_T1_eV": 0.682747,
+        "dEST_eV": 0.225865,
+        "f_S1": 0.000543,
+        "pct_T1_S1": 87.624,
+        "pct_T2_S1": 12.376,
+        "pct_T1_T1": 89.594,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.03339087,
+            "energy_eV": 0.908612,
+            "pct_T1": 87.624,
+            "pct_T2": 12.376,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.000543,
+            "trans_dip_norm_au": 0.110487
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.02509048,
+            "energy_eV": 0.682747,
+            "pct_T1": 89.594,
+            "pct_T2": 10.406,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 18.52,
+          "build_M11": 23.59,
+          "singlet": 167.79,
+          "triplet": 98.51,
+          "total": 308.41
+        }
+      }
+    },
+    {
+      "mol_id": "B_3N_asym",
+      "name": "1,3,7-Triaza-9b-boraphenalene",
+      "family": "bn_triangulene",
+      "symmetry_class": "Cs",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC2=NC=NC3=CC=NC(=C1)B32",
+      "inchikey": "AYJHOTXWPNMSPI-UHFFFAOYSA-N",
+      "inchikey_14": "AYJHOTXWPNMSPI",
+      "formula": "C9H6BN3",
+      "n_heavy": 13,
+      "n_atoms": 19,
+      "n_electrons": 86,
+      "mw": 166.98,
+      "qed": 0.4824,
+      "sa_score": 5.1526,
+      "xyz_path": "data/processed/invest_xyz/B_3N_asym.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -877.47338,
+      "gfn2_xtb_fmax_eV_A": 0.01925,
+      "planarity_rmsd_A": 0.0643,
+      "gfn2_dipole_debye": 1.3684,
+      "opt_time_s": 14.837,
+      "adc2_def2svp": {
+        "mol_id": "B_3N_asym",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 212,
+        "n_occ_act": 30,
+        "n_vir_act": 169,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -531.78815946,
+        "rhf_hl_gap_eV": 5.9192,
+        "E_S1_eV": -0.243485,
+        "E_T1_eV": -0.438882,
+        "dEST_eV": 0.195397,
+        "f_S1": -8.9e-05,
+        "pct_T1_S1": 87.029,
+        "pct_T2_S1": 12.971,
+        "pct_T1_T1": 88.23,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": -0.0089479,
+            "energy_eV": -0.243485,
+            "pct_T1": 87.029,
+            "pct_T2": 12.971,
+            "converged": true,
+            "iters": 4,
+            "osc_f": -8.9e-05,
+            "trans_dip_norm_au": 0.086584
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": -0.0161286,
+            "energy_eV": -0.438882,
+            "pct_T1": 88.23,
+            "pct_T2": 11.77,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 27.93,
+          "build_M11": 34.55,
+          "singlet": 108.45,
+          "triplet": 75.13,
+          "total": 246.06
+        }
+      }
+    },
+    {
+      "mol_id": "BN_rim_cyclazine",
+      "name": "1-Aza-2-bora-9b-azaphenalene (BN-rim cyclazine)",
+      "family": "bn_triangulene",
+      "symmetry_class": "Cs",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "B1C=C2C=CC=C3C=CC=C(N1)N23",
+      "inchikey": "JEFLZKHZRZVWMM-UHFFFAOYSA-N",
+      "inchikey_14": "JEFLZKHZRZVWMM",
+      "formula": "C10H9BN2",
+      "n_heavy": 13,
+      "n_atoms": 22,
+      "n_electrons": 88,
+      "mw": 168.008,
+      "qed": 0.5414,
+      "sa_score": 4.9256,
+      "xyz_path": "data/processed/invest_xyz/BN_rim_cyclazine.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -901.105625,
+      "gfn2_xtb_fmax_eV_A": 0.01826,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 2.1157,
+      "opt_time_s": 7.464,
+      "adc2_def2svp": {
+        "mol_id": "BN_rim_cyclazine",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 227,
+        "n_occ_act": 31,
+        "n_vir_act": 183,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -517.14420245,
+        "rhf_hl_gap_eV": 8.0021,
+        "E_S1_eV": 2.026184,
+        "E_T1_eV": 1.856028,
+        "dEST_eV": 0.170156,
+        "f_S1": 0.03084,
+        "pct_T1_S1": 89.626,
+        "pct_T2_S1": 10.374,
+        "pct_T1_T1": 91.66,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.0744609,
+            "energy_eV": 2.026184,
+            "pct_T1": 89.626,
+            "pct_T2": 10.374,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.03084,
+            "trans_dip_norm_au": 0.557347
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.06820778,
+            "energy_eV": 1.856028,
+            "pct_T1": 91.66,
+            "pct_T2": 8.34,
+            "converged": true,
+            "iters": 4
+          }
+        ],
+        "timings_s": {
+          "rhf": 21.17,
+          "build_M11": 37.8,
+          "singlet": 130.95,
+          "triplet": 111.32,
+          "total": 301.24
+        }
+      }
+    },
+    {
+      "mol_id": "B3N3_rim_phenalene",
+      "name": "1,4,7-Triaza-2,5,8-tribora-9b-azaphenalene (B3N3-BCN)",
+      "family": "bn_triangulene",
+      "symmetry_class": "C3h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "B1C=C2NBC=C3NBC=C(N1)N32",
+      "inchikey": "PEWGVPOUGVFIGT-UHFFFAOYSA-N",
+      "inchikey_14": "PEWGVPOUGVFIGT",
+      "formula": "C6H9B3N4",
+      "n_heavy": 13,
+      "n_atoms": 22,
+      "n_electrons": 88,
+      "mw": 169.602,
+      "qed": 0.3524,
+      "sa_score": 6.9374,
+      "xyz_path": "data/processed/invest_xyz/B3N3_rim_phenalene.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -897.024029,
+      "gfn2_xtb_fmax_eV_A": 0.015,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0,
+      "opt_time_s": 5.885,
+      "adc2_def2svp": {
+        "mol_id": "B3N3_rim_phenalene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 227,
+        "n_occ_act": 31,
+        "n_vir_act": 183,
+        "n_core_frozen": 13,
+        "rhf_converged": true,
+        "e_rhf_ha": -524.06375743,
+        "rhf_hl_gap_eV": 10.1865,
+        "E_S1_eV": 3.621009,
+        "E_T1_eV": 3.44223,
+        "dEST_eV": 0.178779,
+        "f_S1": 0.0,
+        "pct_T1_S1": 90.368,
+        "pct_T2_S1": 9.632,
+        "pct_T1_T1": 93.283,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.13306962,
+            "energy_eV": 3.621009,
+            "pct_T1": 90.368,
+            "pct_T2": 9.632,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 1e-06
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.12649961,
+            "energy_eV": 3.44223,
+            "pct_T1": 93.283,
+            "pct_T2": 6.717,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 20.57,
+          "build_M11": 40.27,
+          "singlet": 129.66,
+          "triplet": 83.64,
+          "total": 274.14
+        }
+      }
+    },
+    {
+      "mol_id": "pentalene",
+      "name": "Pentalene",
+      "family": "non_alternant",
+      "symmetry_class": "C2h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC2=CC=CC2=C1",
+      "inchikey": "GUVXZFRDPCKWEM-UHFFFAOYSA-N",
+      "inchikey_14": "GUVXZFRDPCKWEM",
+      "formula": "C8H6",
+      "n_heavy": 8,
+      "n_atoms": 14,
+      "n_electrons": 54,
+      "mw": 102.136,
+      "qed": 0.4384,
+      "sa_score": 3.548,
+      "xyz_path": "data/processed/invest_xyz/pentalene.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -546.581147,
+      "gfn2_xtb_fmax_eV_A": 0.00729,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0003,
+      "opt_time_s": 2.546,
+      "adc2_def2svp": {
+        "mol_id": "pentalene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 142,
+        "n_occ_act": 19,
+        "n_vir_act": 115,
+        "n_core_frozen": 8,
+        "rhf_converged": true,
+        "e_rhf_ha": -306.11790521,
+        "rhf_hl_gap_eV": 8.2779,
+        "E_S1_eV": 2.079323,
+        "E_T1_eV": 1.205346,
+        "dEST_eV": 0.873977,
+        "f_S1": 0.0,
+        "pct_T1_S1": 92.159,
+        "pct_T2_S1": 7.841,
+        "pct_T1_T1": 94.143,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.07641369,
+            "energy_eV": 2.079323,
+            "pct_T1": 92.159,
+            "pct_T2": 7.841,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 1.6e-05
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.04429566,
+            "energy_eV": 1.205346,
+            "pct_T1": 94.143,
+            "pct_T2": 5.857,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 17.82,
+          "build_M11": 3.12,
+          "singlet": 10.79,
+          "triplet": 6.7,
+          "total": 38.43
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "pentalene",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 142,
+        "n_core_frozen": 8,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -307.19280287,
+        "E_S1_eV": 2.29215,
+        "E_T1_eV": 1.206149,
+        "dEST_eV": 1.086001,
+        "f_S1_R1": 0.0,
+        "pct_R1_S1": 91.092,
+        "pct_R1_T1": 94.061,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.08423497,
+            "energy_eV": 2.29215,
+            "pct_R1": 91.092,
+            "osc_f_R1": 0.0
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.04432517,
+            "energy_eV": 1.206149,
+            "pct_R1": 94.061
+          }
+        ],
+        "timings_s": {
+          "rhf": 24.39,
+          "ccsd": 100.66,
+          "eom_s": 144.29,
+          "eom_t": 189.98,
+          "total": 459.48
+        }
+      }
+    },
+    {
+      "mol_id": "1_4_diazapentalene",
+      "name": "1,4-Diazapentalene",
+      "family": "non_alternant",
+      "symmetry_class": "C2h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=NC2=CC=NC2=C1",
+      "inchikey": "RQGPLDBZHMVWCH-UHFFFAOYSA-N",
+      "inchikey_14": "RQGPLDBZHMVWCH",
+      "formula": "C6H4N2",
+      "n_heavy": 8,
+      "n_atoms": 12,
+      "n_electrons": 54,
+      "mw": 104.112,
+      "qed": 0.4363,
+      "sa_score": 4.5097,
+      "xyz_path": "data/processed/invest_xyz/1_4_diazapentalene.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -561.35415,
+      "gfn2_xtb_fmax_eV_A": 0.01829,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0006,
+      "opt_time_s": 2.579,
+      "adc2_def2svp": {
+        "mol_id": "1_4_diazapentalene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 132,
+        "n_occ_act": 19,
+        "n_vir_act": 105,
+        "n_core_frozen": 8,
+        "rhf_converged": true,
+        "e_rhf_ha": -338.07894601,
+        "rhf_hl_gap_eV": 9.1791,
+        "E_S1_eV": 2.61206,
+        "E_T1_eV": 1.586034,
+        "dEST_eV": 1.026026,
+        "f_S1": 0.0,
+        "pct_T1_S1": 91.944,
+        "pct_T2_S1": 8.056,
+        "pct_T1_T1": 94.014,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.09599144,
+            "energy_eV": 2.61206,
+            "pct_T1": 91.944,
+            "pct_T2": 8.056,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 1.4e-05
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.05828567,
+            "energy_eV": 1.586034,
+            "pct_T1": 94.014,
+            "pct_T2": 5.986,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 21.13,
+          "build_M11": 2.34,
+          "singlet": 7.84,
+          "triplet": 4.36,
+          "total": 35.67
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "1_4_diazapentalene",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 132,
+        "n_core_frozen": 8,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -339.1894693,
+        "E_S1_eV": 2.99465,
+        "E_T1_eV": 1.637285,
+        "dEST_eV": 1.357365,
+        "f_S1_R1": 0.0,
+        "pct_R1_S1": 93.151,
+        "pct_R1_T1": 94.163,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.11005137,
+            "energy_eV": 2.99465,
+            "pct_R1": 93.151,
+            "osc_f_R1": 0.0
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.06016912,
+            "energy_eV": 1.637285,
+            "pct_R1": 94.163
+          }
+        ],
+        "timings_s": {
+          "rhf": 20.31,
+          "ccsd": 78.9,
+          "eom_s": 90.45,
+          "eom_t": 133.53,
+          "total": 323.25
+        }
+      }
+    },
+    {
+      "mol_id": "2_5_diazapentalene",
+      "name": "2,5-Diazapentalene",
+      "family": "non_alternant",
+      "symmetry_class": "C2h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=NC=C2C=NC=C12",
+      "inchikey": "YKPJEYXZEBLYCI-UHFFFAOYSA-N",
+      "inchikey_14": "YKPJEYXZEBLYCI",
+      "formula": "C6H4N2",
+      "n_heavy": 8,
+      "n_atoms": 12,
+      "n_electrons": 54,
+      "mw": 104.112,
+      "qed": 0.4363,
+      "sa_score": 4.4565,
+      "xyz_path": "data/processed/invest_xyz/2_5_diazapentalene.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -561.295937,
+      "gfn2_xtb_fmax_eV_A": 0.00827,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0004,
+      "opt_time_s": 2.299,
+      "adc2_def2svp": {
+        "mol_id": "2_5_diazapentalene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 132,
+        "n_occ_act": 19,
+        "n_vir_act": 105,
+        "n_core_frozen": 8,
+        "rhf_converged": true,
+        "e_rhf_ha": -338.07480384,
+        "rhf_hl_gap_eV": 9.063,
+        "E_S1_eV": 1.877227,
+        "E_T1_eV": 2.039225,
+        "dEST_eV": -0.161998,
+        "f_S1": 0.0,
+        "pct_T1_S1": 90.656,
+        "pct_T2_S1": 9.344,
+        "pct_T1_T1": 94.441,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.06898683,
+            "energy_eV": 1.877227,
+            "pct_T1": 90.656,
+            "pct_T2": 9.344,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 9e-06
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.07494013,
+            "energy_eV": 2.039225,
+            "pct_T1": 94.441,
+            "pct_T2": 5.559,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 21.41,
+          "build_M11": 2.44,
+          "singlet": 7.47,
+          "triplet": 4.83,
+          "total": 36.14
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "2_5_diazapentalene",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 132,
+        "n_core_frozen": 8,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -339.18449912,
+        "E_S1_eV": 2.092624,
+        "E_T1_eV": 1.607337,
+        "dEST_eV": 0.485287,
+        "f_S1_R1": 0.0,
+        "pct_R1_S1": 88.042,
+        "pct_R1_T1": 92.809,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.0769025,
+            "energy_eV": 2.092624,
+            "pct_R1": 88.042,
+            "osc_f_R1": 0.0
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.05906855,
+            "energy_eV": 1.607337,
+            "pct_R1": 92.809
+          }
+        ],
+        "timings_s": {
+          "rhf": 30.88,
+          "ccsd": 111.73,
+          "eom_s": 117.81,
+          "eom_t": 138.56,
+          "total": 399.84
+        }
+      }
+    },
+    {
+      "mol_id": "1_3_4_6_tetraazapentalene",
+      "name": "1,3,4,6-Tetraazapentalene",
+      "family": "non_alternant",
+      "symmetry_class": "D2h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=NC2=NC=NC2=N1",
+      "inchikey": "CQQJSOXDEFZGFG-UHFFFAOYSA-N",
+      "inchikey_14": "CQQJSOXDEFZGFG",
+      "formula": "C4H2N4",
+      "n_heavy": 8,
+      "n_atoms": 10,
+      "n_electrons": 54,
+      "mw": 106.088,
+      "qed": 0.4127,
+      "sa_score": 4.35,
+      "xyz_path": "data/processed/invest_xyz/1_3_4_6_tetraazapentalene.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -575.816688,
+      "gfn2_xtb_fmax_eV_A": 0.01148,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0001,
+      "opt_time_s": 1.729,
+      "adc2_def2svp": {
+        "mol_id": "1_3_4_6_tetraazapentalene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 122,
+        "n_occ_act": 19,
+        "n_vir_act": 95,
+        "n_core_frozen": 8,
+        "rhf_converged": true,
+        "e_rhf_ha": -370.03677802,
+        "rhf_hl_gap_eV": 9.942,
+        "E_S1_eV": 1.979536,
+        "E_T1_eV": 1.756562,
+        "dEST_eV": 0.222974,
+        "f_S1": 1.9e-05,
+        "pct_T1_S1": 90.507,
+        "pct_T2_S1": 9.493,
+        "pct_T1_T1": 93.292,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.0727466,
+            "energy_eV": 1.979536,
+            "pct_T1": 90.507,
+            "pct_T2": 9.493,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 1.9e-05,
+            "trans_dip_norm_au": 0.013932
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.06455245,
+            "energy_eV": 1.756562,
+            "pct_T1": 93.292,
+            "pct_T2": 6.708,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 15.93,
+          "build_M11": 1.36,
+          "singlet": 9.96,
+          "triplet": 3.6,
+          "total": 30.85
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "1_3_4_6_tetraazapentalene",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 122,
+        "n_core_frozen": 8,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -371.17819292,
+        "E_S1_eV": 3.017105,
+        "E_T1_eV": 1.879599,
+        "dEST_eV": 1.137506,
+        "f_S1_R1": 0.0,
+        "pct_R1_S1": 90.362,
+        "pct_R1_T1": 93.698,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.11087655,
+            "energy_eV": 3.017105,
+            "pct_R1": 90.362,
+            "osc_f_R1": 0.0
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.06907399,
+            "energy_eV": 1.879599,
+            "pct_R1": 93.698
+          }
+        ],
+        "timings_s": {
+          "rhf": 23.74,
+          "ccsd": 78.83,
+          "eom_s": 74.45,
+          "eom_t": 99.03,
+          "total": 276.18
+        }
+      }
+    },
+    {
+      "mol_id": "s_indacene",
+      "name": "s-Indacene",
+      "family": "non_alternant",
+      "symmetry_class": "C2h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=Cc2cc3c(cc2=C1)C=CC=3",
+      "inchikey": "WEMQMWWWCBYPOV-UHFFFAOYSA-N",
+      "inchikey_14": "WEMQMWWWCBYPOV",
+      "formula": "C12H8",
+      "n_heavy": 12,
+      "n_atoms": 20,
+      "n_electrons": 80,
+      "mw": 152.196,
+      "qed": 0.5254,
+      "sa_score": 3.5751,
+      "xyz_path": "data/processed/invest_xyz/s_indacene.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -808.065506,
+      "gfn2_xtb_fmax_eV_A": 0.01671,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0,
+      "opt_time_s": 4.669,
+      "adc2_def2svp": {
+        "mol_id": "s_indacene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 208,
+        "n_occ_act": 28,
+        "n_vir_act": 168,
+        "n_core_frozen": 12,
+        "rhf_converged": true,
+        "e_rhf_ha": -458.65099735,
+        "rhf_hl_gap_eV": 6.6864,
+        "E_S1_eV": 0.803919,
+        "E_T1_eV": 0.954405,
+        "dEST_eV": -0.150486,
+        "f_S1": 0.0,
+        "pct_T1_S1": 88.857,
+        "pct_T2_S1": 11.143,
+        "pct_T1_T1": 92.015,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.02954347,
+            "energy_eV": 0.803919,
+            "pct_T1": 88.857,
+            "pct_T2": 11.143,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 2e-06
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.03507375,
+            "energy_eV": 0.954405,
+            "pct_T1": 92.015,
+            "pct_T2": 7.985,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 17.93,
+          "build_M11": 24.91,
+          "singlet": 73.82,
+          "triplet": 48.83,
+          "total": 165.49
+        }
+      }
+    },
+    {
+      "mol_id": "1_5_diaza_s_indacene",
+      "name": "1,5-Diaza-s-indacene",
+      "family": "non_alternant",
+      "symmetry_class": "C2h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=Nc2cc3c(cc2=C1)N=CC=3",
+      "inchikey": "UVOMXDZIIPHCIM-UHFFFAOYSA-N",
+      "inchikey_14": "UVOMXDZIIPHCIM",
+      "formula": "C10H6N2",
+      "n_heavy": 12,
+      "n_atoms": 18,
+      "n_electrons": 80,
+      "mw": 154.172,
+      "qed": 0.5247,
+      "sa_score": 4.2515,
+      "xyz_path": "data/processed/invest_xyz/1_5_diaza_s_indacene.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -822.825472,
+      "gfn2_xtb_fmax_eV_A": 0.01504,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 0.0008,
+      "opt_time_s": 4.49,
+      "adc2_def2svp": {
+        "mol_id": "1_5_diaza_s_indacene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 198,
+        "n_occ_act": 28,
+        "n_vir_act": 158,
+        "n_core_frozen": 12,
+        "rhf_converged": true,
+        "e_rhf_ha": -490.62524858,
+        "rhf_hl_gap_eV": 7.7067,
+        "E_S1_eV": 2.046272,
+        "E_T1_eV": 1.406894,
+        "dEST_eV": 0.639378,
+        "f_S1": 0.0,
+        "pct_T1_S1": 90.028,
+        "pct_T2_S1": 9.972,
+        "pct_T1_T1": 92.458,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.07519909,
+            "energy_eV": 2.046272,
+            "pct_T1": 90.028,
+            "pct_T2": 9.972,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.0,
+            "trans_dip_norm_au": 2.6e-05
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.05170241,
+            "energy_eV": 1.406894,
+            "pct_T1": 92.458,
+            "pct_T2": 7.542,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 20.8,
+          "build_M11": 20.53,
+          "singlet": 64.71,
+          "triplet": 41.64,
+          "total": 147.68
+        }
+      }
+    },
+    {
+      "mol_id": "azulene",
+      "name": "Azulene (positive control)",
+      "family": "non_alternant",
+      "symmetry_class": "C2v",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "c1ccc2cccc-2cc1",
+      "inchikey": "CUFNKYGDVFVPHO-UHFFFAOYSA-N",
+      "inchikey_14": "CUFNKYGDVFVPHO",
+      "formula": "C10H8",
+      "n_heavy": 10,
+      "n_atoms": 18,
+      "n_electrons": 68,
+      "mw": 128.174,
+      "qed": 0.5114,
+      "sa_score": 1.0,
+      "xyz_path": "data/processed/invest_xyz/azulene.xyz",
+      "source_geom": "questdb_ccsd_t_init",
+      "gfn2_xtb_energy_eV": -691.775198,
+      "gfn2_xtb_fmax_eV_A": 0.00925,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 1.3043,
+      "opt_time_s": 1.684,
+      "adc2_def2svp": {
+        "mol_id": "azulene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 180,
+        "n_occ_act": 24,
+        "n_vir_act": 146,
+        "n_core_frozen": 10,
+        "rhf_converged": true,
+        "e_rhf_ha": -383.0023563,
+        "rhf_hl_gap_eV": 8.374,
+        "E_S1_eV": 2.283692,
+        "E_T1_eV": 2.652365,
+        "dEST_eV": -0.368673,
+        "f_S1": 0.00858,
+        "pct_T1_S1": 89.602,
+        "pct_T2_S1": 10.398,
+        "pct_T1_T1": 93.876,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.08392413,
+            "energy_eV": 2.283692,
+            "pct_T1": 89.602,
+            "pct_T2": 10.398,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.00858,
+            "trans_dip_norm_au": 0.276898
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.09747262,
+            "energy_eV": 2.652365,
+            "pct_T1": 93.876,
+            "pct_T2": 6.124,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 9.19,
+          "build_M11": 10.63,
+          "singlet": 33.46,
+          "triplet": 29.9,
+          "total": 83.18
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "azulene",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 180,
+        "n_core_frozen": 10,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -384.34981499,
+        "E_S1_eV": 2.301355,
+        "E_T1_eV": 2.268419,
+        "dEST_eV": 0.032936,
+        "f_S1_R1": 0.014245,
+        "pct_R1_S1": 91.159,
+        "pct_R1_T1": 90.843,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.08457324,
+            "energy_eV": 2.301355,
+            "pct_R1": 91.159,
+            "osc_f_R1": 0.014245
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.08336286,
+            "energy_eV": 2.268419,
+            "pct_R1": 90.843
+          }
+        ],
+        "timings_s": {
+          "rhf": 118.35,
+          "ccsd": 366.35,
+          "eom_s": 493.83,
+          "eom_t": 449.16,
+          "total": 1428.13
+        }
+      }
+    },
+    {
+      "mol_id": "1_3_diazaazulene",
+      "name": "1,3-Diazaazulene",
+      "family": "non_alternant",
+      "symmetry_class": "C2v",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "c1ccc2ncnc-2cc1",
+      "inchikey": "HPGSSIJHLUDJFV-UHFFFAOYSA-N",
+      "inchikey_14": "HPGSSIJHLUDJFV",
+      "formula": "C8H6N2",
+      "n_heavy": 10,
+      "n_atoms": 16,
+      "n_electrons": 68,
+      "mw": 130.15,
+      "qed": 0.5407,
+      "sa_score": 1.6929,
+      "xyz_path": "data/processed/invest_xyz/1_3_diazaazulene.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -707.037812,
+      "gfn2_xtb_fmax_eV_A": 0.01813,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 4.5422,
+      "opt_time_s": 3.187,
+      "adc2_def2svp": {
+        "mol_id": "1_3_diazaazulene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 170,
+        "n_occ_act": 24,
+        "n_vir_act": 136,
+        "n_core_frozen": 10,
+        "rhf_converged": true,
+        "e_rhf_ha": -414.98727699,
+        "rhf_hl_gap_eV": 9.7203,
+        "E_S1_eV": 3.111223,
+        "E_T1_eV": 2.927758,
+        "dEST_eV": 0.183465,
+        "f_S1": 0.009994,
+        "pct_T1_S1": 88.8,
+        "pct_T2_S1": 11.2,
+        "pct_T1_T1": 94.116,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.11433535,
+            "energy_eV": 3.111223,
+            "pct_T1": 88.8,
+            "pct_T2": 11.2,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.009994,
+            "trans_dip_norm_au": 0.256042
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.10759312,
+            "energy_eV": 2.927758,
+            "pct_T1": 94.116,
+            "pct_T2": 5.884,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 7.94,
+          "build_M11": 9.11,
+          "singlet": 36.41,
+          "triplet": 21.11,
+          "total": 74.58
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "1_3_diazaazulene",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 170,
+        "n_core_frozen": 10,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -416.36814233,
+        "E_S1_eV": 3.198906,
+        "E_T1_eV": 2.568391,
+        "dEST_eV": 0.630515,
+        "f_S1_R1": 0.010009,
+        "pct_R1_S1": 90.562,
+        "pct_R1_T1": 94.147,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.11755762,
+            "energy_eV": 3.198906,
+            "pct_R1": 90.562,
+            "osc_f_R1": 0.010009
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.09438662,
+            "energy_eV": 2.568391,
+            "pct_R1": 94.147
+          }
+        ],
+        "timings_s": {
+          "rhf": 91.02,
+          "ccsd": 335.67,
+          "eom_s": 437.05,
+          "eom_t": 595.73,
+          "total": 1464.17
+        }
+      }
+    },
+    {
+      "mol_id": "calicene",
+      "name": "Calicene",
+      "family": "non_alternant",
+      "symmetry_class": "C2v",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC(=C2C=C2)C=C1",
+      "inchikey": "ZXWMPJFQZJXFQN-UHFFFAOYSA-N",
+      "inchikey_14": "ZXWMPJFQZJXFQN",
+      "formula": "C8H6",
+      "n_heavy": 8,
+      "n_atoms": 14,
+      "n_electrons": 54,
+      "mw": 102.136,
+      "qed": 0.4384,
+      "sa_score": 3.1487,
+      "xyz_path": "data/processed/invest_xyz/calicene.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -544.89649,
+      "gfn2_xtb_fmax_eV_A": 0.01464,
+      "planarity_rmsd_A": 0.0,
+      "gfn2_dipole_debye": 3.9219,
+      "opt_time_s": 2.534,
+      "adc2_def2svp": {
+        "mol_id": "calicene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 142,
+        "n_occ_act": 19,
+        "n_vir_act": 115,
+        "n_core_frozen": 8,
+        "rhf_converged": true,
+        "e_rhf_ha": -306.06558382,
+        "rhf_hl_gap_eV": 10.6346,
+        "E_S1_eV": 4.424955,
+        "E_T1_eV": 3.082727,
+        "dEST_eV": 1.342228,
+        "f_S1": 0.027756,
+        "pct_T1_S1": 91.107,
+        "pct_T2_S1": 8.893,
+        "pct_T1_T1": 94.238,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.1626141,
+            "energy_eV": 4.424955,
+            "pct_T1": 91.107,
+            "pct_T2": 8.893,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.027756,
+            "trans_dip_norm_au": 0.357793
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.11328814,
+            "energy_eV": 3.082727,
+            "pct_T1": 94.238,
+            "pct_T2": 5.762,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 60.23,
+          "build_M11": 3.3,
+          "singlet": 11.01,
+          "triplet": 5.25,
+          "total": 79.8
+        }
+      },
+      "eom_ccsd_def2svp": {
+        "mol_id": "calicene",
+        "method": "EOM-EE-CCSD/def2-svp",
+        "ok": true,
+        "n_ao": 142,
+        "n_core_frozen": 8,
+        "ccsd_converged": true,
+        "e_ccsd_ha": -307.13262936,
+        "E_S1_eV": 4.595137,
+        "E_T1_eV": 2.980535,
+        "dEST_eV": 1.614602,
+        "f_S1_R1": 0.046407,
+        "pct_R1_S1": 90.991,
+        "pct_R1_T1": 93.421,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.16886816,
+            "energy_eV": 4.595137,
+            "pct_R1": 90.991,
+            "osc_f_R1": 0.046407
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "energy_ha": 0.10953265,
+            "energy_eV": 2.980535,
+            "pct_R1": 93.421
+          }
+        ],
+        "timings_s": {
+          "rhf": 38.95,
+          "ccsd": 108.41,
+          "eom_s": 183.37,
+          "eom_t": 194.07,
+          "total": 525.16
+        }
+      }
+    },
+    {
+      "mol_id": "heptalene",
+      "name": "Heptalene",
+      "family": "non_alternant",
+      "symmetry_class": "C2h",
+      "lit_ref": {
+        "run_ab_initio": true
+      },
+      "smiles": "C1=CC=C2C=CC=CC=C2C=C1",
+      "inchikey": "DDTGNKBZWQHIEH-UHFFFAOYSA-N",
+      "inchikey_14": "DDTGNKBZWQHIEH",
+      "formula": "C12H10",
+      "n_heavy": 12,
+      "n_atoms": 22,
+      "n_electrons": 82,
+      "mw": 154.212,
+      "qed": 0.5026,
+      "sa_score": 3.4679,
+      "xyz_path": "data/processed/invest_xyz/heptalene.xyz",
+      "source_geom": "rdkit_etkdgv3_gfn2xtb",
+      "gfn2_xtb_energy_eV": -834.839545,
+      "gfn2_xtb_fmax_eV_A": 0.01837,
+      "planarity_rmsd_A": 0.4969,
+      "gfn2_dipole_debye": 0.4162,
+      "opt_time_s": 2.939,
+      "adc2_def2svp": {
+        "mol_id": "heptalene",
+        "method": "RI-EE-ADC(2)/def2-svp",
+        "ok": true,
+        "n_ao": 218,
+        "n_occ_act": 29,
+        "n_vir_act": 177,
+        "n_core_frozen": 12,
+        "rhf_converged": true,
+        "e_rhf_ha": -459.81058006,
+        "rhf_hl_gap_eV": 8.721,
+        "E_S1_eV": 2.873091,
+        "E_T1_eV": 2.161956,
+        "dEST_eV": 0.711135,
+        "f_S1": 0.000641,
+        "pct_T1_S1": 90.842,
+        "pct_T2_S1": 9.158,
+        "pct_T1_T1": 93.4,
+        "singlet_roots": [
+          {
+            "root": 1,
+            "spin": "S",
+            "energy_ha": 0.10558414,
+            "energy_eV": 2.873091,
+            "pct_T1": 90.842,
+            "pct_T2": 9.158,
+            "converged": true,
+            "iters": 4,
+            "osc_f": 0.000641,
+            "trans_dip_norm_au": 0.067455
+          }
+        ],
+        "triplet_roots": [
+          {
+            "root": 1,
+            "spin": "T",
+            "energy_ha": 0.0794504,
+            "energy_eV": 2.161956,
+            "pct_T1": 93.4,
+            "pct_T2": 6.6,
+            "converged": true,
+            "iters": 3
+          }
+        ],
+        "timings_s": {
+          "rhf": 15.37,
+          "build_M11": 30.87,
+          "singlet": 68.84,
+          "triplet": 36.76,
+          "total": 151.84
+        }
+      }
+    }
+  ]
+}

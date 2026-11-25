@@ -1,0 +1,39 @@
+{
+  "mol_id": "calicene",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 142,
+  "n_core_frozen": 8,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -307.13262936,
+  "E_S1_eV": 4.595137,
+  "E_T1_eV": 2.980535,
+  "dEST_eV": 1.614602,
+  "f_S1_R1": 0.046407,
+  "pct_R1_S1": 90.991,
+  "pct_R1_T1": 93.421,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.16886816,
+      "energy_eV": 4.595137,
+      "pct_R1": 90.991,
+      "osc_f_R1": 0.046407
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.10953265,
+      "energy_eV": 2.980535,
+      "pct_R1": 93.421
+    }
+  ],
+  "timings_s": {
+    "rhf": 38.95,
+    "ccsd": 108.41,
+    "eom_s": 183.37,
+    "eom_t": 194.07,
+    "total": 525.16
+  }
+}

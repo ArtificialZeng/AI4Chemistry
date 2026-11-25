@@ -1,0 +1,3726 @@
+{
+  "name": "HEPTA_INVEST44_Clean",
+  "source": "data/external/HEPTA-INVEST/data/HEPTA-INVEST44.csv (EOM-CCSD/cc-pVDZ + TDDFT-CAM-B3LYP/cc-pVDZ)",
+  "summary": {
+    "n_molecules": 44,
+    "n_inverted": 37,
+    "n_non_inverted": 7,
+    "by_substitution_type": {
+      "mono": 15,
+      "di": 13,
+      "tri": 16
+    },
+    "delta_EST_min_eV": -0.2698,
+    "delta_EST_max_eV": 0.1971,
+    "cam_b3lyp_inverted_count": 0,
+    "cam_b3lyp_delta_EST_MAE_eV": 0.4133818181818182,
+    "n_with_f_S1_eomccsd": 44
+  },
+  "splits": {
+    "cv5_folds": {
+      "fold_0": [
+        "hepta_2T-7N-CN",
+        "hepta_2T-7N-COMe",
+        "hepta_2T-7N-SH",
+        "hepta_2T-7N-CF3-CN",
+        "hepta_2T-7N-NH2-NH2",
+        "hepta_2T-7N-SH-SH",
+        "hepta_2T-7N-CN-CN-NH2",
+        "hepta_2T-7N-NH2-NH2-NH2",
+        "hepta_2T-7N-NH2-NH2-SH"
+      ],
+      "fold_1": [
+        "hepta_2T-7N-F",
+        "hepta_2T-7N-OCF3",
+        "hepta_2T-7N-PH2",
+        "hepta_2T-7N-CN-F",
+        "hepta_2T-7N-CN-NH2",
+        "hepta_2T-7N-NH2-F",
+        "hepta_2T-7N-CF3-CN-F",
+        "hepta_2T-7N-CF3-NH2-NH2",
+        "hepta_2T-7N-CN-CN-SH"
+      ],
+      "fold_2": [
+        "hepta_2T-7N-CF3",
+        "hepta_2T-7N-COOH",
+        "hepta_2T-7N-Ph",
+        "hepta_2T-7N-CF3-CF3",
+        "hepta_2T-7N-CF3-SH",
+        "hepta_2T-7N-NH2-CF3",
+        "hepta_2T-7N-CN-CN-F",
+        "hepta_2T-7N-NH2-NH2-CN",
+        "hepta_2T-7N-NH2-NH2-F"
+      ],
+      "fold_3": [
+        "hepta_2T-7N-CHO",
+        "hepta_2T-7N-OMe",
+        "hepta_2T-7N-CN-SH",
+        "hepta_2T-7N-NH2-SH",
+        "hepta_2T-7N-CF3-CF3-CN",
+        "hepta_2T-7N-CF3-CN-NH2",
+        "hepta_2T-7N-CF3-CN-SH",
+        "hepta_2T-7N-CN-CN-CN"
+      ],
+      "fold_4": [
+        "hepta_2T-7N",
+        "hepta_2T-7N-NH2",
+        "hepta_2T-7N-NMe2",
+        "hepta_2T-7N-OH",
+        "hepta_2T-7N-CF3-F",
+        "hepta_2T-7N-CN-CN",
+        "hepta_2T-7N-CF3-CF3-F",
+        "hepta_2T-7N-CF3-CF3-NH2",
+        "hepta_2T-7N-CF3-CF3-SH"
+      ]
+    },
+    "mono_to_di_tri": {
+      "train": [
+        "hepta_2T-7N",
+        "hepta_2T-7N-CF3",
+        "hepta_2T-7N-CHO",
+        "hepta_2T-7N-CN",
+        "hepta_2T-7N-COMe",
+        "hepta_2T-7N-COOH",
+        "hepta_2T-7N-F",
+        "hepta_2T-7N-NH2",
+        "hepta_2T-7N-NMe2",
+        "hepta_2T-7N-OCF3",
+        "hepta_2T-7N-OH",
+        "hepta_2T-7N-OMe",
+        "hepta_2T-7N-PH2",
+        "hepta_2T-7N-Ph",
+        "hepta_2T-7N-SH"
+      ],
+      "test": [
+        "hepta_2T-7N-CF3-CF3",
+        "hepta_2T-7N-CF3-CN",
+        "hepta_2T-7N-CF3-F",
+        "hepta_2T-7N-CF3-SH",
+        "hepta_2T-7N-CN-CN",
+        "hepta_2T-7N-CN-F",
+        "hepta_2T-7N-CN-NH2",
+        "hepta_2T-7N-CN-SH",
+        "hepta_2T-7N-NH2-CF3",
+        "hepta_2T-7N-NH2-F",
+        "hepta_2T-7N-NH2-NH2",
+        "hepta_2T-7N-NH2-SH",
+        "hepta_2T-7N-SH-SH",
+        "hepta_2T-7N-CF3-CF3-CN",
+        "hepta_2T-7N-CF3-CF3-F",
+        "hepta_2T-7N-CF3-CF3-NH2",
+        "hepta_2T-7N-CF3-CF3-SH",
+        "hepta_2T-7N-CF3-CN-F",
+        "hepta_2T-7N-CF3-CN-NH2",
+        "hepta_2T-7N-CF3-CN-SH",
+        "hepta_2T-7N-CF3-NH2-NH2",
+        "hepta_2T-7N-CN-CN-CN",
+        "hepta_2T-7N-CN-CN-F",
+        "hepta_2T-7N-CN-CN-NH2",
+        "hepta_2T-7N-CN-CN-SH",
+        "hepta_2T-7N-NH2-NH2-CN",
+        "hepta_2T-7N-NH2-NH2-F",
+        "hepta_2T-7N-NH2-NH2-NH2",
+        "hepta_2T-7N-NH2-NH2-SH"
+      ]
+    }
+  },
+  "molecules": [
+    {
+      "mol_id": "hepta_2T-7N",
+      "name": "2T-7N",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "H"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N/2T-7N.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 16,
+      "n_heavy": 13,
+      "nelectron": 88,
+      "formula": "C6H3N7",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 2.8295,
+      "E_T1_eV": 3.0024,
+      "delta_EST_eV": -0.1729,
+      "is_inverted": true,
+      "percent_R1_S1": 89.27,
+      "percent_R1_T1": 90.46,
+      "f_S1_eomccsd": 0.0,
+      "CT_S1": 0.882,
+      "CT_T1": 0.869,
+      "delta_CT": 0.013,
+      "Om_S1": 0.774,
+      "Om_T1": 0.785,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.094,
+          "E_T1_eV": 2.848,
+          "delta_EST_eV": 0.246,
+          "f_S1": 0.0
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8295,
+          "pct_T1": 89.27,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.094
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0024,
+          "pct_T1": 90.46,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.848
+          }
+        }
+      ],
+      "cv5_fold": 4,
+      "conformer_group": "grp_heptazine"
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3",
+      "name": "2T-7N-CF3",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "CF3"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-CF3/2T-7N-CF3.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 19,
+      "n_heavy": 17,
+      "nelectron": 120,
+      "formula": "C7H2F3N7",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 2.8046,
+      "E_T1_eV": 2.957,
+      "delta_EST_eV": -0.1524,
+      "is_inverted": true,
+      "percent_R1_S1": 89.3,
+      "percent_R1_T1": 90.52,
+      "f_S1_eomccsd": 0.00015,
+      "CT_S1": 0.877,
+      "CT_T1": 0.859,
+      "delta_CT": 0.018,
+      "Om_S1": 0.774,
+      "Om_T1": 0.785,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.066,
+          "E_T1_eV": 2.807,
+          "delta_EST_eV": 0.259,
+          "f_S1": 0.0
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8046,
+          "pct_T1": 89.3,
+          "osc_cc3": 0.00015,
+          "baselines": {
+            "CAM-B3LYP": 3.066
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.957,
+          "pct_T1": 90.52,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.807
+          }
+        }
+      ],
+      "cv5_fold": 2
+    },
+    {
+      "mol_id": "hepta_2T-7N-CHO",
+      "name": "2T-7N-CHO",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "CHO"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-CHO/2T-7N-CHO.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CHO.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 18,
+      "n_heavy": 15,
+      "nelectron": 102,
+      "formula": "C7H3N7O",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "O"
+      ],
+      "E_S1_eV": 2.7241,
+      "E_T1_eV": 2.8453,
+      "delta_EST_eV": -0.1212,
+      "is_inverted": true,
+      "percent_R1_S1": 89.26,
+      "percent_R1_T1": 90.54,
+      "f_S1_eomccsd": 0.000844,
+      "CT_S1": 0.876,
+      "CT_T1": 0.849,
+      "delta_CT": 0.027,
+      "Om_S1": 0.771,
+      "Om_T1": 0.783,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 2.94,
+          "E_T1_eV": 2.644,
+          "delta_EST_eV": 0.296,
+          "f_S1": 0.002
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CHO",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.7241,
+          "pct_T1": 89.26,
+          "osc_cc3": 0.000844,
+          "baselines": {
+            "CAM-B3LYP": 2.94
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CHO",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8453,
+          "pct_T1": 90.54,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.644
+          }
+        }
+      ],
+      "cv5_fold": 3
+    },
+    {
+      "mol_id": "hepta_2T-7N-CN",
+      "name": "2T-7N-CN",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "CN"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-CN/2T-7N-CN.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CN.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 17,
+      "n_heavy": 15,
+      "nelectron": 100,
+      "formula": "C7H2N8",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 2.7461,
+      "E_T1_eV": 2.8699,
+      "delta_EST_eV": -0.1238,
+      "is_inverted": true,
+      "percent_R1_S1": 89.23,
+      "percent_R1_T1": 90.5,
+      "f_S1_eomccsd": 0.000765,
+      "CT_S1": 0.875,
+      "CT_T1": 0.846,
+      "delta_CT": 0.029,
+      "Om_S1": 0.771,
+      "Om_T1": 0.783,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 2.985,
+          "E_T1_eV": 2.698,
+          "delta_EST_eV": 0.287,
+          "f_S1": 0.001
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.7461,
+          "pct_T1": 89.23,
+          "osc_cc3": 0.000765,
+          "baselines": {
+            "CAM-B3LYP": 2.985
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8699,
+          "pct_T1": 90.5,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.698
+          }
+        }
+      ],
+      "cv5_fold": 0
+    },
+    {
+      "mol_id": "hepta_2T-7N-COMe",
+      "name": "2T-7N-COMe",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "COMe"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-COMe/2T-7N-COMe.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-COMe.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 21,
+      "n_heavy": 16,
+      "nelectron": 110,
+      "formula": "C8H5N7O",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "O"
+      ],
+      "E_S1_eV": 2.7389,
+      "E_T1_eV": 2.8707,
+      "delta_EST_eV": -0.1318,
+      "is_inverted": true,
+      "percent_R1_S1": 89.28,
+      "percent_R1_T1": 90.53,
+      "f_S1_eomccsd": 0.000562,
+      "CT_S1": 0.877,
+      "CT_T1": 0.854,
+      "delta_CT": 0.023,
+      "Om_S1": 0.772,
+      "Om_T1": 0.783,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 2.975,
+          "E_T1_eV": 2.7,
+          "delta_EST_eV": 0.275,
+          "f_S1": 0.001
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-COMe",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.7389,
+          "pct_T1": 89.28,
+          "osc_cc3": 0.000562,
+          "baselines": {
+            "CAM-B3LYP": 2.975
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-COMe",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8707,
+          "pct_T1": 90.53,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.7
+          }
+        }
+      ],
+      "cv5_fold": 0
+    },
+    {
+      "mol_id": "hepta_2T-7N-COOH",
+      "name": "2T-7N-COOH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "COOH"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-COOH/2T-7N-COOH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-COOH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 19,
+      "n_heavy": 16,
+      "nelectron": 110,
+      "formula": "C7H3N7O2",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "O"
+      ],
+      "E_S1_eV": 2.7167,
+      "E_T1_eV": 2.8387,
+      "delta_EST_eV": -0.122,
+      "is_inverted": true,
+      "percent_R1_S1": 89.29,
+      "percent_R1_T1": 90.59,
+      "f_S1_eomccsd": 0.000738,
+      "CT_S1": 0.875,
+      "CT_T1": 0.848,
+      "delta_CT": 0.027,
+      "Om_S1": 0.772,
+      "Om_T1": 0.783,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 2.963,
+          "E_T1_eV": 2.677,
+          "delta_EST_eV": 0.286,
+          "f_S1": 0.001
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-COOH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.7167,
+          "pct_T1": 89.29,
+          "osc_cc3": 0.000738,
+          "baselines": {
+            "CAM-B3LYP": 2.963
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-COOH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8387,
+          "pct_T1": 90.59,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.677
+          }
+        }
+      ],
+      "cv5_fold": 2
+    },
+    {
+      "mol_id": "hepta_2T-7N-F",
+      "name": "2T-7N-F",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "F"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-F/2T-7N-F.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-F.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 16,
+      "n_heavy": 14,
+      "nelectron": 96,
+      "formula": "C6H2FN7",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.0536,
+      "E_T1_eV": 3.2203,
+      "delta_EST_eV": -0.1667,
+      "is_inverted": true,
+      "percent_R1_S1": 89.36,
+      "percent_R1_T1": 90.6,
+      "f_S1_eomccsd": 0.003094,
+      "CT_S1": 0.881,
+      "CT_T1": 0.862,
+      "delta_CT": 0.019,
+      "Om_S1": 0.777,
+      "Om_T1": 0.788,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.299,
+          "E_T1_eV": 3.042,
+          "delta_EST_eV": 0.257,
+          "f_S1": 0.002
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0536,
+          "pct_T1": 89.36,
+          "osc_cc3": 0.003094,
+          "baselines": {
+            "CAM-B3LYP": 3.299
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.2203,
+          "pct_T1": 90.6,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.042
+          }
+        }
+      ],
+      "cv5_fold": 1
+    },
+    {
+      "mol_id": "hepta_2T-7N-NH2",
+      "name": "2T-7N-NH2",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "NH2"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-NH2/2T-7N-NH2.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-NH2.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 18,
+      "n_heavy": 14,
+      "nelectron": 96,
+      "formula": "C6H4N8",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.2545,
+      "E_T1_eV": 3.3304,
+      "delta_EST_eV": -0.0759,
+      "is_inverted": true,
+      "percent_R1_S1": 89.43,
+      "percent_R1_T1": 90.96,
+      "f_S1_eomccsd": 0.014075,
+      "CT_S1": 0.871,
+      "CT_T1": 0.824,
+      "delta_CT": 0.047,
+      "Om_S1": 0.779,
+      "Om_T1": 0.793,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.497,
+          "E_T1_eV": 3.141,
+          "delta_EST_eV": 0.356,
+          "f_S1": 0.011
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.2545,
+          "pct_T1": 89.43,
+          "osc_cc3": 0.014075,
+          "baselines": {
+            "CAM-B3LYP": 3.497
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.3304,
+          "pct_T1": 90.96,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.141
+          }
+        }
+      ],
+      "cv5_fold": 4
+    },
+    {
+      "mol_id": "hepta_2T-7N-NMe2",
+      "name": "2T-7N-NMe2",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "NMe2"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-NMe2/2T-7N-NMe2.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-NMe2.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 24,
+      "n_heavy": 16,
+      "nelectron": 112,
+      "formula": "C8H8N8",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.3047,
+      "E_T1_eV": 3.3565,
+      "delta_EST_eV": -0.0518,
+      "is_inverted": true,
+      "percent_R1_S1": 89.45,
+      "percent_R1_T1": 91.02,
+      "f_S1_eomccsd": 0.016357,
+      "CT_S1": 0.866,
+      "CT_T1": 0.814,
+      "delta_CT": 0.052,
+      "Om_S1": 0.778,
+      "Om_T1": 0.793,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.542,
+          "E_T1_eV": 3.166,
+          "delta_EST_eV": 0.376,
+          "f_S1": 0.012
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-NMe2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.3047,
+          "pct_T1": 89.45,
+          "osc_cc3": 0.016357,
+          "baselines": {
+            "CAM-B3LYP": 3.542
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-NMe2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.3565,
+          "pct_T1": 91.02,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.166
+          }
+        }
+      ],
+      "cv5_fold": 4
+    },
+    {
+      "mol_id": "hepta_2T-7N-OCF3",
+      "name": "2T-7N-OCF3",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "OCF3"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-OCF3/2T-7N-OCF3.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-OCF3.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 20,
+      "n_heavy": 18,
+      "nelectron": 128,
+      "formula": "C7H2F3N7O",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N",
+        "O"
+      ],
+      "E_S1_eV": 3.0534,
+      "E_T1_eV": 3.2195,
+      "delta_EST_eV": -0.1661,
+      "is_inverted": true,
+      "percent_R1_S1": 89.38,
+      "percent_R1_T1": 90.61,
+      "f_S1_eomccsd": 0.002862,
+      "CT_S1": 0.881,
+      "CT_T1": 0.863,
+      "delta_CT": 0.018,
+      "Om_S1": 0.777,
+      "Om_T1": 0.788,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.302,
+          "E_T1_eV": 3.046,
+          "delta_EST_eV": 0.256,
+          "f_S1": 0.002
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-OCF3",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0534,
+          "pct_T1": 89.38,
+          "osc_cc3": 0.002862,
+          "baselines": {
+            "CAM-B3LYP": 3.302
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-OCF3",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.2195,
+          "pct_T1": 90.61,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.046
+          }
+        }
+      ],
+      "cv5_fold": 1
+    },
+    {
+      "mol_id": "hepta_2T-7N-OH",
+      "name": "2T-7N-OH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "OH"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-OH/2T-7N-OH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-OH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 17,
+      "n_heavy": 14,
+      "nelectron": 96,
+      "formula": "C6H3N7O",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "O"
+      ],
+      "E_S1_eV": 3.16,
+      "E_T1_eV": 3.2873,
+      "delta_EST_eV": -0.1273,
+      "is_inverted": true,
+      "percent_R1_S1": 89.41,
+      "percent_R1_T1": 90.79,
+      "f_S1_eomccsd": 0.007877,
+      "CT_S1": 0.878,
+      "CT_T1": 0.845,
+      "delta_CT": 0.033,
+      "Om_S1": 0.778,
+      "Om_T1": 0.79,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.405,
+          "E_T1_eV": 3.104,
+          "delta_EST_eV": 0.301,
+          "f_S1": 0.006
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-OH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.16,
+          "pct_T1": 89.41,
+          "osc_cc3": 0.007877,
+          "baselines": {
+            "CAM-B3LYP": 3.405
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-OH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.2873,
+          "pct_T1": 90.79,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.104
+          }
+        }
+      ],
+      "cv5_fold": 4
+    },
+    {
+      "mol_id": "hepta_2T-7N-OMe",
+      "name": "2T-7N-OMe",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "OMe"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-OMe/2T-7N-OMe.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-OMe.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 20,
+      "n_heavy": 15,
+      "nelectron": 104,
+      "formula": "C7H5N7O",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "O"
+      ],
+      "E_S1_eV": 3.1559,
+      "E_T1_eV": 3.2732,
+      "delta_EST_eV": -0.1173,
+      "is_inverted": true,
+      "percent_R1_S1": 89.41,
+      "percent_R1_T1": 90.79,
+      "f_S1_eomccsd": 0.007577,
+      "CT_S1": 0.876,
+      "CT_T1": 0.84,
+      "delta_CT": 0.036,
+      "Om_S1": 0.778,
+      "Om_T1": 0.79,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.395,
+          "E_T1_eV": 3.093,
+          "delta_EST_eV": 0.302,
+          "f_S1": 0.006
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-OMe",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.1559,
+          "pct_T1": 89.41,
+          "osc_cc3": 0.007577,
+          "baselines": {
+            "CAM-B3LYP": 3.395
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-OMe",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.2732,
+          "pct_T1": 90.79,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.093
+          }
+        }
+      ],
+      "cv5_fold": 3
+    },
+    {
+      "mol_id": "hepta_2T-7N-PH2",
+      "name": "2T-7N-PH2",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "PH2"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-PH2/2T-7N-PH2.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-PH2.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 18,
+      "n_heavy": 14,
+      "nelectron": 104,
+      "formula": "C6H4N7P",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "P"
+      ],
+      "E_S1_eV": 2.8752,
+      "E_T1_eV": 3.0475,
+      "delta_EST_eV": -0.1723,
+      "is_inverted": true,
+      "percent_R1_S1": 89.29,
+      "percent_R1_T1": 90.51,
+      "f_S1_eomccsd": 8e-06,
+      "CT_S1": 0.882,
+      "CT_T1": 0.87,
+      "delta_CT": 0.012,
+      "Om_S1": 0.774,
+      "Om_T1": 0.785,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.142,
+          "E_T1_eV": 2.906,
+          "delta_EST_eV": 0.236,
+          "f_S1": 0.0
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-PH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8752,
+          "pct_T1": 89.29,
+          "osc_cc3": 8e-06,
+          "baselines": {
+            "CAM-B3LYP": 3.142
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-PH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0475,
+          "pct_T1": 90.51,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.906
+          }
+        }
+      ],
+      "cv5_fold": 1
+    },
+    {
+      "mol_id": "hepta_2T-7N-Ph",
+      "name": "2T-7N-Ph",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "Ph"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-Ph/2T-7N-Ph.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-Ph.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 26,
+      "n_heavy": 19,
+      "nelectron": 128,
+      "formula": "C12H7N7",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 2.8664,
+      "E_T1_eV": 3.0327,
+      "delta_EST_eV": -0.1663,
+      "is_inverted": true,
+      "percent_R1_S1": 89.27,
+      "percent_R1_T1": 90.42,
+      "f_S1_eomccsd": 2.2e-05,
+      "CT_S1": 0.882,
+      "CT_T1": 0.87,
+      "delta_CT": 0.012,
+      "Om_S1": 0.774,
+      "Om_T1": 0.784,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.117,
+          "E_T1_eV": 2.889,
+          "delta_EST_eV": 0.228,
+          "f_S1": 0.0
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-Ph",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8664,
+          "pct_T1": 89.27,
+          "osc_cc3": 2.2e-05,
+          "baselines": {
+            "CAM-B3LYP": 3.117
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-Ph",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0327,
+          "pct_T1": 90.42,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.889
+          }
+        }
+      ],
+      "cv5_fold": 2
+    },
+    {
+      "mol_id": "hepta_2T-7N-SH",
+      "name": "2T-7N-SH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "mono",
+      "substituents": [
+        "SH"
+      ],
+      "in_hepta15_benchmark": true,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/monosub/eomccsd/2T-7N-SH/2T-7N-SH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-SH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 17,
+      "n_heavy": 14,
+      "nelectron": 104,
+      "formula": "C6H3N7S",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "S"
+      ],
+      "E_S1_eV": 2.9758,
+      "E_T1_eV": 3.1504,
+      "delta_EST_eV": -0.1746,
+      "is_inverted": true,
+      "percent_R1_S1": 89.33,
+      "percent_R1_T1": 90.56,
+      "f_S1_eomccsd": 0.000925,
+      "CT_S1": 0.883,
+      "CT_T1": 0.868,
+      "delta_CT": 0.015,
+      "Om_S1": 0.775,
+      "Om_T1": 0.786,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.236,
+          "E_T1_eV": 2.995,
+          "delta_EST_eV": 0.241,
+          "f_S1": 0.001
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.9758,
+          "pct_T1": 89.33,
+          "osc_cc3": 0.000925,
+          "baselines": {
+            "CAM-B3LYP": 3.236
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.1504,
+          "pct_T1": 90.56,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.995
+          }
+        }
+      ],
+      "cv5_fold": 0
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-CF3",
+      "name": "2T-7N-CF3-CF3",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "CF3",
+        "CF3"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-CF3-CF3/2T-7N-CF3-CF3.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-CF3.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 22,
+      "n_heavy": 21,
+      "nelectron": 152,
+      "formula": "C8HF6N7",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 2.7849,
+      "E_T1_eV": 2.9268,
+      "delta_EST_eV": -0.1419,
+      "is_inverted": true,
+      "percent_R1_S1": 89.33,
+      "percent_R1_T1": 90.55,
+      "f_S1_eomccsd": 0.000221,
+      "CT_S1": 0.873,
+      "CT_T1": 0.855,
+      "delta_CT": 0.018,
+      "Om_S1": 0.773,
+      "Om_T1": 0.784,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.044,
+          "E_T1_eV": 2.78,
+          "delta_EST_eV": 0.264,
+          "f_S1": 0.0
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-CF3",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.7849,
+          "pct_T1": 89.33,
+          "osc_cc3": 0.000221,
+          "baselines": {
+            "CAM-B3LYP": 3.044
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-CF3",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.9268,
+          "pct_T1": 90.55,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.78
+          }
+        }
+      ],
+      "cv5_fold": 2
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-CN",
+      "name": "2T-7N-CF3-CN",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "CF3",
+        "CN"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-CF3-CN/2T-7N-CF3-CN.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-CN.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 20,
+      "n_heavy": 19,
+      "nelectron": 132,
+      "formula": "C8HF3N8",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 2.7296,
+      "E_T1_eV": 2.8582,
+      "delta_EST_eV": -0.1286,
+      "is_inverted": true,
+      "percent_R1_S1": 89.27,
+      "percent_R1_T1": 90.51,
+      "f_S1_eomccsd": 0.000568,
+      "CT_S1": 0.872,
+      "CT_T1": 0.85,
+      "delta_CT": 0.022,
+      "Om_S1": 0.77,
+      "Om_T1": 0.782,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 2.97,
+          "E_T1_eV": 2.692,
+          "delta_EST_eV": 0.278,
+          "f_S1": 0.001
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.7296,
+          "pct_T1": 89.27,
+          "osc_cc3": 0.000568,
+          "baselines": {
+            "CAM-B3LYP": 2.97
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8582,
+          "pct_T1": 90.51,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.692
+          }
+        }
+      ],
+      "cv5_fold": 0
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-F",
+      "name": "2T-7N-CF3-F",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "CF3",
+        "F"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-CF3-F/2T-7N-CF3-F.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-F.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 19,
+      "n_heavy": 18,
+      "nelectron": 128,
+      "formula": "C7HF4N7",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.0252,
+      "E_T1_eV": 3.1552,
+      "delta_EST_eV": -0.13,
+      "is_inverted": true,
+      "percent_R1_S1": 89.39,
+      "percent_R1_T1": 90.69,
+      "f_S1_eomccsd": 0.004176,
+      "CT_S1": 0.875,
+      "CT_T1": 0.844,
+      "delta_CT": 0.031,
+      "Om_S1": 0.777,
+      "Om_T1": 0.788,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.269,
+          "E_T1_eV": 2.985,
+          "delta_EST_eV": 0.284,
+          "f_S1": 0.003
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0252,
+          "pct_T1": 89.39,
+          "osc_cc3": 0.004176,
+          "baselines": {
+            "CAM-B3LYP": 3.269
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.1552,
+          "pct_T1": 90.69,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.985
+          }
+        }
+      ],
+      "cv5_fold": 4
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-SH",
+      "name": "2T-7N-CF3-SH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "CF3",
+        "SH"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-CF3-SH/2T-7N-CF3-SH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-SH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 20,
+      "n_heavy": 18,
+      "nelectron": 136,
+      "formula": "C7H2F3N7S",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N",
+        "S"
+      ],
+      "E_S1_eV": 2.9574,
+      "E_T1_eV": 3.0967,
+      "delta_EST_eV": -0.1393,
+      "is_inverted": true,
+      "percent_R1_S1": 89.36,
+      "percent_R1_T1": 90.66,
+      "f_S1_eomccsd": 0.001738,
+      "CT_S1": 0.877,
+      "CT_T1": 0.849,
+      "delta_CT": 0.028,
+      "Om_S1": 0.775,
+      "Om_T1": 0.787,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.213,
+          "E_T1_eV": 2.945,
+          "delta_EST_eV": 0.268,
+          "f_S1": 0.001
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.9574,
+          "pct_T1": 89.36,
+          "osc_cc3": 0.001738,
+          "baselines": {
+            "CAM-B3LYP": 3.213
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0967,
+          "pct_T1": 90.66,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.945
+          }
+        }
+      ],
+      "cv5_fold": 2
+    },
+    {
+      "mol_id": "hepta_2T-7N-CN-CN",
+      "name": "2T-7N-CN-CN",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "CN",
+        "CN"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-CN-CN/2T-7N-CN-CN.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CN-CN.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 18,
+      "n_heavy": 17,
+      "nelectron": 112,
+      "formula": "C8HN9",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 2.6763,
+      "E_T1_eV": 2.7942,
+      "delta_EST_eV": -0.1179,
+      "is_inverted": true,
+      "percent_R1_S1": 89.21,
+      "percent_R1_T1": 90.51,
+      "f_S1_eomccsd": 0.00067,
+      "CT_S1": 0.871,
+      "CT_T1": 0.845,
+      "delta_CT": 0.026,
+      "Om_S1": 0.768,
+      "Om_T1": 0.78,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 2.902,
+          "E_T1_eV": 2.618,
+          "delta_EST_eV": 0.284,
+          "f_S1": 0.001
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CN-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.6763,
+          "pct_T1": 89.21,
+          "osc_cc3": 0.00067,
+          "baselines": {
+            "CAM-B3LYP": 2.902
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CN-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.7942,
+          "pct_T1": 90.51,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.618
+          }
+        }
+      ],
+      "cv5_fold": 4
+    },
+    {
+      "mol_id": "hepta_2T-7N-CN-F",
+      "name": "2T-7N-CN-F",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "CN",
+        "F"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-CN-F/2T-7N-CN-F.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CN-F.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 17,
+      "n_heavy": 16,
+      "nelectron": 108,
+      "formula": "C7HFN8",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 2.9589,
+      "E_T1_eV": 3.0514,
+      "delta_EST_eV": -0.0925,
+      "is_inverted": true,
+      "percent_R1_S1": 89.32,
+      "percent_R1_T1": 90.67,
+      "f_S1_eomccsd": 0.005618,
+      "CT_S1": 0.872,
+      "CT_T1": 0.827,
+      "delta_CT": 0.045,
+      "Om_S1": 0.774,
+      "Om_T1": 0.785,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.18,
+          "E_T1_eV": 2.855,
+          "delta_EST_eV": 0.325,
+          "f_S1": 0.005
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CN-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.9589,
+          "pct_T1": 89.32,
+          "osc_cc3": 0.005618,
+          "baselines": {
+            "CAM-B3LYP": 3.18
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CN-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0514,
+          "pct_T1": 90.67,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.855
+          }
+        }
+      ],
+      "cv5_fold": 1
+    },
+    {
+      "mol_id": "hepta_2T-7N-CN-NH2",
+      "name": "2T-7N-CN-NH2",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "CN",
+        "NH2"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-CN-NH2/2T-7N-CN-NH2.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CN-NH2.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 19,
+      "n_heavy": 16,
+      "nelectron": 108,
+      "formula": "C7H3N9",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.1613,
+      "E_T1_eV": 3.1343,
+      "delta_EST_eV": 0.027,
+      "is_inverted": false,
+      "percent_R1_S1": 89.37,
+      "percent_R1_T1": 91.05,
+      "f_S1_eomccsd": 0.019496,
+      "CT_S1": 0.856,
+      "CT_T1": 0.787,
+      "delta_CT": 0.069,
+      "Om_S1": 0.774,
+      "Om_T1": 0.79,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.371,
+          "E_T1_eV": 2.919,
+          "delta_EST_eV": 0.452,
+          "f_S1": 0.017
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CN-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.1613,
+          "pct_T1": 89.37,
+          "osc_cc3": 0.019496,
+          "baselines": {
+            "CAM-B3LYP": 3.371
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CN-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.1343,
+          "pct_T1": 91.05,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.919
+          }
+        }
+      ],
+      "cv5_fold": 1
+    },
+    {
+      "mol_id": "hepta_2T-7N-CN-SH",
+      "name": "2T-7N-CN-SH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "CN",
+        "SH"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-CN-SH/2T-7N-CN-SH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CN-SH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 18,
+      "n_heavy": 16,
+      "nelectron": 116,
+      "formula": "C7H2N8S",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "S"
+      ],
+      "E_S1_eV": 2.8962,
+      "E_T1_eV": 3.0011,
+      "delta_EST_eV": -0.1049,
+      "is_inverted": true,
+      "percent_R1_S1": 89.29,
+      "percent_R1_T1": 90.65,
+      "f_S1_eomccsd": 0.003038,
+      "CT_S1": 0.874,
+      "CT_T1": 0.834,
+      "delta_CT": 0.04,
+      "Om_S1": 0.772,
+      "Om_T1": 0.784,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.131,
+          "E_T1_eV": 2.822,
+          "delta_EST_eV": 0.309,
+          "f_S1": 0.003
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CN-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8962,
+          "pct_T1": 89.29,
+          "osc_cc3": 0.003038,
+          "baselines": {
+            "CAM-B3LYP": 3.131
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CN-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0011,
+          "pct_T1": 90.65,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.822
+          }
+        }
+      ],
+      "cv5_fold": 3
+    },
+    {
+      "mol_id": "hepta_2T-7N-NH2-CF3",
+      "name": "2T-7N-NH2-CF3",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "NH2",
+        "CF3"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-NH2-CF3/2T-7N-NH2-CF3.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-NH2-CF3.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 21,
+      "n_heavy": 18,
+      "nelectron": 128,
+      "formula": "C7H3F3N8",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.2296,
+      "E_T1_eV": 3.2475,
+      "delta_EST_eV": -0.0179,
+      "is_inverted": true,
+      "percent_R1_S1": 89.45,
+      "percent_R1_T1": 91.08,
+      "f_S1_eomccsd": 0.017185,
+      "CT_S1": 0.862,
+      "CT_T1": 0.802,
+      "delta_CT": 0.06,
+      "Om_S1": 0.778,
+      "Om_T1": 0.793,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.466,
+          "E_T1_eV": 3.066,
+          "delta_EST_eV": 0.4,
+          "f_S1": 0.014
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-NH2-CF3",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.2296,
+          "pct_T1": 89.45,
+          "osc_cc3": 0.017185,
+          "baselines": {
+            "CAM-B3LYP": 3.466
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-NH2-CF3",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.2475,
+          "pct_T1": 91.08,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.066
+          }
+        }
+      ],
+      "cv5_fold": 2
+    },
+    {
+      "mol_id": "hepta_2T-7N-NH2-F",
+      "name": "2T-7N-NH2-F",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "NH2",
+        "F"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-NH2-F/2T-7N-NH2-F.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-NH2-F.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 18,
+      "n_heavy": 15,
+      "nelectron": 104,
+      "formula": "C6H3FN8",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.4969,
+      "E_T1_eV": 3.5617,
+      "delta_EST_eV": -0.0648,
+      "is_inverted": true,
+      "percent_R1_S1": 89.53,
+      "percent_R1_T1": 91.12,
+      "f_S1_eomccsd": 0.015262,
+      "CT_S1": 0.873,
+      "CT_T1": 0.799,
+      "delta_CT": 0.074,
+      "Om_S1": 0.782,
+      "Om_T1": 0.797,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.709,
+          "E_T1_eV": 3.349,
+          "delta_EST_eV": 0.36,
+          "f_S1": 0.011
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-NH2-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.4969,
+          "pct_T1": 89.53,
+          "osc_cc3": 0.015262,
+          "baselines": {
+            "CAM-B3LYP": 3.709
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-NH2-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.5617,
+          "pct_T1": 91.12,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.349
+          }
+        }
+      ],
+      "cv5_fold": 1
+    },
+    {
+      "mol_id": "hepta_2T-7N-NH2-NH2",
+      "name": "2T-7N-NH2-NH2",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "NH2",
+        "NH2"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-NH2-NH2/2T-7N-NH2-NH2.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-NH2-NH2.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 20,
+      "n_heavy": 15,
+      "nelectron": 104,
+      "formula": "C6H5N9",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.6611,
+      "E_T1_eV": 3.647,
+      "delta_EST_eV": 0.0141,
+      "is_inverted": false,
+      "percent_R1_S1": 89.61,
+      "percent_R1_T1": 91.42,
+      "f_S1_eomccsd": 0.023414,
+      "CT_S1": 0.87,
+      "CT_T1": 0.763,
+      "delta_CT": 0.107,
+      "Om_S1": 0.784,
+      "Om_T1": 0.801,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.869,
+          "E_T1_eV": 3.427,
+          "delta_EST_eV": 0.442,
+          "f_S1": 0.016
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-NH2-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.6611,
+          "pct_T1": 89.61,
+          "osc_cc3": 0.023414,
+          "baselines": {
+            "CAM-B3LYP": 3.869
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-NH2-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.647,
+          "pct_T1": 91.42,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.427
+          }
+        }
+      ],
+      "cv5_fold": 0
+    },
+    {
+      "mol_id": "hepta_2T-7N-NH2-SH",
+      "name": "2T-7N-NH2-SH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "NH2",
+        "SH"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-NH2-SH/2T-7N-NH2-SH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-NH2-SH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 19,
+      "n_heavy": 15,
+      "nelectron": 112,
+      "formula": "C6H4N8S",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "S"
+      ],
+      "E_S1_eV": 3.3894,
+      "E_T1_eV": 3.479,
+      "delta_EST_eV": -0.0896,
+      "is_inverted": true,
+      "percent_R1_S1": 89.48,
+      "percent_R1_T1": 90.96,
+      "f_S1_eomccsd": 0.016543,
+      "CT_S1": 0.875,
+      "CT_T1": 0.82,
+      "delta_CT": 0.055,
+      "Om_S1": 0.78,
+      "Om_T1": 0.793,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.62,
+          "E_T1_eV": 3.289,
+          "delta_EST_eV": 0.331,
+          "f_S1": 0.013
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-NH2-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.3894,
+          "pct_T1": 89.48,
+          "osc_cc3": 0.016543,
+          "baselines": {
+            "CAM-B3LYP": 3.62
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-NH2-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.479,
+          "pct_T1": 90.96,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.289
+          }
+        }
+      ],
+      "cv5_fold": 3
+    },
+    {
+      "mol_id": "hepta_2T-7N-SH-SH",
+      "name": "2T-7N-SH-SH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "di",
+      "substituents": [
+        "SH",
+        "SH"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/disub/eomccsd/2T-7N-SH-SH/2T-7N-SH-SH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-SH-SH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 18,
+      "n_heavy": 15,
+      "nelectron": 120,
+      "formula": "C6H3N7S2",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "S"
+      ],
+      "E_S1_eV": 3.1197,
+      "E_T1_eV": 3.3036,
+      "delta_EST_eV": -0.1839,
+      "is_inverted": true,
+      "percent_R1_S1": 89.38,
+      "percent_R1_T1": 90.57,
+      "f_S1_eomccsd": 0.001677,
+      "CT_S1": 0.885,
+      "CT_T1": 0.868,
+      "delta_CT": 0.017,
+      "Om_S1": 0.776,
+      "Om_T1": 0.787,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.371,
+          "E_T1_eV": 3.147,
+          "delta_EST_eV": 0.224,
+          "f_S1": 0.001
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-SH-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.1197,
+          "pct_T1": 89.38,
+          "osc_cc3": 0.001677,
+          "baselines": {
+            "CAM-B3LYP": 3.371
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-SH-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.3036,
+          "pct_T1": 90.57,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.147
+          }
+        }
+      ],
+      "cv5_fold": 0
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-CF3-CN",
+      "name": "2T-7N-CF3-CF3-CN",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CF3",
+        "CF3",
+        "CN"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CF3-CF3-CN/2T-7N-CF3-CF3-CN.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-CF3-CN.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 23,
+      "n_heavy": 23,
+      "nelectron": 164,
+      "formula": "C9F6N8",
+      "elements": [
+        "C",
+        "F",
+        "N"
+      ],
+      "E_S1_eV": 2.7107,
+      "E_T1_eV": 2.8402,
+      "delta_EST_eV": -0.1295,
+      "is_inverted": true,
+      "percent_R1_S1": 89.27,
+      "percent_R1_T1": 90.5,
+      "f_S1_eomccsd": 0.00024,
+      "CT_S1": 0.87,
+      "CT_T1": 0.851,
+      "delta_CT": 0.019,
+      "Om_S1": 0.77,
+      "Om_T1": 0.781,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 2.954,
+          "E_T1_eV": 2.679,
+          "delta_EST_eV": 0.275,
+          "f_S1": 0.0
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-CF3-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.7107,
+          "pct_T1": 89.27,
+          "osc_cc3": 0.00024,
+          "baselines": {
+            "CAM-B3LYP": 2.954
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-CF3-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8402,
+          "pct_T1": 90.5,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.679
+          }
+        }
+      ],
+      "cv5_fold": 3
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-CF3-F",
+      "name": "2T-7N-CF3-CF3-F",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CF3",
+        "CF3",
+        "F"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CF3-CF3-F/2T-7N-CF3-CF3-F.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-CF3-F.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 22,
+      "n_heavy": 22,
+      "nelectron": 160,
+      "formula": "C8F7N7",
+      "elements": [
+        "C",
+        "F",
+        "N"
+      ],
+      "E_S1_eV": 2.999,
+      "E_T1_eV": 3.1168,
+      "delta_EST_eV": -0.1178,
+      "is_inverted": true,
+      "percent_R1_S1": 89.41,
+      "percent_R1_T1": 90.73,
+      "f_S1_eomccsd": 0.004655,
+      "CT_S1": 0.871,
+      "CT_T1": 0.842,
+      "delta_CT": 0.029,
+      "Om_S1": 0.776,
+      "Om_T1": 0.787,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.244,
+          "E_T1_eV": 2.951,
+          "delta_EST_eV": 0.293,
+          "f_S1": 0.004
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-CF3-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.999,
+          "pct_T1": 89.41,
+          "osc_cc3": 0.004655,
+          "baselines": {
+            "CAM-B3LYP": 3.244
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-CF3-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.1168,
+          "pct_T1": 90.73,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.951
+          }
+        }
+      ],
+      "cv5_fold": 4
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-CF3-NH2",
+      "name": "2T-7N-CF3-CF3-NH2",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CF3",
+        "CF3",
+        "NH2"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CF3-CF3-NH2/2T-7N-CF3-CF3-NH2.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-CF3-NH2.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 24,
+      "n_heavy": 22,
+      "nelectron": 160,
+      "formula": "C8H2F6N8",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.2149,
+      "E_T1_eV": 3.2129,
+      "delta_EST_eV": 0.002,
+      "is_inverted": false,
+      "percent_R1_S1": 89.48,
+      "percent_R1_T1": 91.13,
+      "f_S1_eomccsd": 0.019669,
+      "CT_S1": 0.855,
+      "CT_T1": 0.799,
+      "delta_CT": 0.056,
+      "Om_S1": 0.777,
+      "Om_T1": 0.793,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.447,
+          "E_T1_eV": 3.031,
+          "delta_EST_eV": 0.416,
+          "f_S1": 0.015
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-CF3-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.2149,
+          "pct_T1": 89.48,
+          "osc_cc3": 0.019669,
+          "baselines": {
+            "CAM-B3LYP": 3.447
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-CF3-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.2129,
+          "pct_T1": 91.13,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.031
+          }
+        }
+      ],
+      "cv5_fold": 4
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-CF3-SH",
+      "name": "2T-7N-CF3-CF3-SH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CF3",
+        "CF3",
+        "SH"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CF3-CF3-SH/2T-7N-CF3-CF3-SH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-CF3-SH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 23,
+      "n_heavy": 22,
+      "nelectron": 168,
+      "formula": "C8HF6N7S",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N",
+        "S"
+      ],
+      "E_S1_eV": 2.9389,
+      "E_T1_eV": 3.0687,
+      "delta_EST_eV": -0.1298,
+      "is_inverted": true,
+      "percent_R1_S1": 89.39,
+      "percent_R1_T1": 90.7,
+      "f_S1_eomccsd": 0.002285,
+      "CT_S1": 0.874,
+      "CT_T1": 0.847,
+      "delta_CT": 0.027,
+      "Om_S1": 0.774,
+      "Om_T1": 0.786,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.193,
+          "E_T1_eV": 2.919,
+          "delta_EST_eV": 0.274,
+          "f_S1": 0.002
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-CF3-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.9389,
+          "pct_T1": 89.39,
+          "osc_cc3": 0.002285,
+          "baselines": {
+            "CAM-B3LYP": 3.193
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-CF3-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0687,
+          "pct_T1": 90.7,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.919
+          }
+        }
+      ],
+      "cv5_fold": 4
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-CN-F",
+      "name": "2T-7N-CF3-CN-F",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CF3",
+        "CN",
+        "F"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CF3-CN-F/2T-7N-CF3-CN-F.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-CN-F.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 20,
+      "n_heavy": 20,
+      "nelectron": 140,
+      "formula": "C8F4N8",
+      "elements": [
+        "C",
+        "F",
+        "N"
+      ],
+      "E_S1_eV": 2.9319,
+      "E_T1_eV": 3.0213,
+      "delta_EST_eV": -0.0894,
+      "is_inverted": true,
+      "percent_R1_S1": 89.33,
+      "percent_R1_T1": 90.67,
+      "f_S1_eomccsd": 0.006208,
+      "CT_S1": 0.869,
+      "CT_T1": 0.831,
+      "delta_CT": 0.038,
+      "Om_S1": 0.773,
+      "Om_T1": 0.785,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.157,
+          "E_T1_eV": 2.834,
+          "delta_EST_eV": 0.323,
+          "f_S1": 0.006
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-CN-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.9319,
+          "pct_T1": 89.33,
+          "osc_cc3": 0.006208,
+          "baselines": {
+            "CAM-B3LYP": 3.157
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-CN-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0213,
+          "pct_T1": 90.67,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.834
+          }
+        }
+      ],
+      "cv5_fold": 1
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-CN-NH2",
+      "name": "2T-7N-CF3-CN-NH2",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CF3",
+        "CN",
+        "NH2"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CF3-CN-NH2/2T-7N-CF3-CN-NH2.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-CN-NH2.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 22,
+      "n_heavy": 20,
+      "nelectron": 140,
+      "formula": "C8H2F3N9",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.1381,
+      "E_T1_eV": 3.1004,
+      "delta_EST_eV": 0.0377,
+      "is_inverted": false,
+      "percent_R1_S1": 89.39,
+      "percent_R1_T1": 91.06,
+      "f_S1_eomccsd": 0.022446,
+      "CT_S1": 0.851,
+      "CT_T1": 0.79,
+      "delta_CT": 0.061,
+      "Om_S1": 0.774,
+      "Om_T1": 0.79,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.35,
+          "E_T1_eV": 2.895,
+          "delta_EST_eV": 0.455,
+          "f_S1": 0.019
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-CN-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.1381,
+          "pct_T1": 89.39,
+          "osc_cc3": 0.022446,
+          "baselines": {
+            "CAM-B3LYP": 3.35
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-CN-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.1004,
+          "pct_T1": 91.06,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.895
+          }
+        }
+      ],
+      "cv5_fold": 3
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-CN-SH",
+      "name": "2T-7N-CF3-CN-SH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CF3",
+        "CN",
+        "SH"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CF3-CN-SH/2T-7N-CF3-CN-SH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-CN-SH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 21,
+      "n_heavy": 20,
+      "nelectron": 148,
+      "formula": "C8HF3N8S",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N",
+        "S"
+      ],
+      "E_S1_eV": 2.8792,
+      "E_T1_eV": 2.9765,
+      "delta_EST_eV": -0.0973,
+      "is_inverted": true,
+      "percent_R1_S1": 89.31,
+      "percent_R1_T1": 90.67,
+      "f_S1_eomccsd": 0.003566,
+      "CT_S1": 0.87,
+      "CT_T1": 0.833,
+      "delta_CT": 0.037,
+      "Om_S1": 0.771,
+      "Om_T1": 0.784,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.115,
+          "E_T1_eV": 2.804,
+          "delta_EST_eV": 0.311,
+          "f_S1": 0.004
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-CN-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8792,
+          "pct_T1": 89.31,
+          "osc_cc3": 0.003566,
+          "baselines": {
+            "CAM-B3LYP": 3.115
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-CN-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.9765,
+          "pct_T1": 90.67,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.804
+          }
+        }
+      ],
+      "cv5_fold": 3
+    },
+    {
+      "mol_id": "hepta_2T-7N-CF3-NH2-NH2",
+      "name": "2T-7N-CF3-NH2-NH2",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CF3",
+        "NH2",
+        "NH2"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CF3-NH2-NH2/2T-7N-CF3-NH2-NH2.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CF3-NH2-NH2.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 23,
+      "n_heavy": 19,
+      "nelectron": 136,
+      "formula": "C7H4F3N9",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.6369,
+      "E_T1_eV": 3.5203,
+      "delta_EST_eV": 0.1166,
+      "is_inverted": false,
+      "percent_R1_S1": 89.64,
+      "percent_R1_T1": 91.59,
+      "f_S1_eomccsd": 0.02567,
+      "CT_S1": 0.856,
+      "CT_T1": 0.738,
+      "delta_CT": 0.118,
+      "Om_S1": 0.783,
+      "Om_T1": 0.802,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.835,
+          "E_T1_eV": 3.306,
+          "delta_EST_eV": 0.529,
+          "f_S1": 0.019
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CF3-NH2-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.6369,
+          "pct_T1": 89.64,
+          "osc_cc3": 0.02567,
+          "baselines": {
+            "CAM-B3LYP": 3.835
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CF3-NH2-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.5203,
+          "pct_T1": 91.59,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.306
+          }
+        }
+      ],
+      "cv5_fold": 1
+    },
+    {
+      "mol_id": "hepta_2T-7N-CN-CN-CN",
+      "name": "2T-7N-CN-CN-CN",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CN",
+        "CN",
+        "CN"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CN-CN-CN/2T-7N-CN-CN-CN.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CN-CN-CN.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 19,
+      "n_heavy": 19,
+      "nelectron": 124,
+      "formula": "C9N10",
+      "elements": [
+        "C",
+        "N"
+      ],
+      "E_S1_eV": 2.617,
+      "E_T1_eV": 2.7456,
+      "delta_EST_eV": -0.1286,
+      "is_inverted": true,
+      "percent_R1_S1": 89.17,
+      "percent_R1_T1": 90.4,
+      "f_S1_eomccsd": 0.0,
+      "CT_S1": 0.871,
+      "CT_T1": 0.854,
+      "delta_CT": 0.017,
+      "Om_S1": 0.766,
+      "Om_T1": 0.777,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 2.836,
+          "E_T1_eV": 2.569,
+          "delta_EST_eV": 0.267,
+          "f_S1": 0.0
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CN-CN-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.617,
+          "pct_T1": 89.17,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.836
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CN-CN-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.7456,
+          "pct_T1": 90.4,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.569
+          }
+        }
+      ],
+      "cv5_fold": 3
+    },
+    {
+      "mol_id": "hepta_2T-7N-CN-CN-F",
+      "name": "2T-7N-CN-CN-F",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CN",
+        "CN",
+        "F"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CN-CN-F/2T-7N-CN-CN-F.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CN-CN-F.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 18,
+      "n_heavy": 18,
+      "nelectron": 120,
+      "formula": "C8FN9",
+      "elements": [
+        "C",
+        "F",
+        "N"
+      ],
+      "E_S1_eV": 2.8817,
+      "E_T1_eV": 2.9658,
+      "delta_EST_eV": -0.0841,
+      "is_inverted": true,
+      "percent_R1_S1": 89.27,
+      "percent_R1_T1": 90.63,
+      "f_S1_eomccsd": 0.00681,
+      "CT_S1": 0.868,
+      "CT_T1": 0.831,
+      "delta_CT": 0.037,
+      "Om_S1": 0.771,
+      "Om_T1": 0.783,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.091,
+          "E_T1_eV": 2.766,
+          "delta_EST_eV": 0.325,
+          "f_S1": 0.006
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CN-CN-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8817,
+          "pct_T1": 89.27,
+          "osc_cc3": 0.00681,
+          "baselines": {
+            "CAM-B3LYP": 3.091
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CN-CN-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.9658,
+          "pct_T1": 90.63,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.766
+          }
+        }
+      ],
+      "cv5_fold": 2
+    },
+    {
+      "mol_id": "hepta_2T-7N-CN-CN-NH2",
+      "name": "2T-7N-CN-CN-NH2",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CN",
+        "CN",
+        "NH2"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CN-CN-NH2/2T-7N-CN-CN-NH2.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CN-CN-NH2.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 20,
+      "n_heavy": 18,
+      "nelectron": 120,
+      "formula": "C8H2N10",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.0881,
+      "E_T1_eV": 3.044,
+      "delta_EST_eV": 0.0441,
+      "is_inverted": false,
+      "percent_R1_S1": 89.33,
+      "percent_R1_T1": 91.03,
+      "f_S1_eomccsd": 0.023748,
+      "CT_S1": 0.849,
+      "CT_T1": 0.792,
+      "delta_CT": 0.057,
+      "Om_S1": 0.771,
+      "Om_T1": 0.788,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.282,
+          "E_T1_eV": 2.824,
+          "delta_EST_eV": 0.458,
+          "f_S1": 0.021
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CN-CN-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.0881,
+          "pct_T1": 89.33,
+          "osc_cc3": 0.023748,
+          "baselines": {
+            "CAM-B3LYP": 3.282
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CN-CN-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.044,
+          "pct_T1": 91.03,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.824
+          }
+        }
+      ],
+      "cv5_fold": 0
+    },
+    {
+      "mol_id": "hepta_2T-7N-CN-CN-SH",
+      "name": "2T-7N-CN-CN-SH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "CN",
+        "CN",
+        "SH"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-CN-CN-SH/2T-7N-CN-CN-SH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-CN-CN-SH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 19,
+      "n_heavy": 18,
+      "nelectron": 128,
+      "formula": "C8HN9S",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "S"
+      ],
+      "E_S1_eV": 2.8322,
+      "E_T1_eV": 2.922,
+      "delta_EST_eV": -0.0898,
+      "is_inverted": true,
+      "percent_R1_S1": 89.25,
+      "percent_R1_T1": 90.62,
+      "f_S1_eomccsd": 0.004202,
+      "CT_S1": 0.869,
+      "CT_T1": 0.836,
+      "delta_CT": 0.033,
+      "Om_S1": 0.769,
+      "Om_T1": 0.781,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.052,
+          "E_T1_eV": 2.737,
+          "delta_EST_eV": 0.315,
+          "f_S1": 0.004
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-CN-CN-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.8322,
+          "pct_T1": 89.25,
+          "osc_cc3": 0.004202,
+          "baselines": {
+            "CAM-B3LYP": 3.052
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-CN-CN-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 2.922,
+          "pct_T1": 90.62,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 2.737
+          }
+        }
+      ],
+      "cv5_fold": 1
+    },
+    {
+      "mol_id": "hepta_2T-7N-NH2-NH2-CN",
+      "name": "2T-7N-NH2-NH2-CN",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "NH2",
+        "NH2",
+        "CN"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-NH2-NH2-CN/2T-7N-NH2-NH2-CN.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-NH2-NH2-CN.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 21,
+      "n_heavy": 17,
+      "nelectron": 116,
+      "formula": "C7H4N10",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.5406,
+      "E_T1_eV": 3.3435,
+      "delta_EST_eV": 0.1971,
+      "is_inverted": false,
+      "percent_R1_S1": 89.5,
+      "percent_R1_T1": 91.52,
+      "f_S1_eomccsd": 0.031966,
+      "CT_S1": 0.844,
+      "CT_T1": 0.727,
+      "delta_CT": 0.117,
+      "Om_S1": 0.778,
+      "Om_T1": 0.797,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.71,
+          "E_T1_eV": 3.086,
+          "delta_EST_eV": 0.624,
+          "f_S1": 0.027
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-NH2-NH2-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.5406,
+          "pct_T1": 89.5,
+          "osc_cc3": 0.031966,
+          "baselines": {
+            "CAM-B3LYP": 3.71
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-NH2-NH2-CN",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.3435,
+          "pct_T1": 91.52,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.086
+          }
+        }
+      ],
+      "cv5_fold": 2
+    },
+    {
+      "mol_id": "hepta_2T-7N-NH2-NH2-F",
+      "name": "2T-7N-NH2-NH2-F",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "NH2",
+        "NH2",
+        "F"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-NH2-NH2-F/2T-7N-NH2-NH2-F.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-NH2-NH2-F.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 20,
+      "n_heavy": 16,
+      "nelectron": 112,
+      "formula": "C6H4FN9",
+      "elements": [
+        "C",
+        "F",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 3.9526,
+      "E_T1_eV": 4.1074,
+      "delta_EST_eV": -0.1548,
+      "is_inverted": true,
+      "percent_R1_S1": 89.74,
+      "percent_R1_T1": 91.22,
+      "f_S1_eomccsd": 0.004946,
+      "CT_S1": 0.886,
+      "CT_T1": 0.803,
+      "delta_CT": 0.083,
+      "Om_S1": 0.789,
+      "Om_T1": 0.803,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 4.103,
+          "E_T1_eV": 3.845,
+          "delta_EST_eV": 0.258,
+          "f_S1": 0.003
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-NH2-NH2-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.9526,
+          "pct_T1": 89.74,
+          "osc_cc3": 0.004946,
+          "baselines": {
+            "CAM-B3LYP": 4.103
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-NH2-NH2-F",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 4.1074,
+          "pct_T1": 91.22,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.845
+          }
+        }
+      ],
+      "cv5_fold": 2
+    },
+    {
+      "mol_id": "hepta_2T-7N-NH2-NH2-NH2",
+      "name": "2T-7N-NH2-NH2-NH2",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "NH2",
+        "NH2",
+        "NH2"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-NH2-NH2-NH2/2T-7N-NH2-NH2-NH2.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-NH2-NH2-NH2.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 22,
+      "n_heavy": 16,
+      "nelectron": 112,
+      "formula": "C6H6N10",
+      "elements": [
+        "C",
+        "H",
+        "N"
+      ],
+      "E_S1_eV": 4.107,
+      "E_T1_eV": 4.3768,
+      "delta_EST_eV": -0.2698,
+      "is_inverted": true,
+      "percent_R1_S1": 89.84,
+      "percent_R1_T1": 90.86,
+      "f_S1_eomccsd": 0.0,
+      "CT_S1": 0.894,
+      "CT_T1": 0.9,
+      "delta_CT": -0.006,
+      "Om_S1": 0.791,
+      "Om_T1": 0.798,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 4.245,
+          "E_T1_eV": 4.105,
+          "delta_EST_eV": 0.14,
+          "f_S1": 0.0
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-NH2-NH2-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 4.107,
+          "pct_T1": 89.84,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 4.245
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-NH2-NH2-NH2",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 4.3768,
+          "pct_T1": 90.86,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 4.105
+          }
+        }
+      ],
+      "cv5_fold": 0
+    },
+    {
+      "mol_id": "hepta_2T-7N-NH2-NH2-SH",
+      "name": "2T-7N-NH2-NH2-SH",
+      "subset": "HEPTA-INVEST44",
+      "substitution_type": "tri",
+      "substituents": [
+        "NH2",
+        "NH2",
+        "SH"
+      ],
+      "in_hepta15_benchmark": false,
+      "xyz_path": "data/external/HEPTA-INVEST/data/raw_data/trisub/eomccsd/2T-7N-NH2-NH2-SH/2T-7N-NH2-NH2-SH.xyz",
+      "feature_path": "data/processed/features/hepta_2T-7N-NH2-NH2-SH.npz",
+      "charge": 0,
+      "spin": 0,
+      "n_atoms": 21,
+      "n_heavy": 16,
+      "nelectron": 120,
+      "formula": "C6H5N9S",
+      "elements": [
+        "C",
+        "H",
+        "N",
+        "S"
+      ],
+      "E_S1_eV": 3.8065,
+      "E_T1_eV": 3.8823,
+      "delta_EST_eV": -0.0758,
+      "is_inverted": true,
+      "percent_R1_S1": 89.67,
+      "percent_R1_T1": 91.18,
+      "f_S1_eomccsd": 0.012306,
+      "CT_S1": 0.879,
+      "CT_T1": 0.79,
+      "delta_CT": 0.089,
+      "Om_S1": 0.786,
+      "Om_T1": 0.799,
+      "baselines": {
+        "CAM-B3LYP": {
+          "E_S1_eV": 3.99,
+          "E_T1_eV": 3.669,
+          "delta_EST_eV": 0.321,
+          "f_S1": 0.009
+        }
+      },
+      "states": [
+        {
+          "mol_id": "hepta_2T-7N-NH2-NH2-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 0,
+          "state_label": "S1",
+          "spin": 1,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.8065,
+          "pct_T1": 89.67,
+          "osc_cc3": 0.012306,
+          "baselines": {
+            "CAM-B3LYP": 3.99
+          }
+        },
+        {
+          "mol_id": "hepta_2T-7N-NH2-NH2-SH",
+          "subset": "HEPTA-INVEST44",
+          "state_index": 1,
+          "state_label": "T1",
+          "spin": 3,
+          "vr": "V",
+          "type": "ppi",
+          "special": null,
+          "safe": true,
+          "tbe_avtz_eV": 3.8823,
+          "pct_T1": 91.18,
+          "osc_cc3": 0.0,
+          "baselines": {
+            "CAM-B3LYP": 3.669
+          }
+        }
+      ],
+      "cv5_fold": 0
+    }
+  ]
+}

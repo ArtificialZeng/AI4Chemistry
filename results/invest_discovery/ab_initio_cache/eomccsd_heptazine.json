@@ -1,0 +1,39 @@
+{
+  "mol_id": "heptazine",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 197,
+  "n_core_frozen": 13,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -611.48087246,
+  "E_S1_eV": 2.796052,
+  "E_T1_eV": 2.993388,
+  "dEST_eV": -0.197336,
+  "f_S1_R1": 0.0,
+  "pct_R1_S1": 91.271,
+  "pct_R1_T1": 90.605,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.10275303,
+      "energy_eV": 2.796052,
+      "pct_R1": 91.271,
+      "osc_f_R1": 0.0
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.11000499,
+      "energy_eV": 2.993388,
+      "pct_R1": 90.605
+    }
+  ],
+  "timings_s": {
+    "rhf": 210.73,
+    "ccsd": 1205.79,
+    "eom_s": 904.89,
+    "eom_t": 818.39,
+    "total": 3140.61
+  }
+}

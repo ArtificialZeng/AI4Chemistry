@@ -1,0 +1,86 @@
+{
+  "mol_id": "VBI_0069_3N_13_pp",
+  "method": "SA4-CASSCF(6,6)+SC-NEVPT2/def2-svp",
+  "ok": true,
+  "n_singlet_roots": 3,
+  "selected_s1_cas_root": 1,
+  "ncas": 6,
+  "nelecas": 6,
+  "basis": "def2-svp",
+  "n_ao": 245,
+  "casscf_converged": true,
+  "pi_weights_init_occ": [
+    0.9982,
+    0.9995,
+    0.9995
+  ],
+  "pi_weights_init_vir": [
+    0.9995,
+    0.9996,
+    0.9994
+  ],
+  "sa3_noons": [
+    1.9323,
+    1.8948,
+    1.2317,
+    0.6226,
+    0.2645,
+    0.0541
+  ],
+  "spin_square_S0": 0.0,
+  "spin_square_S1": 0.0,
+  "spin_square_T1": 2.0,
+  "E_S0_casscf_ha": -699.50468787,
+  "E_S0_nevpt2_ha": -701.60731592,
+  "CASSCF_E_S1_eV": 2.692995,
+  "CASSCF_E_T1_eV": 2.356776,
+  "CASSCF_dEST_eV": 0.336219,
+  "E_S1_eV": 2.441098,
+  "E_T1_eV": 2.443636,
+  "dEST_eV": -0.002538,
+  "f_S1_casscf": 0.196109,
+  "f_S1_nevpt2_energy": 0.177765,
+  "f_S1_basis_verified": true,
+  "S1_cas_exc_weights": {
+    "w0": 0.0224,
+    "w1_singles": 0.8374,
+    "w2_doubles": 0.1093,
+    "w3plus": 0.0309
+  },
+  "all_singlet_excited_roots": [
+    {
+      "cas_root_idx": 1,
+      "CASSCF_E_eV": 2.692995,
+      "NEVPT2_E_eV": 2.441098,
+      "f_casscf": 0.196109,
+      "f_nevpt2_energy": 0.177765,
+      "spin_square": 0.0,
+      "exc_weights": {
+        "w0": 0.0224,
+        "w1_singles": 0.8374,
+        "w2_doubles": 0.1093,
+        "w3plus": 0.0309
+      }
+    },
+    {
+      "cas_root_idx": 2,
+      "CASSCF_E_eV": 4.73859,
+      "NEVPT2_E_eV": 4.171956,
+      "f_casscf": 0.249496,
+      "f_nevpt2_energy": 0.219661,
+      "spin_square": 0.0,
+      "exc_weights": {
+        "w0": 0.0003,
+        "w1_singles": 0.6794,
+        "w2_doubles": 0.2826,
+        "w3plus": 0.0377
+      }
+    }
+  ],
+  "timings_s": {
+    "rhf": 17.65,
+    "casscf": 2362.38,
+    "nevpt2": 118.55,
+    "total": 2498.59
+  }
+}

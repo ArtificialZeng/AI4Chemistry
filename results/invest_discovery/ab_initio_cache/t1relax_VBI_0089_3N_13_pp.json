@@ -1,0 +1,29 @@
+{
+  "mol_id": "VBI_0089_3N_13_pp",
+  "ok": true,
+  "s0_opt_converged": true,
+  "t1_opt_converged": true,
+  "heavy_rmsd_xtb_vs_pbe0S0_A": 0.017,
+  "heavy_rmsd_pbe0S0_vs_pbe0T1_A": 0.017,
+  "uks_T1_reorg_lambda_eV": 0.0862,
+  "rks_S0_strain_at_T1_eV": 0.1111,
+  "uks_spin_square_vert": 2.0107,
+  "uks_spin_square_opt": 2.018,
+  "uks_E_T1_vert_eV": 2.0062,
+  "uks_E_T1_adia_eV": 1.92,
+  "adc2_at_pbe0_S0_geom": {
+    "E_S1_eV": 2.014742,
+    "E_T1_eV": 2.165228,
+    "dEST_eV": -0.150486,
+    "f_S1": 0.012308
+  },
+  "adc2_at_pbe0_T1_geom": {
+    "E_S1_eV": 1.870495,
+    "E_T1_eV": 1.973561,
+    "dEST_at_T1_geom_eV": -0.103066,
+    "f_S1_at_T1_geom": 0.017325
+  },
+  "s0_opt_xyz": "results/invest_discovery/relaxed_xyz/VBI_0089_3N_13_pp_S0_pbe0.xyz",
+  "t1_opt_xyz": "results/invest_discovery/relaxed_xyz/VBI_0089_3N_13_pp_T1_pbe0.xyz",
+  "total_time_s": 1961.9
+}

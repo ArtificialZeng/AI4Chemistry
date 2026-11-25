@@ -1,0 +1,52 @@
+{
+  "mol_id": "azulene",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 180,
+  "n_occ_act": 24,
+  "n_vir_act": 146,
+  "n_core_frozen": 10,
+  "rhf_converged": true,
+  "e_rhf_ha": -383.0023563,
+  "rhf_hl_gap_eV": 8.374,
+  "E_S1_eV": 2.283692,
+  "E_T1_eV": 2.652365,
+  "dEST_eV": -0.368673,
+  "f_S1": 0.00858,
+  "pct_T1_S1": 89.602,
+  "pct_T2_S1": 10.398,
+  "pct_T1_T1": 93.876,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.08392413,
+      "energy_eV": 2.283692,
+      "pct_T1": 89.602,
+      "pct_T2": 10.398,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.00858,
+      "trans_dip_norm_au": 0.276898
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.09747262,
+      "energy_eV": 2.652365,
+      "pct_T1": 93.876,
+      "pct_T2": 6.124,
+      "converged": true,
+      "iters": 3
+    }
+  ],
+  "timings_s": {
+    "rhf": 9.19,
+    "build_M11": 10.63,
+    "singlet": 33.46,
+    "triplet": 29.9,
+    "total": 83.18
+  }
+}

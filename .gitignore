@@ -1,0 +1,33 @@
+# Virtual environments & Python caches
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+
+# macOS & editor artifacts
+.DS_Store
+._*
+.vscode/
+.idea/
+
+# Training / solver scratch directories
+catboost_info/
+env_check/
+
+# LaTeX intermediate build files
+manuscript/*.aux
+manuscript/*.bbl
+manuscript/*.blg
+manuscript/*.fdb_latexmk
+manuscript/*.fls
+manuscript/*.log
+manuscript/*.out
+manuscript/*.synctex.gz
+manuscript/*.toc
+manuscript/_tmp_*
+
+# Large binary solver caches & third-party upstream dataset clones
+*.pkl
+data/external/

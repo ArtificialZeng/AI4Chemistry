@@ -1,0 +1,39 @@
+{
+  "mol_id": "3N_1_3_9b",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 217,
+  "n_core_frozen": 13,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -547.47173635,
+  "E_S1_eV": 1.722262,
+  "E_T1_eV": 1.814326,
+  "dEST_eV": -0.092064,
+  "f_S1_R1": 0.003777,
+  "pct_R1_S1": 91.484,
+  "pct_R1_T1": 91.131,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.06329194,
+      "energy_eV": 1.722262,
+      "pct_R1": 91.484,
+      "osc_f_R1": 0.003777
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.06667526,
+      "energy_eV": 1.814326,
+      "pct_R1": 91.131
+    }
+  ],
+  "timings_s": {
+    "rhf": 99.41,
+    "ccsd": 1431.13,
+    "eom_s": 816.29,
+    "eom_t": 1299.13,
+    "total": 3646.61
+  }
+}

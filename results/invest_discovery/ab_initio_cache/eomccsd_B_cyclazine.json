@@ -1,0 +1,39 @@
+{
+  "mol_id": "B_cyclazine",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 227,
+  "n_core_frozen": 13,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -485.63913238,
+  "E_S1_eV": 1.127377,
+  "E_T1_eV": 1.016377,
+  "dEST_eV": 0.111,
+  "f_S1_R1": 0.0,
+  "pct_R1_S1": 90.032,
+  "pct_R1_T1": 91.546,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.04143036,
+      "energy_eV": 1.127377,
+      "pct_R1": 90.032,
+      "osc_f_R1": 0.0
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.03735116,
+      "energy_eV": 1.016377,
+      "pct_R1": 91.546
+    }
+  ],
+  "timings_s": {
+    "rhf": 98.12,
+    "ccsd": 790.92,
+    "eom_s": 1016.94,
+    "eom_t": 2170.21,
+    "total": 4077.74
+  }
+}

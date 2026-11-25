@@ -1,0 +1,39 @@
+{
+  "mol_id": "1_4_diazapentalene",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 132,
+  "n_core_frozen": 8,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -339.1894693,
+  "E_S1_eV": 2.99465,
+  "E_T1_eV": 1.637285,
+  "dEST_eV": 1.357365,
+  "f_S1_R1": 0.0,
+  "pct_R1_S1": 93.151,
+  "pct_R1_T1": 94.163,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.11005137,
+      "energy_eV": 2.99465,
+      "pct_R1": 93.151,
+      "osc_f_R1": 0.0
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.06016912,
+      "energy_eV": 1.637285,
+      "pct_R1": 94.163
+    }
+  ],
+  "timings_s": {
+    "rhf": 20.31,
+    "ccsd": 78.9,
+    "eom_s": 90.45,
+    "eom_t": 133.53,
+    "total": 323.25
+  }
+}

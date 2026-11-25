@@ -1,0 +1,39 @@
+{
+  "mol_id": "2_5_diazapentalene",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 132,
+  "n_core_frozen": 8,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -339.18449912,
+  "E_S1_eV": 2.092624,
+  "E_T1_eV": 1.607337,
+  "dEST_eV": 0.485287,
+  "f_S1_R1": 0.0,
+  "pct_R1_S1": 88.042,
+  "pct_R1_T1": 92.809,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.0769025,
+      "energy_eV": 2.092624,
+      "pct_R1": 88.042,
+      "osc_f_R1": 0.0
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.05906855,
+      "energy_eV": 1.607337,
+      "pct_R1": 92.809
+    }
+  ],
+  "timings_s": {
+    "rhf": 30.88,
+    "ccsd": 111.73,
+    "eom_s": 117.81,
+    "eom_t": 138.56,
+    "total": 399.84
+  }
+}

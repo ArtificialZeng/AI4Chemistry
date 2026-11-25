@@ -1,0 +1,52 @@
+{
+  "mol_id": "1_3_diazaazulene",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 170,
+  "n_occ_act": 24,
+  "n_vir_act": 136,
+  "n_core_frozen": 10,
+  "rhf_converged": true,
+  "e_rhf_ha": -414.98727699,
+  "rhf_hl_gap_eV": 9.7203,
+  "E_S1_eV": 3.111223,
+  "E_T1_eV": 2.927758,
+  "dEST_eV": 0.183465,
+  "f_S1": 0.009994,
+  "pct_T1_S1": 88.8,
+  "pct_T2_S1": 11.2,
+  "pct_T1_T1": 94.116,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.11433535,
+      "energy_eV": 3.111223,
+      "pct_T1": 88.8,
+      "pct_T2": 11.2,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.009994,
+      "trans_dip_norm_au": 0.256042
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.10759312,
+      "energy_eV": 2.927758,
+      "pct_T1": 94.116,
+      "pct_T2": 5.884,
+      "converged": true,
+      "iters": 3
+    }
+  ],
+  "timings_s": {
+    "rhf": 7.94,
+    "build_M11": 9.11,
+    "singlet": 36.41,
+    "triplet": 21.11,
+    "total": 74.58
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "mol_id": "5AP",
+  "ok": true,
+  "s0_opt_converged": true,
+  "t1_opt_converged": true,
+  "heavy_rmsd_xtb_vs_pbe0S0_A": 0.0144,
+  "heavy_rmsd_pbe0S0_vs_pbe0T1_A": 0.0214,
+  "uks_T1_reorg_lambda_eV": 0.1339,
+  "rks_S0_strain_at_T1_eV": 0.2492,
+  "uks_spin_square_vert": 2.0091,
+  "uks_spin_square_opt": 2.0221,
+  "uks_E_T1_vert_eV": 2.1266,
+  "uks_E_T1_adia_eV": 1.9927,
+  "adc2_at_pbe0_S0_geom": {
+    "E_S1_eV": 2.073895,
+    "E_T1_eV": 2.27091,
+    "dEST_eV": -0.197015,
+    "f_S1": 0.002206
+  },
+  "adc2_at_pbe0_T1_geom": {
+    "E_S1_eV": 1.69819,
+    "E_T1_eV": 1.868532,
+    "dEST_at_T1_geom_eV": -0.170342,
+    "f_S1_at_T1_geom": 0.000482
+  },
+  "s0_opt_xyz": "results/invest_discovery/relaxed_xyz/5AP_S0_pbe0.xyz",
+  "t1_opt_xyz": "results/invest_discovery/relaxed_xyz/5AP_T1_pbe0.xyz",
+  "total_time_s": 1736.7
+}

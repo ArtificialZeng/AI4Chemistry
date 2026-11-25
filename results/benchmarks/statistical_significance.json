@@ -1,0 +1,112 @@
+{
+  "CV5_dEST_MAE_bootstrap95": {
+    "Lehmann-TDDFT": {
+      "mean": 0.08760587501187297,
+      "ci95_low": 0.07248478608523598,
+      "ci95_high": 0.105315155249178,
+      "n": 169
+    },
+    "Static-Delta-TDDFT": {
+      "mean": 0.0957359845041219,
+      "ci95_low": 0.0750323599126285,
+      "ci95_high": 0.11851675278127931,
+      "n": 169
+    },
+    "DF-PBE0_RI-TDA": {
+      "mean": 0.4210335199294005,
+      "ci95_low": 0.3784809713772204,
+      "ci95_high": 0.46785155733352585,
+      "n": 169
+    },
+    "SchNet3D": {
+      "mean": 0.47793959838370603,
+      "ci95_low": 0.41162242439487273,
+      "ci95_high": 0.5475803824446752,
+      "n": 169
+    }
+  },
+  "CV5_dEST_paired_Wilcoxon": {
+    "Lehmann_vs_TDA": {
+      "mean_diff_A_minus_B": -0.3334276449175275,
+      "wilcoxon_p": 1.1715162921272942e-25,
+      "A_better_frac": 0.9053254437869822,
+      "n": 169
+    },
+    "Lehmann_vs_SchNet3D": {
+      "mean_diff_A_minus_B": -0.39033372337183303,
+      "wilcoxon_p": 2.905963395279825e-25,
+      "A_better_frac": 0.8875739644970414,
+      "n": 169
+    },
+    "Lehmann_vs_StaticDelta": {
+      "mean_diff_A_minus_B": -0.00813010949224891,
+      "wilcoxon_p": 0.5450799793105552,
+      "A_better_frac": 0.44970414201183434,
+      "n": 169
+    }
+  },
+  "ZeroShot_23NovelScaffolds_dEST_bootstrap95": {
+    "Lehmann-TDDFT": {
+      "mean": 0.14636254303344035,
+      "ci95_low": 0.0794562226827435,
+      "ci95_high": 0.22655325837615609,
+      "n": 23
+    },
+    "Static-Delta-TDDFT": {
+      "mean": 0.16535394990948846,
+      "ci95_low": 0.0943381054437862,
+      "ci95_high": 0.24621586269312085,
+      "n": 23
+    },
+    "DF-PBE0_RI-TDA": {
+      "mean": 0.3947195370871573,
+      "ci95_low": 0.3216369133075729,
+      "ci95_high": 0.4673311502967701,
+      "n": 23
+    },
+    "SchNet3D": {
+      "mean": 0.49618544491709843,
+      "ci95_low": 0.40384633432319467,
+      "ci95_high": 0.591109980856033,
+      "n": 23
+    }
+  },
+  "ZeroShot_23NovelScaffolds_paired_Wilcoxon": {
+    "dEST_Lehmann_vs_TDA": {
+      "mean_diff_A_minus_B": -0.248356994053717,
+      "wilcoxon_p": 8.845329284667969e-05,
+      "A_better_frac": 0.782608695652174,
+      "n": 23
+    },
+    "dEST_Lehmann_vs_SchNet3D": {
+      "mean_diff_A_minus_B": -0.34982290188365794,
+      "wilcoxon_p": 1.6689300537109375e-06,
+      "A_better_frac": 0.9130434782608695,
+      "n": 23
+    },
+    "dEST_Lehmann_vs_StaticDelta": {
+      "mean_diff_A_minus_B": -0.018991406876048108,
+      "wilcoxon_p": 0.20015525817871094,
+      "A_better_frac": 0.6086956521739131,
+      "n": 23
+    },
+    "S1_Lehmann_vs_TDA": {
+      "mean_diff_A_minus_B": -0.14078719479095247,
+      "wilcoxon_p": 0.0002148151397705078,
+      "A_better_frac": 0.8695652173913043,
+      "n": 23
+    },
+    "S1_Lehmann_vs_SchNet3D": {
+      "mean_diff_A_minus_B": -1.3802553552424888,
+      "wilcoxon_p": 4.76837158203125e-07,
+      "A_better_frac": 0.9565217391304348,
+      "n": 23
+    },
+    "S1_Lehmann_vs_StaticDelta": {
+      "mean_diff_A_minus_B": -0.051749870380252624,
+      "wilcoxon_p": 0.013528585433959961,
+      "A_better_frac": 0.6956521739130435,
+      "n": 23
+    }
+  }
+}

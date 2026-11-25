@@ -1,0 +1,52 @@
+{
+  "mol_id": "cyclazine",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 227,
+  "n_occ_act": 31,
+  "n_vir_act": 183,
+  "n_core_frozen": 13,
+  "rhf_converged": true,
+  "e_rhf_ha": -513.68888396,
+  "rhf_hl_gap_eV": 7.1956,
+  "E_S1_eV": 1.092257,
+  "E_T1_eV": 1.263067,
+  "dEST_eV": -0.17081,
+  "f_S1": 0.0,
+  "pct_T1_S1": 89.354,
+  "pct_T2_S1": 10.646,
+  "pct_T1_T1": 90.672,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.0401397,
+      "energy_eV": 1.092257,
+      "pct_T1": 89.354,
+      "pct_T2": 10.646,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 0.0,
+      "trans_dip_norm_au": 9e-06
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.04641686,
+      "energy_eV": 1.263067,
+      "pct_T1": 90.672,
+      "pct_T2": 9.328,
+      "converged": true,
+      "iters": 4
+    }
+  ],
+  "timings_s": {
+    "rhf": 18.74,
+    "build_M11": 58.52,
+    "singlet": 150.58,
+    "triplet": 86.69,
+    "total": 314.54
+  }
+}

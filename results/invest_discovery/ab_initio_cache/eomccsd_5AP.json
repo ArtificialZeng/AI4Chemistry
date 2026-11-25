@@ -1,0 +1,39 @@
+{
+  "mol_id": "5AP",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 207,
+  "n_core_frozen": 13,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -579.48091809,
+  "E_S1_eV": 2.265165,
+  "E_T1_eV": 2.365997,
+  "dEST_eV": -0.100832,
+  "f_S1_R1": 0.004075,
+  "pct_R1_S1": 91.382,
+  "pct_R1_T1": 91.065,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.08324329,
+      "energy_eV": 2.265165,
+      "pct_R1": 91.382,
+      "osc_f_R1": 0.004075
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.08694879,
+      "energy_eV": 2.365997,
+      "pct_R1": 91.065
+    }
+  ],
+  "timings_s": {
+    "rhf": 68.29,
+    "ccsd": 2209.69,
+    "eom_s": 1282.97,
+    "eom_t": 1527.49,
+    "total": 5091.22
+  }
+}

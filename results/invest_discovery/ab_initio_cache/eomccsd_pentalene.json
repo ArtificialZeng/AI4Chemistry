@@ -1,0 +1,39 @@
+{
+  "mol_id": "pentalene",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 142,
+  "n_core_frozen": 8,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -307.19280287,
+  "E_S1_eV": 2.29215,
+  "E_T1_eV": 1.206149,
+  "dEST_eV": 1.086001,
+  "f_S1_R1": 0.0,
+  "pct_R1_S1": 91.092,
+  "pct_R1_T1": 94.061,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.08423497,
+      "energy_eV": 2.29215,
+      "pct_R1": 91.092,
+      "osc_f_R1": 0.0
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.04432517,
+      "energy_eV": 1.206149,
+      "pct_R1": 94.061
+    }
+  ],
+  "timings_s": {
+    "rhf": 24.39,
+    "ccsd": 100.66,
+    "eom_s": 144.29,
+    "eom_t": 189.98,
+    "total": 459.48
+  }
+}

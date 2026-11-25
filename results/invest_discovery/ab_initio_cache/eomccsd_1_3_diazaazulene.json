@@ -1,0 +1,39 @@
+{
+  "mol_id": "1_3_diazaazulene",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 170,
+  "n_core_frozen": 10,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -416.36814233,
+  "E_S1_eV": 3.198906,
+  "E_T1_eV": 2.568391,
+  "dEST_eV": 0.630515,
+  "f_S1_R1": 0.010009,
+  "pct_R1_S1": 90.562,
+  "pct_R1_T1": 94.147,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.11755762,
+      "energy_eV": 3.198906,
+      "pct_R1": 90.562,
+      "osc_f_R1": 0.010009
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.09438662,
+      "energy_eV": 2.568391,
+      "pct_R1": 94.147
+    }
+  ],
+  "timings_s": {
+    "rhf": 91.02,
+    "ccsd": 335.67,
+    "eom_s": 437.05,
+    "eom_t": 595.73,
+    "total": 1464.17
+  }
+}

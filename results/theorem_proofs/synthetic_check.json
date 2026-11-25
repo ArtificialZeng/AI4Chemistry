@@ -1,0 +1,169 @@
+{
+  "mode": "synthetic",
+  "theorems": {
+    "theorem_1_causality_and_sum_rules": {
+      "cases": [
+        {
+          "mol_id": "synth_normal_A",
+          "S": {
+            "hermiticity_max_err": 0.0,
+            "schur_complement_max_err_eV": 1.1777544613449183e-13,
+            "lehmann_residue_Z_max_err": 2.9781732635569824e-14,
+            "spectral_sum_rule_matrix_err": 1.6762014849409037e-15,
+            "spectral_sum_rule_trace_err": 0.0,
+            "max_eig_dSigma_domega": -0.0009244822078245184,
+            "max_eig_Im_Sigma_retarded": -0.00023099287295415247,
+            "kramers_kronig_hilbert_max_err_eV": 2.609024107869118e-15
+          },
+          "T": {
+            "hermiticity_max_err": 0.0,
+            "schur_complement_max_err_eV": 2.5327705379119604e-12,
+            "lehmann_residue_Z_max_err": 1.7987260986229714e-13,
+            "spectral_sum_rule_matrix_err": 2.032350738285161e-15,
+            "spectral_sum_rule_trace_err": 0.0,
+            "max_eig_dSigma_domega": -0.0005137085288015372,
+            "max_eig_Im_Sigma_retarded": -0.00012835127607209806,
+            "kramers_kronig_hilbert_max_err_eV": 1.0781306403195856e-15
+          },
+          "dipole_norm2_bare": 8.37382942812179,
+          "dipole_norm2_dressed": 8.373829428121786,
+          "dipole_conservation_err": 3.552713678800501e-15,
+          "passed": true
+        },
+        {
+          "mol_id": "synth_invest",
+          "S": {
+            "hermiticity_max_err": 0.0,
+            "schur_complement_max_err_eV": 8.476696662530903e-14,
+            "lehmann_residue_Z_max_err": 1.587618925213974e-14,
+            "spectral_sum_rule_matrix_err": 1.5182608686847699e-15,
+            "spectral_sum_rule_trace_err": 0.0,
+            "max_eig_dSigma_domega": -0.001229215244910964,
+            "max_eig_Im_Sigma_retarded": -0.00030713143699524287,
+            "kramers_kronig_hilbert_max_err_eV": 6.661338147750939e-15
+          },
+          "T": {
+            "hermiticity_max_err": 0.0,
+            "schur_complement_max_err_eV": 5.731140530126761e-13,
+            "lehmann_residue_Z_max_err": 1.9040324872321435e-14,
+            "spectral_sum_rule_matrix_err": 1.9472242186807427e-15,
+            "spectral_sum_rule_trace_err": 1.7763568394002505e-15,
+            "max_eig_dSigma_domega": -0.00015728985043942647,
+            "max_eig_Im_Sigma_retarded": -3.9294224200305416e-05,
+            "kramers_kronig_hilbert_max_err_eV": 7.979727989493313e-17
+          },
+          "dipole_norm2_bare": 4.947496563281359,
+          "dipole_norm2_dressed": 4.947496563281359,
+          "dipole_conservation_err": 0.0,
+          "passed": true
+        }
+      ],
+      "all_passed": true
+    },
+    "theorem_2_gauge_and_point_group_symmetry": {
+      "cases": [
+        {
+          "mol_id": "synth_normal_A",
+          "n_phase_trials": 8,
+          "phase_flip_max_dE_S_eV": 0.0,
+          "phase_flip_max_dE_T_eV": 0.0,
+          "phase_flip_max_df": 0.0,
+          "phase_flip_max_d_pctT1": 0.0,
+          "phase_flip_max_dE_ground_CI_eV": 8.881784197001252e-15,
+          "dark_bare_count": 4,
+          "bright_bare_count": 4,
+          "dark_dressed_count": 19,
+          "max_dark_state_osc": 6.701359976141174e-29,
+          "explicit_irrep_forb_Delta_max": 0.0,
+          "explicit_irrep_forb_V_max": 0.0,
+          "symmetry_forbidden_Delta_max_eV": 0.0,
+          "symmetry_forbidden_V_max_eV": 0.0,
+          "symmetry_forbidden_v0D_max_eV": 0.0,
+          "n_forbidden_SS_pairs": 32,
+          "n_forbidden_SD_pairs": 100,
+          "passed": true
+        }
+      ],
+      "all_passed": true
+    },
+    "theorem_3_size_intensivity": {
+      "cases": [
+        {
+          "label": "exact_direct_sum_A_oplus_B",
+          "n_compare_states": 8,
+          "max_dE_S_eV": 2.6645352591003757e-15,
+          "max_dE_T_eV": 9.769962616701378e-15,
+          "max_df_S": 1.1102230246251565e-15,
+          "max_d_pctT2_S": 2.2737367544323206e-13,
+          "max_d_pctT2_T": 1.5631940186722204e-13,
+          "dEST_A_eV": 0.8562318407278298,
+          "dEST_AB_on_A_eV": 0.8562318407278275,
+          "abs_diff_dEST_eV": 2.220446049250313e-15,
+          "n_zero_overlap_cross_doubles": 13,
+          "cross_double_pole_shift_max_eV": 0.0,
+          "cross_double_V_max_eV": 0.0,
+          "tol_eV": 1e-12,
+          "passed": true
+        }
+      ],
+      "all_passed": true
+    },
+    "theorem_4_hund_inversion_criterion": {
+      "cases": [
+        {
+          "mol_id": "synth_normal_A",
+          "E_S1_eV": 3.8993323011739878,
+          "E_T1_eV": 3.043100460446158,
+          "delta_EST_eV": 0.8562318407278298,
+          "delta_EST_bare_tda_eV": 1.3388877452640946,
+          "delta_EST_static_ablation_eV": 0.9379721267424577,
+          "two_K_HL_eV": 0.7201513439621795,
+          "delta_EST_static_rayleigh_eV": 0.9423390907981224,
+          "delta_Sigma_ST_eV": 0.08610725007029418,
+          "Sigma_S1_dyn_eV": -0.10635876647218559,
+          "Sigma_S1_TT_eV": -0.09882571825779338,
+          "Sigma_S1_SS_eV": -0.007533048214392227,
+          "Sigma_T1_dyn_eV": -0.02025151640189141,
+          "identity_residual_eV": 1.5543122344752192e-15,
+          "Z_S1": 0.9559938359108531,
+          "Z_S1_residual": 8.881784197001252e-16,
+          "is_inverted": false,
+          "criterion_iff_holds": true,
+          "passed": true
+        },
+        {
+          "mol_id": "synth_invest",
+          "E_S1_eV": 2.4559017492516797,
+          "E_T1_eV": 2.4004506285079144,
+          "delta_EST_eV": 0.05545112074376535,
+          "delta_EST_bare_tda_eV": 0.1299999999999999,
+          "delta_EST_static_ablation_eV": 0.26936575889076675,
+          "two_K_HL_eV": 0.12,
+          "delta_EST_static_rayleigh_eV": 0.27314573593775027,
+          "delta_Sigma_ST_eV": 0.2176946151939849,
+          "Sigma_S1_dyn_eV": -0.22125392804814903,
+          "Sigma_S1_TT_eV": -0.17334502255724318,
+          "Sigma_S1_SS_eV": -0.04790890549090587,
+          "Sigma_T1_dyn_eV": -0.003559312854164131,
+          "identity_residual_eV": 2.7755575615628914e-17,
+          "Z_S1": 0.9478720167368233,
+          "Z_S1_residual": 7.771561172376096e-16,
+          "is_inverted": false,
+          "criterion_iff_holds": true,
+          "passed": true
+        }
+      ],
+      "all_passed": true
+    },
+    "theorem_5_conical_intersection_topology": {
+      "adiabatic_H01_eff_eV": 0.0,
+      "lehmann_H01_linearity_R_with_yh": 0.9999583759222016,
+      "min_gap_on_encircling_loop_eV": 0.1745801579649989,
+      "parallel_transport_closing_overlap": -0.998515834829217,
+      "berry_phase_rad": 3.141592653589793,
+      "berry_phase_pi_verified": true,
+      "passed": true
+    }
+  },
+  "all_theorems_passed": true
+}

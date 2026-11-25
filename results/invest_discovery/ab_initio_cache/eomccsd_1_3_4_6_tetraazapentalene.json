@@ -1,0 +1,39 @@
+{
+  "mol_id": "1_3_4_6_tetraazapentalene",
+  "method": "EOM-EE-CCSD/def2-svp",
+  "ok": true,
+  "n_ao": 122,
+  "n_core_frozen": 8,
+  "ccsd_converged": true,
+  "e_ccsd_ha": -371.17819292,
+  "E_S1_eV": 3.017105,
+  "E_T1_eV": 1.879599,
+  "dEST_eV": 1.137506,
+  "f_S1_R1": 0.0,
+  "pct_R1_S1": 90.362,
+  "pct_R1_T1": 93.698,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.11087655,
+      "energy_eV": 3.017105,
+      "pct_R1": 90.362,
+      "osc_f_R1": 0.0
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "energy_ha": 0.06907399,
+      "energy_eV": 1.879599,
+      "pct_R1": 93.698
+    }
+  ],
+  "timings_s": {
+    "rhf": 23.74,
+    "ccsd": 78.83,
+    "eom_s": 74.45,
+    "eom_t": 99.03,
+    "total": 276.18
+  }
+}

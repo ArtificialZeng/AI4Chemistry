@@ -1,0 +1,52 @@
+{
+  "mol_id": "1_3_4_6_tetraazapentalene",
+  "method": "RI-EE-ADC(2)/def2-svp",
+  "ok": true,
+  "n_ao": 122,
+  "n_occ_act": 19,
+  "n_vir_act": 95,
+  "n_core_frozen": 8,
+  "rhf_converged": true,
+  "e_rhf_ha": -370.03677802,
+  "rhf_hl_gap_eV": 9.942,
+  "E_S1_eV": 1.979536,
+  "E_T1_eV": 1.756562,
+  "dEST_eV": 0.222974,
+  "f_S1": 1.9e-05,
+  "pct_T1_S1": 90.507,
+  "pct_T2_S1": 9.493,
+  "pct_T1_T1": 93.292,
+  "singlet_roots": [
+    {
+      "root": 1,
+      "spin": "S",
+      "energy_ha": 0.0727466,
+      "energy_eV": 1.979536,
+      "pct_T1": 90.507,
+      "pct_T2": 9.493,
+      "converged": true,
+      "iters": 4,
+      "osc_f": 1.9e-05,
+      "trans_dip_norm_au": 0.013932
+    }
+  ],
+  "triplet_roots": [
+    {
+      "root": 1,
+      "spin": "T",
+      "energy_ha": 0.06455245,
+      "energy_eV": 1.756562,
+      "pct_T1": 93.292,
+      "pct_T2": 6.708,
+      "converged": true,
+      "iters": 3
+    }
+  ],
+  "timings_s": {
+    "rhf": 15.93,
+    "build_M11": 1.36,
+    "singlet": 9.96,
+    "triplet": 3.6,
+    "total": 30.85
+  }
+}
