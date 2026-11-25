@@ -1,8 +1,8 @@
 {
   "project": "Lehmann-TDDFT v2.0",
   "status": "FROZEN_SUBMISSION_READY_ZERO_BLOCKERS",
-  "frozen_utc": "2026-11-25T18:32:19Z",
-  "audit_status": "0_LEAKS_0_BLOCKERS_12_OF_12_UNITTESTS_PASS",
+  "frozen_utc": "2026-11-25T18:53:52Z",
+  "audit_status": "0_LEAKS_0_BLOCKERS_14_OF_14_UNITTESTS_PASS",
   "highlights_v2_final_freeze": {
     "larger_basis_and_t1_relaxation": "25/25 strictly inverted (5AP + VBI-0089 + VBI-0210 + VBI-0069 + VBI-0236 across def2-SVP, aug-cc-pVDZ, def2-TZVP, DF-PBE0 S0 min, DF-UKS PBE0 T1 min)",
     "conical_intersection_fssh": "3/3 LOMO branching-plane systems (Ethylene, Methanimine, Fulvene; 300 trajectories each, 50 fs, 0% negative-gap entries)",
@@ -20,28 +20,32 @@
   },
   "deliverables": {
     "README.md": {
-      "bytes": 7400,
-      "sha256": "2acfeeeb9ba9144ca588dbc54bc39a24bc66d45d3c119784bfb9d485e867f7e9"
+      "bytes": 7902,
+      "sha256": "6d843fe7bb4e03cbb8fee78f1f1e44d3972a84cbef18b92d77422ed909c5c9f6"
+    },
+    "LICENSE": {
+      "bytes": 1068,
+      "sha256": "fa9e8539a9046d070158a7cbb74c484704cbf2b162249e49210167277db5c678"
     },
     ".gitignore": {
       "bytes": 541,
       "sha256": "7af580c26bbf6edffc008ca3bb4dd3bbd2d9cef6483f355087a285251138a6d0"
     },
     "manuscript/lehmann_tddft_nature.pdf": {
-      "bytes": 1337172,
-      "sha256": "4cf280ca2798b3f8bc1c5faf1eb32f1dc4131e962e424449dad4d6b2628e3c8a"
+      "bytes": 1337537,
+      "sha256": "ab317729966d5b7a10d4bd42101033e26523e87c4c00ca29ccde7aaeade5d187"
     },
     "manuscript/lehmann_tddft_nature.tex": {
       "bytes": 84149,
-      "sha256": "da219c358eee4669a2cdb7ae1c56f6e8bc1e678013bcfed8e1841f7a52ffbea1"
+      "sha256": "0f9f94e11b681c0bd2205cdd383f6b7bd25f15566abef5063aba2a2f18000724"
     },
     "manuscript/lehmann_tddft_SI.pdf": {
-      "bytes": 743532,
-      "sha256": "ed03db6f855a3d15ac93cb0854372740abcf93fb5243a3e753355ea3eac5cc2c"
+      "bytes": 754530,
+      "sha256": "d2fe848fc158b845c9ea75a828a5486372284b94f072d0ba9ab4cf27be4a9fb5"
     },
     "manuscript/lehmann_tddft_SI.tex": {
-      "bytes": 30072,
-      "sha256": "c74ac640c3dfb0d2d75a6442fe74df5b5c772b006c23d992cec609f078713da5"
+      "bytes": 31364,
+      "sha256": "34eb6093d024409aabc9a458169390cf23c68e2da7d349462733cce9fc80b3cf"
     },
     "manuscript/references.bib": {
       "bytes": 42222,
@@ -49,31 +53,23 @@
     },
     "manuscript/EXECUTIVE_SUMMARY.md": {
       "bytes": 10937,
-      "sha256": "d2c7499a4f0949d18f50dac6f9345be0aa67c222878c30e21d7439217f3e04e4"
+      "sha256": "e6c46bd649b15fa466ca18094047fe7a543992a2c8d88c565d54c5434f4d4fa0"
     },
     "manuscript/NATCOMPUTSCI-26-5124/cover_letter.pdf": {
       "bytes": 77100,
       "sha256": "e092e7c52e5f48dfd3df5b491752d4657029f8525ad89d2cf85d778f6f5df353"
     },
     "manuscript/NATCOMPUTSCI-26-5124/lehmann_tddft_nature_submission.pdf": {
-      "bytes": 1346043,
-      "sha256": "e2605b09a79a0de8e7adb5e00e1eeb0f4e100ba182a1acedce850136bd8f7b58"
+      "bytes": 1346404,
+      "sha256": "efb0f268a09afcdf4efa28a44c2f175449ba2de21c52e168245bb5d282b70682"
     },
     "manuscript/NATCOMPUTSCI-26-5124/lehmann_tddft_SI.pdf": {
-      "bytes": 743532,
-      "sha256": "ed03db6f855a3d15ac93cb0854372740abcf93fb5243a3e753355ea3eac5cc2c"
+      "bytes": 754530,
+      "sha256": "d2fe848fc158b845c9ea75a828a5486372284b94f072d0ba9ab4cf27be4a9fb5"
     },
     "manuscript/NATCOMPUTSCI-26-5124/lehmann_tddft_source_for_review.zip": {
-      "bytes": 317432,
-      "sha256": "d7f126288c7f413f09208bd6d98b73d3f8c08b8f64aa6c3ed7c17433d68f43d1"
-    },
-    "results/audit_report.md": {
-      "bytes": 36557,
-      "sha256": "1603e3db5b45d535ca2a3eae83c4e67391df0d8658653ff1cd05fa79c0734944"
-    },
-    "results/audit_report.json": {
-      "bytes": 179340,
-      "sha256": "84f06331c1b4570f5192ba6a4fb5eb86b681b6522a764e9d5c1f973e243be17c"
+      "bytes": 323074,
+      "sha256": "817c842860557789caea8a7e00df5bb8d2444deeb6ae14d8d060f5c330d9e63c"
     },
     "results/benchmarks/cv5_summary.json": {
       "bytes": 13965,
@@ -120,40 +116,44 @@
       "sha256": "edc695ac63e44fe4d7c9593b1c27759204382082e5b32250c6298f21a22b6fea"
     },
     "figures/fig1_framework_theorems.pdf": {
-      "bytes": 135538,
-      "sha256": "2803b76886f5c0d4afed393878c5aaf2b2586385ff50c63b12d3ed79074170a1"
+      "bytes": 135625,
+      "sha256": "159a78d1d9bed2bde151ff2b8daebb096b2570f152ad69e73384272fb386980e"
     },
     "figures/fig2_questdb_doubles.pdf": {
-      "bytes": 122245,
-      "sha256": "f1b791fc9bbf52d92be9278ad3479ea4dbea6fe0de7c898d8e17dacd538d099b"
+      "bytes": 122379,
+      "sha256": "a432e24beab378f52cd207c1f2fe1d8e37a6deac3b157c2e294584c51ba9641a"
     },
     "figures/fig3_conical_intersections.pdf": {
-      "bytes": 133781,
-      "sha256": "23e371eb0ad21210c3db679d671691e17c5b50c1c61a143f366fdf265f7afc28"
+      "bytes": 133846,
+      "sha256": "7cb947c708844ad069a3194c1238f89b6dd9509e84aa1124d94545dd3cc1f9f5"
     },
     "figures/fig4_invest_discovery.pdf": {
       "bytes": 249262,
-      "sha256": "12c5bcd63c652de9b50266a3e9fb296e5f44d4e8b3335af3f9d371d7966e977b"
+      "sha256": "552349f035ab650a3aa77e48b8628ef11ca67ee647098da76bc0519327105dc3"
     },
     "figures/fig5_scaling_diagnostics.pdf": {
-      "bytes": 90612,
-      "sha256": "b966bd35f0d87ec8f8acbf5a61ab9ec49995aad9bac2bd4d7d74062b4f8004b2"
+      "bytes": 90644,
+      "sha256": "f1bdca27dccca14e50e53db7b6dde39bbf257371934171022137e06916b4bef6"
     },
     "figures/fig6_extended_ci_ablations.pdf": {
-      "bytes": 147913,
-      "sha256": "f82767ed5025d11e66ad7ba181e654c4e64ad5edffcc6f0c63cf0647ba3fd474"
+      "bytes": 147961,
+      "sha256": "cfdfb0435df7ce2038ff453115cdd6bcfc70431773147445bee8e28acb47b5ad"
     },
     "tests/test_lehmann_reproducibility.py": {
-      "bytes": 12887,
-      "sha256": "ea296c3792daa1075282a9cac89ec1ec376c1877bb8f8c2bea46cf26a5005ed3"
+      "bytes": 17528,
+      "sha256": "1a60cd9ac5a78d7d3491370196b92034c7016fe0fe55870a4a7b4f57bf8c78fc"
     },
     "scripts/make_figures.py": {
-      "bytes": 116222,
-      "sha256": "4eeeac5eca0ba11dc2ca677578bda2724e045cc841cbb75b05f0cd0fe6c2a8ad"
+      "bytes": 116306,
+      "sha256": "75b38309ab8527326d50bab47d7da2cd84779fc7124ed3b7387ad2bfaa2f86d8"
     },
     "scripts/build_supplementary_info.py": {
-      "bytes": 34289,
-      "sha256": "c9b52e2cbdacdde50c20d69b16f97726e95e9d50d1b4e45309f5635b51eff55b"
+      "bytes": 35412,
+      "sha256": "d732188b630a4240973185004f5f47c7e4026744987ddad7827bdfddbd51ab75"
+    },
+    "src/lehmann_tddft/audit.py": {
+      "bytes": 173123,
+      "sha256": "88a70e811b49d880547460bbcffc47f915ba739df360c4b61f2940dd0f25cbfa"
     },
     "src/lehmann_tddft/v2_triple_verification.py": {
       "bytes": 34564,
@@ -163,5 +163,9 @@
       "bytes": 23835,
       "sha256": "025f9b23af956891b3886c7376c1a9f31e1a3dc4f83fa8035a13a16b02bc3e79"
     }
-  }
+  },
+  "live_audit_outputs_verified_semantically": [
+    "results/audit_report.md",
+    "results/audit_report.json"
+  ]
 }

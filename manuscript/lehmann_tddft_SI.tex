@@ -105,16 +105,24 @@ whose single-exciton-coupled spectrum is the exact union $\mathrm{spec}(\Hlift(A
 
 \subsection*{Proof of Theorem 4 (Exact Dynamical INVEST Phase Boundary) and $D_{3h}$ Selection Rules}
 \begin{proof}
-Writing $E_{S_1} = E_{S_1}^{\mathrm{stat}} - \Sigma_{S_1}^{\mathrm{dyn}}$ and $E_{T_1} = E_{T_1}^{\mathrm{stat}} - \Sigma_{T_1}^{\mathrm{dyn}}$ with $\Sigma_n^{\mathrm{dyn}} \equiv E_n^{\mathrm{stat}} - E_n$ (non-negative for the lowest root by the Hylleraas--Undheim--MacDonald interlacing theorem), subtracting gives
+Left-multiplying the exact Schur-complement equation (Eq.~(S2)) for the lowest singlet ($S_1$) and triplet ($T_1$) eigenstates by the normalized single-exciton projections $\mathbf{u}_n \equiv c_n / \|c_n\|_2$ yields the exact Rayleigh-quotient decomposition
 \begin{equation}
-\dEST \equiv E_{S_1} - E_{T_1} = \dEST^{\mathrm{stat}} - \dSig, \qquad \dSig \equiv \Sigma_{S_1}^{\mathrm{dyn}} - \Sigma_{T_1}^{\mathrm{dyn}}.
+E_n = E_n^{\mathrm{stat}} + \Sigma_n^{\mathrm{dyn}}(E_n), \qquad
+E_n^{\mathrm{stat}} \equiv \mathbf{u}_n^\top \mathbf{H}_{SS}^{(\sigma)} \mathbf{u}_n, \qquad
+\Sigma_n^{\mathrm{dyn}}(E_n) \equiv \mathbf{u}_n^\top \Sig(E_n)\,\mathbf{u}_n = \sum_\mu \frac{(\mathbf{u}_n^\top \mathbf{v}_\mu)^2}{E_n - D_{\theta,\mu}^{(\sigma)}},
 \end{equation}
-Thus $\dEST < 0$ if and only if $\dSig > \dEST^{\mathrm{stat}}$. For $D_{3h}$ heptazine ($S_1, T_1 \in A_2'$; degenerate triplet doublet $T_2, T_3 \in E'$), decomposing the direct product $E'\otimes E'$ into symmetric and antisymmetric parts via the $D_{3h}$ character table ($\chi(E)=2, \chi(C_3)=-1, \chi(C_2')=0, \chi(\sigma_h)=2, \chi(S_3)=-1, \chi(\sigma_v)=0$) gives:
+where $\Sigma_n^{\mathrm{dyn}}(E_n) \le 0$ whenever $E_n < \min_\mu D_{\theta,\mu}^{(\sigma)}$ (strictly stabilizing the lowest root, consistent with Hylleraas--Undheim--MacDonald interlacing). Subtracting $E_{T_1}$ from $E_{S_1}$ gives the exact identity matching Main Text Eq.~(3):
+\begin{equation}
+\dEST \equiv E_{S_1} - E_{T_1} = \dEST^{\mathrm{stat}} - \dSig, \qquad
+\dEST^{\mathrm{stat}} \equiv E_{S_1}^{\mathrm{stat}} - E_{T_1}^{\mathrm{stat}}, \qquad
+\dSig \equiv \Sigma_{T_1}^{\mathrm{dyn}}(E_{T_1}) - \Sigma_{S_1}^{\mathrm{dyn}}(E_{S_1}).
+\end{equation}
+Thus singlet--triplet inversion ($\dEST < 0$) occurs if and only if differential dynamical stabilization $\dSig$ exceeds $\dEST^{\mathrm{stat}}$. For $D_{3h}$ heptazine ($S_1, T_1 \in A_2'$; degenerate triplet doublet $T_2, T_3 \in E'$), decomposing the direct product $E'\otimes E'$ into symmetric and antisymmetric parts via the $D_{3h}$ character table ($\chi(E)=2, \chi(C_3)=-1, \chi(C_2')=0, \chi(\sigma_h)=2, \chi(S_3)=-1, \chi(\sigma_v)=0$) gives:
 \begin{equation}
 [E'\otimes E']_S = A_1' \oplus E' \not\ni A_2', \qquad
 [E'\otimes E']_A = A_2'.
 \end{equation}
-Therefore, by the Wigner--Eckart theorem, the symmetric bi-exciton singlet $^1(T_2 T_3)_+$ has identically zero coupling to $S_1(A_2')$ (verified numerically on \texttt{quest\_Heptazine.npz}: $\|\mathbf{W}_{SD}^{(S)}[S_1,(T_2,T_3)_+]\| = 2.26\times 10^{-6}$\,eV), whereas the antisymmetric channel $^1(T_2 T_3)_-$ transforms as $A_2'$ and couples strongly ($\|\mathbf{W}_{SD}^{(T)}[T_1,(T_2,T_3)_-]\| = 1.4801$\,eV), explaining why spin-complete \leh{} v2.0 shifts 45/45 CV5 heptazines into the unified Dynamical-INVEST phase.
+Therefore, by the Wigner--Eckart theorem, the symmetric bi-exciton singlet $^1(T_2 T_3)_+$ has identically zero coupling to $S_1(A_2')$ (verified numerically on \texttt{quest\_Heptazine.npz}: $\|\mathbf{W}_{SD}^{(S)}[S_1,(T_2,T_3)_+]\| = 2.26\times 10^{-6}$\,eV), whereas the antisymmetric spatial channel $[E'\otimes E']_A = A_2'$ couples strongly ($\|\mathbf{W}_{SD}^{\mathrm{anti}}[S_1,(T_2,T_3)_-]\| = 1.4801$\,eV, evaluated via the shared antisymmetric spatial RI tensor contracted onto $S_1(A_2')$ through $w_{S_1,T_1}=|\mathrm{Tr}(\mathbf{X}_{S_1}^\top\mathbf{X}_{T_1})|^2\approx 1$), yielding $\Sigma_{S_1}^{\mathrm{dyn}} = -0.358$\,eV and shifting 45/45 CV5 heptazines into the unified Dynamical-INVEST phase.
 \end{proof}
 
 \subsection*{Proof of Theorem 5 (Restoring $(3N-8)$ Codimension-2 Conical Intersections and $\gamma=\pi$)}
@@ -233,31 +241,31 @@ Supplementary Table~\ref{tab:s3} lists all 20 pre-registered blind \emph{de novo
 \toprule
 \textbf{Novel External Core} & \textbf{RI-ADC(2)} & \textbf{DF-PBE0 TDA} & \textbf{\leh{} v2.0} & \textbf{B2PLYP} & \textbf{PBE-QIDH} & \textbf{SCS-PBE-QIDH} & \textbf{SOS-PBE-QIDH} \\
 \midrule
-\texttt{1\_3\_4\_6\_tetraazapentalene} & +0.223 & +0.457 & \textbf{+0.242} & +0.340 & +0.562 & +0.417 & +0.402 \\
-\texttt{1\_3\_diazaazulene} & +0.183 & +0.712 & \textbf{+0.469} & +0.345 & +0.631 & +0.372 & +0.318 \\
-\texttt{1\_4\_diazapentalene} & +1.026 & +1.195 & \textbf{+0.948} & +1.061 & +1.182 & +1.141 & +1.138 \\
-\texttt{1\_5\_diaza\_s\_indacene} & +0.639 & +0.713 & \textbf{+0.505} & +0.588 & +0.723 & +0.664 & +0.657 \\
-\texttt{2N\_1\_9b} & -0.130 & +0.290 & \textbf{-0.110} & +0.049 & +0.068 & -0.064 & -0.095 \\
-\texttt{2\_5\_diazapentalene} & -0.162 & +0.646 & \textbf{+0.394} & +0.430 & +0.497 & +0.377 & +0.352 \\
-\texttt{3N\_1\_3\_9b} & -0.162 & +0.308 & \textbf{-0.109} & +0.038 & +0.055 & -0.087 & -0.121 \\
-\texttt{3N\_1\_4\_9b} & -0.083 & +0.334 & \textbf{-0.098} & +0.085 & +0.116 & -0.019 & -0.049 \\
-\texttt{4N\_1\_3\_7\_9b} & -0.177 & +0.299 & \textbf{-0.113} & +0.023 & +0.035 & -0.114 & -0.149 \\
-\texttt{4N\_1\_4\_7\_9b} & -0.054 & +0.362 & \textbf{-0.061} & +0.111 & +0.149 & +0.009 & -0.022 \\
-\texttt{4N\_2\_5\_8\_9b} & -0.107 & +0.333 & \textbf{-0.105} & +0.088 & +0.105 & -0.021 & -0.051 \\
-\texttt{5AP} & -0.189 & +0.324 & \textbf{-0.063} & +0.017 & +0.034 & -0.123 & -0.159 \\
-\texttt{5N\_1\_3\_4\_7\_9b} & -0.158 & +0.325 & \textbf{-0.079} & +0.040 & +0.061 & -0.095 & -0.130 \\
-\texttt{6N\_1\_3\_4\_6\_7\_9b} & -0.225 & +0.299 & \textbf{-0.115} & -0.012 & -0.002 & -0.170 & -0.208 \\
-\texttt{B3N3\_rim\_phenalene} & +0.179 & +0.456 & \textbf{+0.183} & +0.205 & +0.397 & +0.276 & +0.261 \\
-\texttt{BN\_rim\_cyclazine} & +0.170 & +0.571 & \textbf{+0.140} & +0.312 & +0.385 & +0.264 & +0.239 \\
-\texttt{B\_3N\_asym} & +0.195 & +0.774 & \textbf{+0.224} & -0.032 & +0.131 & +0.048 & +0.037 \\
-\texttt{B\_4AP} & +0.226 & +0.662 & \textbf{+0.286} & +0.369 & +0.565 & +0.420 & +0.413 \\
-\texttt{B\_5AP} & +0.097 & +0.185 & \textbf{-0.053} & -0.172 & -0.194 & -0.368 & -0.364 \\
-\texttt{B\_cyclazine} & -0.029 & +0.311 & \textbf{-0.163} & +0.101 & +0.143 & +0.021 & -0.007 \\
-\texttt{B\_heptazine} & +1.025 & +0.571 & \textbf{+0.476} & +0.092 & +0.194 & +0.153 & +0.143 \\
-\texttt{calicene} & +1.342 & +0.812 & \textbf{+0.729} & +0.763 & +1.537 & +1.457 & +1.448 \\
-\texttt{heptalene} & +0.711 & +0.709 & \textbf{+0.464} & +0.627 & +0.781 & +0.745 & +0.748 \\
+\texttt{1\_3\_4\_6\_tetraazapentalene} & $+0.223$ & $+0.457$ & $\mathbf{+0.242}$ & $+0.340$ & $+0.562$ & $+0.417$ & $+0.402$ \\
+\texttt{1\_3\_diazaazulene} & $+0.183$ & $+0.712$ & $\mathbf{+0.469}$ & $+0.345$ & $+0.631$ & $+0.372$ & $+0.318$ \\
+\texttt{1\_4\_diazapentalene} & $+1.026$ & $+1.195$ & $\mathbf{+0.948}$ & $+1.061$ & $+1.182$ & $+1.141$ & $+1.138$ \\
+\texttt{1\_5\_diaza\_s\_indacene} & $+0.639$ & $+0.713$ & $\mathbf{+0.505}$ & $+0.588$ & $+0.723$ & $+0.664$ & $+0.657$ \\
+\texttt{2N\_1\_9b} & $-0.130$ & $+0.290$ & $\mathbf{-0.110}$ & $+0.049$ & $+0.068$ & $-0.064$ & $-0.095$ \\
+\texttt{2\_5\_diazapentalene} & $-0.162$ & $+0.646$ & $\mathbf{+0.394}$ & $+0.430$ & $+0.497$ & $+0.377$ & $+0.352$ \\
+\texttt{3N\_1\_3\_9b} & $-0.162$ & $+0.308$ & $\mathbf{-0.109}$ & $+0.038$ & $+0.055$ & $-0.087$ & $-0.121$ \\
+\texttt{3N\_1\_4\_9b} & $-0.083$ & $+0.334$ & $\mathbf{-0.098}$ & $+0.085$ & $+0.116$ & $-0.019$ & $-0.049$ \\
+\texttt{4N\_1\_3\_7\_9b} & $-0.177$ & $+0.299$ & $\mathbf{-0.113}$ & $+0.023$ & $+0.035$ & $-0.114$ & $-0.149$ \\
+\texttt{4N\_1\_4\_7\_9b} & $-0.054$ & $+0.362$ & $\mathbf{-0.061}$ & $+0.111$ & $+0.149$ & $+0.009$ & $-0.022$ \\
+\texttt{4N\_2\_5\_8\_9b} & $-0.107$ & $+0.333$ & $\mathbf{-0.105}$ & $+0.088$ & $+0.105$ & $-0.021$ & $-0.051$ \\
+\texttt{5AP} & $-0.189$ & $+0.324$ & $\mathbf{-0.063}$ & $+0.017$ & $+0.034$ & $-0.123$ & $-0.159$ \\
+\texttt{5N\_1\_3\_4\_7\_9b} & $-0.158$ & $+0.325$ & $\mathbf{-0.079}$ & $+0.040$ & $+0.061$ & $-0.095$ & $-0.130$ \\
+\texttt{6N\_1\_3\_4\_6\_7\_9b} & $-0.225$ & $+0.299$ & $\mathbf{-0.115}$ & $-0.012$ & $-0.002$ & $-0.170$ & $-0.208$ \\
+\texttt{B3N3\_rim\_phenalene} & $+0.179$ & $+0.456$ & $\mathbf{+0.183}$ & $+0.205$ & $+0.397$ & $+0.276$ & $+0.261$ \\
+\texttt{BN\_rim\_cyclazine} & $+0.170$ & $+0.571$ & $\mathbf{+0.140}$ & $+0.312$ & $+0.385$ & $+0.264$ & $+0.239$ \\
+\texttt{B\_3N\_asym} & $+0.195$ & $+0.774$ & $\mathbf{+0.224}$ & $-0.032$ & $+0.131$ & $+0.048$ & $+0.037$ \\
+\texttt{B\_4AP} & $+0.226$ & $+0.662$ & $\mathbf{+0.286}$ & $+0.369$ & $+0.565$ & $+0.420$ & $+0.413$ \\
+\texttt{B\_5AP} & $+0.097$ & $+0.185$ & $\mathbf{-0.053}$ & $-0.172$ & $-0.194$ & $-0.368$ & $-0.364$ \\
+\texttt{B\_cyclazine} & $-0.029$ & $+0.311$ & $\mathbf{-0.163}$ & $+0.101$ & $+0.143$ & $+0.021$ & $-0.007$ \\
+\texttt{B\_heptazine} & $+1.025$ & $+0.571$ & $\mathbf{+0.476}$ & $+0.092$ & $+0.194$ & $+0.153$ & $+0.143$ \\
+\texttt{calicene} & $+1.342$ & $+0.812$ & $\mathbf{+0.729}$ & $+0.763$ & $+1.537$ & $+1.457$ & $+1.448$ \\
+\texttt{heptalene} & $+0.711$ & $+0.709$ & $\mathbf{+0.464}$ & $+0.627$ & $+0.781$ & $+0.745$ & $+0.748$ \\
 \midrule
-\textbf{23-Core MAE (eV) / MCC} & Ref. & 0.395 & \textbf{0.146 (0.826)} & 0.227 (-0.112) & 0.260 (+0.013) & 0.162 (+0.659) & 0.142 (+0.826) \\
+\textbf{23-Core MAE (eV) / MCC} & Ref. & 0.395 & \textbf{0.146 ($+0.826$)} & 0.227 ($-0.112$) & 0.260 ($+0.013$) & 0.162 ($+0.659$) & 0.142 ($+0.826$) \\
 \bottomrule
 \end{tabular}}
 \end{table}

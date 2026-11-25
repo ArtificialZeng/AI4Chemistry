@@ -437,8 +437,8 @@ def make_fig1() -> None:
         "", xy=(schnet_si_s1, y_pos[1] - 0.55), xytext=(si_direct, y_pos[1] - 0.55),
         arrowprops=dict(arrowstyle="<->", color=PAL["adiabatic"], lw=0.85)
     )
-    ax_c.text(1e-7, y_pos[1] - 1.15, "13–14 orders gap", ha="center", va="top",
-              fontsize=5.2, fontweight="bold", color=PAL["adiabatic"],
+    ax_c.text(1e-7, y_pos[1] - 1.15, "13–14 orders\n(vs Direct Sum)", ha="center", va="top",
+              fontsize=4.85, fontweight="bold", color=PAL["adiabatic"],
               bbox=dict(boxstyle="round,pad=0.13", fc="white", ec=PAL["adiabatic"], lw=0.5))
 
     ax_c.set_xscale("log")
@@ -668,8 +668,9 @@ def make_fig2() -> None:
                 arrowprops=dict(arrowstyle="-", color=PAL["slate"], lw=0.55, shrinkA=0, shrinkB=2.5),
             )
 
+    ax_b.axhline(0.0, color=PAL["slate"], lw=0.6, ls=":", alpha=0.75, zorder=1)
     ax_b.set_xlim(0.7, 13.8)
-    ax_b.set_ylim(0.1, 14.3)
+    ax_b.set_ylim(-1.25, 14.3)
     ax_b.set_xlabel("QUESTDB TBE / CC3 Reference Energy (eV)")
     ax_b.set_ylabel("Predicted Energy (eV, Zero-Oracle GD)")
     ax_b.set_title("Blind Leave-Family-Out Double Excitations", fontsize=7.5, pad=4)
@@ -1012,23 +1013,22 @@ def make_fig3() -> None:
     wb = 0.165
     offs = np.linspace(-2 * wb, 2 * wb, len(bars_d))
     for (ml, col, vals), off in zip(bars_d, offs):
-        pvals = [min(v, 0.44) for v in vals]
-        ax_d.bar(xd + off, pvals, width=wb, color=col, edgecolor="white", lw=0.35, label=ml, zorder=3)
-        for xi, v, pv in zip(xd + off, vals, pvals):
-            if v > 0.44:
-                ax_d.text(xi, pv + 0.008, f"{v:.2f}", ha="center", va="bottom", fontsize=4.6, fontweight="bold", color=col)
+        ax_d.bar(xd + off, vals, width=wb, color=col, edgecolor="white", lw=0.35, label=ml, zorder=3)
+        for xi, v in zip(xd + off, vals):
+            if v > 0.50:
+                ax_d.text(xi, v + 0.012, f"{v:.2f}", ha="center", va="bottom", fontsize=4.6, fontweight="bold", color=col)
             elif ml == "Lehmann LOMO":
-                ax_d.text(xi, pv + 0.008, f"{v:.3f}", ha="center", va="bottom", fontsize=4.75, fontweight="bold", color=PAL["lehmann"])
+                ax_d.text(xi, v + 0.012, f"{v:.3f}", ha="center", va="bottom", fontsize=4.75, fontweight="bold", color=PAL["lehmann"])
     ax_d.annotate(
         "Beats CASSCF\n(0.083 vs 0.108)\n& SF-BHHLYP!",
-        xy=(2.0 + 2 * wb, bars_d[-1][2][2] + 0.032), xytext=(1.55, 0.35),
+        xy=(2.0 + 2 * wb, bars_d[-1][2][2] + 0.045), xytext=(1.58, 0.49),
         ha="center", fontsize=4.6, fontweight="bold", color=PAL["lehmann"],
         arrowprops=dict(arrowstyle="->", color=PAL["lehmann"], lw=0.65),
         bbox=dict(boxstyle="round,pad=0.12", fc="white", ec=PAL["lehmann"], lw=0.45),
     )
     ax_d.set_xticks(xd)
     ax_d.set_xticklabels([m[1] for m in mols_d], fontsize=5.8)
-    ax_d.set_ylim(0, 0.50)
+    ax_d.set_ylim(0, 0.74)
     ax_d.set_ylabel("2-Sheet PES MAE vs NEVPT2 (eV)")
     ax_d.set_title("LOMO PES Accuracy (*SF Spin-Mixed)", fontsize=7.1, pad=4)
     ax_d.legend(loc="upper right", ncol=2, fontsize=4.45, columnspacing=0.45, handlelength=0.95,
@@ -1554,7 +1554,7 @@ def make_fig5() -> None:
                         n_inv_ba += 1
             if any(np.isfinite(vals_b)):
                 ax_d.bar(xd + off_b, clean_v, width=wd, color=col_b, edgecolor="white", lw=0.35, label=lbl_b, zorder=3)
-        # Annotate T1-relaxed f_S1 enhancement cleanly on all novel discoveries
+        # Annotate T1-relaxed f_S1 enhancement cleanly aligned to the right of the green S0 bar (under gold T1 bar)
         for i_m, (m_id, _) in enumerate(targs_d):
             if m_id == "5AP":
                 continue
@@ -1562,9 +1562,9 @@ def make_fig5() -> None:
             yv_m = t1_d.get("dEST_at_T1_geom_eV")
             fv_m = t1_d.get("f_S1_at_T1_geom")
             if yv_m is not None and fv_m is not None:
-                ax_d.text(xd[i_m] + 2.0 * wd + 0.01, yv_m - 0.008, f"f={fv_m:.3f}", ha="center", va="top",
-                          fontsize=4.05, fontweight="bold", color="#9A6700",
-                          bbox=dict(boxstyle="round,pad=0.03", fc="white", ec="none", alpha=0.88), zorder=7)
+                ax_d.text(xd[i_m] + 2.0 * wd, yv_m - 0.009, f"f={fv_m:.3f}", ha="center", va="top",
+                          rotation=90, fontsize=4.0, fontweight="bold", color="#8A5A00",
+                          bbox=dict(boxstyle="round,pad=0.04", fc="white", ec="none", alpha=0.88), zorder=7)
         diffs_mev = [
             1000.0 * abs(lb[m]["aug-cc-pvdz"]["dEST_eV"] - lb[m]["def2-tzvp"]["dEST_eV"])
             for m, _ in targs_d
@@ -1651,7 +1651,7 @@ def make_fig6() -> None:
         ax = fig.add_subplot(gs_r1[idx], projection="3d")
         _plot_3d_ci_surface(
             ax, met["X"], met["Y"], e0, e1, ttl, col, rpa_mask=rpa, loop_xy=loop_m,
-            zlim=(-0.85, 1.35), show_zlabel=(idx == 2), zticks=[-0.5, 0.0, 0.5, 1.0]
+            zlim=(-1.15, 1.35), show_zlabel=(idx == 2), zticks=[-1.0, -0.5, 0.0, 0.5, 1.0]
         )
         ax.text2D(-0.03, 0.96, ltr, transform=ax.transAxes, fontsize=10.0, fontweight="bold")
 

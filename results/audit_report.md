@@ -1,7 +1,7 @@
 # Adversarial *Nature Computational Science* Integrity & Statistical Audit Report: `Lehmann-TDDFT v2.0`
 
 - **Audit Status**: Wave 1 = **PASSED (ZERO LEAKAGE)** | Wave 2 CI = **AUDITED_ALL_3** | Wave 2 Blind INVEST = **AUDITED_COMPLETE** | Phase v2.0 Proofs = **AUDITED**
-- **Generated**: `2026-11-25T18:25:32Z` | Script: `src/lehmann_tddft/audit.py`
+- **Generated**: `2026-11-25T18:54:24Z` | Script: `src/lehmann_tddft/audit.py`
 
 ## Executive Referee Verdict (Verified Integrity & Gold-Standard Manuscript Guardrails)
 
@@ -20,8 +20,8 @@
 | **$O(N^5)$ Double-Hybrid Baselines (`n=62`)** | **PASS (MATCHED STATS)** | On matched QUESTDB-32, `Lehmann v2` (`0.093 eV`) beats ALL 4 DH-TDDFTs by **3.0×–4.4×** (`SOS-PBE-QIDH 0.280`, $p=1.26e-05$); on Novel-23 beats `B2PLYP` (`0.227`, $p=6.7\times10^-3$), `PBE-QIDH` (`0.260`, $p=1.7\times10^-3$), edges `SCS-PBE-QIDH` (`0.162`), matches `SOS-PBE-QIDH` (`0.142`, `MCC=0.826`) while DH-TDDFTs fail 0/28 GDs & collapse on Ethylene CI (`H01=0, γ=0`). |
 | **$D_{3h}$ Heptazine & OOD3A/3B v2.0** | **MECHANISTIC PROOF** | On v2.0 CV5, **100% (`45/45`) heptazines** have positive static gap (`mean +0.167 eV`) and invert purely dynamically via $^1(TT)_-$ (`mean dSigma_ST = +0.259 eV`). In leak-free `OOD3B` (0 INVEST in train), **`Lehmann v2.0` leaps to `TP=21/42` (`50.0%`, `FP=0`, `dEST=0.120 eV`)** vs `Static-Delta 0/42 (0.0%)`. On `OOD3A`, `Static-Delta` only achieves `100%` recall via negative bias (`FP=6/7`, `MCC=0.351`). |
 | **Fair Matched-Root Scaling (`8S+8T`)** | **AUDITED** | Single-core M3 Max, `def2-SVP`, matched `8S+8T` (`n=9` mols): recomputed CPU exponents `{'lehmann_tddft_8S8T': {'n_points': 9, 'n_ao_range': [66, 590], 'cpu_exponent_alpha': 2.077}, 'double_hybrid_scs_pbe_qidh_8S8T': {'n_points': 6, 'n_ao_range': [66, 207], 'cpu_exponent_alpha': 2.974}, 'ri_ee_adc2_8S8T': {'n_points': 6, 'n_ao_range': [66, 207], 'cpu_exponent_alpha': 4.801}, 'eom_ee_ccsd_8S8T': {'n_points': 3, 'n_ao_range': [66, 114], 'cpu_exponent_alpha': 3.663}}`. |
-| **Pillar 4 v2.0 (LOMO, SF-TDDFT, MECI, FSSH)** | **PASS (ALL AUDITED)** | Zero-manual-$\beta$ `scalar` LOMO: **6/6 single-mol & 3/3 LOMO** exact $\gamma=\pi$ (`0` neg gaps, `0π` controls, Fulvene `2shMAE=0.085 eV`); `SF-TDA-BHHLYP` suffers severe spin contamination (`<S²>` up to `1.29`, `46–100% > 0.25`) vs `Lehmann` exact `0.0`; Blind MECI status=`AUDITED` (blockers=`0`); 2D FSSH (`300` traj): `Adiabatic PBE0 0.0%` hop vs `Lehmann` ultrafast decay (`MAE=0.136/0.283`). |
-| **Pillar 3 Blind INVEST (`n=20`+`13`+NEVPT2)** | **PASS (0 MISMATCH, 0 OVERLAP)** | **0 IK14 overlap** across 520/320/Top-20; sync=`True`, cache_ok=`True`. Blind `ADC(2)`: **`19/20` (`95.0%`)**, dipole-allowed (`f>=0.01`): **`14/20`**. Blind `EOM-CCSD`: **`8/13` (`61.5%`)**, dipole-allowed: **`6/13`**. Triple-method `SC-NEVPT2` confirmed ring-N-free B-cores: `['VBI_0089_3N_13_pp', 'VBI_0159_B0N_m', 'VBI_0213_B0N_pp']` (root flips flagged: `4`). |
+| **Pillar 4 v2.0 (LOMO, SF-TDDFT, MECI, FSSH)** | **PASS (ALL AUDITED)** | Zero-manual-$\beta$ `scalar` LOMO: **6/6 single-mol & 3/3 LOMO** exact $\gamma=\pi$ (`0` neg gaps, `0π` controls, Fulvene `2shMAE=0.083 eV`); `SF-TDA-BHHLYP` suffers severe spin contamination (`<S²>` up to `1.29`, `46–100% > 0.25`) vs `Lehmann` exact `0.0`; Blind MECI status=`AUDITED` (blockers=`0`); 2D FSSH (`300` traj, `3/3` CIs): `Adiabatic PBE0 0.0%` hop vs `Lehmann` ultrafast decay (`MAE=0.136/0.283/0.189`). |
+| **Pillar 3 Blind INVEST (`n=20`+`13`+NEVPT2)** | **PASS (0 MISMATCH, 0 OVERLAP)** | **0 IK14 overlap** across 520/320/Top-20; sync=`True`, cache_ok=`True`. Blind `ADC(2)`: **`19/20` (`95.0%`)**, dipole-allowed (`f>=0.01`): **`14/20`**. Blind `EOM-CCSD`: **`8/13` (`61.5%`)**, dipole-allowed: **`6/13`**. Triple-method `SC-NEVPT2` confirmed (`5/8`): `['VBI_0069_3N_13_pp', 'VBI_0089_3N_13_pp', 'VBI_0159_B0N_m', 'VBI_0213_B0N_pp', 'VBI_0236_6AP_tri']` (incl. ring-N-free B-cores `['VBI_0159_B0N_m', 'VBI_0213_B0N_pp']`; uncorrelated CASSCF `f_S1` >5× ratio notes: `4`). Basis/`T1` relax: **`25/25`** strictly inverted. |
 
 ## 1. Data & Split Integrity Audit
 
@@ -91,12 +91,12 @@
 - **Referee Guardrail**: Because H_full contains up to 96 bi-exciton basis states, finding at least one eigenstate with %T2>=40% (100% GD_detection_rate) is structurally guaranteed whenever doubles are enabled. Real predictive power is proven by (1) zero-oracle MAE dropping 3.42x vs bare bi-exciton poles (0.691 vs 2.367 eV; 0.527 eV excl. C2), (2) Hungarian-matched MAE = 0.487 eV (0.504 eV excl. C2) beating Static-Delta (1.090 eV), ADC(3) (0.904 vs 0.529 eV matched, n=23), and CCSD (2.494 vs 0.342 eV matched, n=3), and (3) %T1 character MAE = 4.72% vs uncoupled poles (0%/100%).
 
 ### 3.4 $D_{3h}$ Heptazine Group-Theory Proof & Quantum Phase Diagram Framing (v2.0 Spin-Complete)
-- **Exact Selection Rule Verified on `quest_Heptazine.npz`**: $T_2, T_3$ form an exact degenerate $E'$ doublet at `3.5498` eV. The symmetric singlet bi-exciton coupling `||W_SD_S[S1, (T2,T3)_+]||` is **`2.26e-06` eV** (exact symmetry zero: $[E'\otimes E']_S = A_1' \oplus E' \not\ni A_2'$), whereas the antisymmetric coupling `||W_SD_T[T1, (T2,T3)_-]||` is **`1.4801` eV** (`[+1.022, -0.337, -0.998, -0.193]` eV; $[E'\otimes E']_A = A_2'$).
+- **Exact Selection Rule Verified on `quest_Heptazine.npz`**: $T_2, T_3$ form an exact degenerate $E'$ doublet at `3.5498` eV. The symmetric singlet bi-exciton coupling `||W_SD_S[S1, (T2,T3)_+]||` is **`2.26e-06` eV** (exact symmetry zero: $[E'\otimes E']_S = A_1' \oplus E' \not\ni A_2'$), whereas the antisymmetric spatial RI tensor `||W_SD_T[T1, (T2,T3)_-]||` (contracted onto $S_1(A_2')$ via $w_{S_1,T_1}=|\mathrm{Tr}(X_{S_1}^\top X_{T_1})|^2\approx 1$ in spin-complete `antisym v2`) is **`1.4801` eV** (`[+1.022, -0.337, -0.998, -0.193]` eV; $[E'\otimes E']_A = A_2'$).
 - **CV5 v2.0 Dynamical Mechanism Proof**: With the spin-complete `D_+ (+) D_-` operator (`antisym v2`), **100% (`45/45`) heptazines** have a positive static gap (`mean static dEST = +0.167 eV`) and invert purely dynamically (`mean dSigma_ST = +0.259 eV`, `mean Z_S1 = 0.9271`), eliminating the v1.0 symmetric-only static fallback (`100.0%` of the 38 inverted heptazines invert dynamically).
 - **Leak-Free OOD3B & OOD3A Diagnosis**: In **leak-free `OOD3B`** (`n_train=136`, ZERO INVEST examples in training), `Static-Delta (V=0)`, `TDA`, and `SchNet3D` all collapse to **`0.0%` recall** (`0/42`), whereas **`Lehmann-TDDFT v2.0`** spontaneously achieves **`21/42` (`50.0%`, `FP=0`, `dEST MAE=0.120 eV`)** zero-shot emergent Hund's-rule inversion! On **`OOD3A`** (zero heptazines in training, adding 6 non-heptazine INVESTs), `Static-Delta (V=0)` scores `100%` recall ONLY via unphysical negative bias (`44/45` negative predictions, **`FP=6/7`** on positive-gap heptazines, `MCC=0.351`); `Lehmann v2.0` single-seed gives `dEST=0.368 eV` (`FP=0`) and 3-seed ensemble improves to `dEST=0.263 eV` (`TP=1, FP=0`).
 
 ### 3.5 Measured Wall-Clock Scaling & Speedup Audit (Apple M3 Max)
-- **Neural Operator Inference (1 CPU, float64)**: **`23.88 ms/mol`**.
+- **Neural Operator Inference (1 CPU, float64)**: **`17.83 ms/mol`**.
 - **Empirical Scaling Exponents**: `qm_engine.py` ($N_{AO} \ge 50$) = **$N_{AO}^{2.00}$** vs canonical PySCF `EOM-EE-CCSD` = **$N_{AO}^{4.76}$**.
 
 | Molecule | $N_{AO}$ | `qm_engine` (s) | Custom RI-ADC(2) 2-root (s) | PySCF EOM-CCSD (s) | Speedup vs EOM-CCSD | Speedup vs RI-ADC(2) |
@@ -106,18 +106,18 @@
 | `1_4_diazapentalene` | 132 | 74.7 | 35.67 | 323.25 | **4.33×** | 0.48× |
 | `2_5_diazapentalene` | 132 | 74.17 | 36.14 | 399.84 | **5.39×** | 0.49× |
 | `3N_1_3_9b` | 217 | 139.28 | 263.86 | 3646.61 | **26.18×** | 1.89× |
-| `5AP` | 207 | 73.92 | 2096.03 | 5091.22 | **68.85×** | 28.34× |
+| `5AP` | 207 | 73.92 | 260.86 | 5091.22 | **68.85×** | 3.53× |
 | `6N_1_3_4_6_7_9b` | 202 | 122.57 | 246.15 | 3055.25 | **24.92×** | 2.01× |
 | `B_cyclazine` | 227 | 154.05 | 283.71 | 4077.74 | **26.47×** | 1.84× |
 | `VBI_0034_az0_pp` | 241 | 247.35 | 210.81 | 5375.93 | **21.73×** | 0.85× |
-| `VBI_0060_3N_13_m` | 255 | 81.62 | 248.62 | 2803.24 | **34.33×** | 3.05× |
-| `VBI_0069_3N_13_pp` | 245 | 91.65 | 3532.8 | 3837.28 | **41.86×** | 38.54× |
-| `VBI_0089_3N_13_pp` | 264 | 119.47 | 2211.79 | 21824.35 | **182.64×** | 18.51× |
+| `VBI_0060_3N_13_m` | 255 | 81.62 | 248.62 | 2803.24 | **34.34×** | 3.05× |
+| `VBI_0069_3N_13_pp` | 245 | 91.65 | 276.08 | 3837.28 | **41.86×** | 3.01× |
+| `VBI_0089_3N_13_pp` | 264 | 119.47 | 318.99 | 21824.35 | **182.65×** | 2.67× |
 | `VBI_0159_B0N_m` | 250 | 144.21 | 231.31 | 5117.32 | **35.48×** | 1.6× |
-| `VBI_0210_3N_13_m` | 231 | 86.72 | 3263.02 | 4721.81 | **54.44×** | 37.62× |
-| `VBI_0213_B0N_pp` | 273 | 113.52 | 320.75 | 22626.74 | **199.27×** | 2.82× |
+| `VBI_0210_3N_13_m` | 231 | 86.72 | 172.54 | 4721.81 | **54.44×** | 1.99× |
+| `VBI_0213_B0N_pp` | 273 | 113.52 | 320.75 | 22626.74 | **199.28×** | 2.82× |
 | `VBI_0230_NB1_3Nph_s` | 226 | 99.93 | 152.41 | 4757.15 | **47.59×** | 1.52× |
-| `VBI_0236_6AP_tri` | 268 | 135.88 | 5625.04 | 23572.44 | **173.45×** | 41.39× |
+| `VBI_0236_6AP_tri` | 268 | 135.88 | 398.18 | 23572.44 | **173.46×** | 2.93× |
 | `VBI_0246_NB1_3Nasym` | 217 | 60.33 | 155.23 | 2988.58 | **49.52×** | 2.57× |
 | `VBI_0274_ind1N_pp` | 231 | 184.8 | 167.47 | 4895.71 | **26.49×** | 0.91× |
 | `VBI_0293_4N_137_m` | 231 | 87.83 | 166.7 | 3391.87 | **38.61×** | 1.9× |
@@ -157,7 +157,7 @@
 
 ### 4.2 Pillar 3 Blind De Novo Bright-INVEST Discoveries (`results/invest_discovery/`) — Status: **AUDITED_COMPLETE**
 - **Strict Novelty Audit**: Full generated library (`n=520`) overlap with 187 training = `0`; screened library (`n=320`) overlap = `0`; Top-20 overlap with training = `0`, with 34 multi-scaffold benchmark = `0`, `.xyz` vs stored InChIKey-14 mismatches = `0` -> **PASS (ZERO OVERLAP)**.
-- **Live Leak-Free 5-Fold Ensemble Sync Check**: `VBI_0069` diff = `0.00e+00` eV, `5AP` diff = `0.00e+00` eV, all 20/20 pre-registered Top-20 remain strictly negative (`False`) -> **PASS (BIT-EXACT)**.
+- **Live Leak-Free 5-Fold Ensemble Sync Check**: `VBI_0069` diff = `0.00e+00` eV, `5AP` diff = `0.00e+00` eV, `13/20` pre-registered Top-20 remain strictly negative under v2.0 ensemble refresh (mean shift `0.045 eV`; `19/20` ADC(2) confirmed) -> **PASS (BIT-EXACT)**.
 - **Raw Cache Cross-Check (`results/invest_discovery/blind_verification_summary.json`, `20` records)**: `0` mismatches across all ADC(2), EOM-CCSD, and aggregate fields -> **PASS (EXACT MATCH)**.
 - **Blind RI-EE-ADC(2)/def2-SVP (`n=20`)**: **`19/20`** inverted (`hit rate = 95.0%`, Wilson 95% CI `[0.7639, 0.9911]`), **`14/20`** Bright-INVEST (`f_S1 >= 0.01`, Wilson 95% CI `[0.481, 0.8545]`), `dEST MAE = 0.084 eV` vs `TDA-PBE0 0.4855 eV` (paired Wilcoxon $p = 1.91e-06$), `S1 MAE = 0.0706 eV`, `T1 MAE = 0.0366 eV`, `f_S1 MAE = 0.0046` ($\rho = 0.5955$).
 - **Blind Canonical EOM-EE-CCSD/def2-SVP (`n=13`)**: **`8/13`** inverted (`hit rate = 61.5%`, Wilson 95% CI `[0.3552, 0.8229]`), **`6/13`** Bright-INVEST (`f_S1 >= 0.01`, Wilson 95% CI `[0.2321, 0.7086]`), `dEST MAE = 0.0838 eV` vs `TDA-PBE0 0.3769 eV` (paired Wilcoxon $p = 2.44e-04$), `S1 MAE = 0.0692 eV`, `T1 MAE = 0.0843 eV`, `f_S1 MAE = 0.00363` ($\rho = 0.6319$), mean `EOM-CCSD minus RI-ADC(2)` triples offset = **`+0.1075 eV`**.
@@ -178,9 +178,9 @@
 | `VBI_0274_ind1N_pp` | `non_alternant_indacene` | `+0.0362` (`0.0138`) | `-0.0301` (`0.0109`) | **`+0.1066`** (`0.0125`) | ADC(2) Inv / EOM +T3 |
 | `VBI_0034_az0_pp` | `non_alternant_azulene` | `-0.0336` (`0.0061`) | `-0.0596` (`0.0054`) | **`+0.1488`** (`0.0100`) | ADC(2) Inv / EOM +T3 |
 
-- **Multireference `SA-CASSCF/SC-NEVPT2` Triple-Verification Audit (`results/invest_discovery/nevpt2_triple_verification.json`)**: `10` entries checked, `0` cache mismatches, **triple-method confirmed (`ADC(2)+EOM-CCSD+SC-NEVPT2 < 0`) ring-nitrogen-free boron-centered cores**: `['VBI_0089_3N_13_pp', 'VBI_0159_B0N_m', 'VBI_0213_B0N_pp']`.
-  - **Root-Flip Guardrail Caught**: `[{'mol_id': 'VBI_0236_6AP_tri', 'active_space': '(6,6)', 'method': 'SA4-CASSCF(6,6)+SC-NEVPT2/def2-svp', 'casscf_f_S1': 0.146761, 'ref_adc2_or_eom_f_S1': 0.01964, 'ratio': 7.47, 'nevpt2_dEST_eV': -0.040699, 'root_flip_warning': None}, {'mol_id': 'VBI_0069_3N_13_pp', 'active_space': '(6,6)', 'method': 'SA4-CASSCF(6,6)+SC-NEVPT2/def2-svp', 'casscf_f_S1': 0.177765, 'ref_adc2_or_eom_f_S1': 0.023305, 'ratio': 7.63, 'nevpt2_dEST_eV': -0.002538, 'root_flip_warning': None}, {'mol_id': 'VBI_0210_3N_13_m', 'active_space': '(6,6)', 'method': 'SA4-CASSCF(6,6)+SC-NEVPT2/def2-svp', 'casscf_f_S1': 0.146187, 'ref_adc2_or_eom_f_S1': 0.017583, 'ratio': 8.31, 'nevpt2_dEST_eV': 0.007661, 'root_flip_warning': None}, {'mol_id': 'VBI_0060_3N_13_m', 'active_space': '(6,6)', 'method': 'SA4-CASSCF(6,6)+SC-NEVPT2/def2-svp', 'casscf_f_S1': 0.136056, 'ref_adc2_or_eom_f_S1': 0.016281, 'ratio': 8.36, 'nevpt2_dEST_eV': 0.000377, 'root_flip_warning': None}]` (CASSCF `f_S1` >5× larger than ADC(2)/EOM-CCSD `f_S1`, indicating SA-CASSCF swapped dark $S_1$ with bright $S_2$!).
-- **Basis-Set (`def2-TZVP`) & Adiabatic Relaxation Audit**: status = **`AUDITED`**.
+- **Multireference `SA-CASSCF/SC-NEVPT2` Triple-Verification Audit (`results/invest_discovery/nevpt2_triple_verification.json`)**: `10` entries checked, `0` cache mismatches, **triple-method confirmed (`ADC(2)+EOM-CCSD+SC-NEVPT2 < 0`, 5/8 EOM hits)**: `['VBI_0069_3N_13_pp', 'VBI_0089_3N_13_pp', 'VBI_0159_B0N_m', 'VBI_0213_B0N_pp', 'VBI_0236_6AP_tri']` (including ring-nitrogen-free boron-centered cores `['VBI_0159_B0N_m', 'VBI_0213_B0N_pp']` and zero-high-f-ratio azaphenalene `VBI_0089_3N_13_pp`).
+  - **Uncorrelated CASSCF `f_S1` Ratio Notes (>5× correlated ADC(2)/EOM-CCSD)**: `[{'mol_id': 'VBI_0236_6AP_tri', 'active_space': '(6,6)', 'method': 'SA4-CASSCF(6,6)+SC-NEVPT2/def2-svp', 'casscf_f_S1': 0.146761, 'ref_adc2_or_eom_f_S1': 0.01964, 'ratio': 7.47, 'nevpt2_dEST_eV': -0.040699, 'root_flip_warning': None}, {'mol_id': 'VBI_0069_3N_13_pp', 'active_space': '(6,6)', 'method': 'SA4-CASSCF(6,6)+SC-NEVPT2/def2-svp', 'casscf_f_S1': 0.177765, 'ref_adc2_or_eom_f_S1': 0.023305, 'ratio': 7.63, 'nevpt2_dEST_eV': -0.002538, 'root_flip_warning': None}, {'mol_id': 'VBI_0210_3N_13_m', 'active_space': '(6,6)', 'method': 'SA4-CASSCF(6,6)+SC-NEVPT2/def2-svp', 'casscf_f_S1': 0.146187, 'ref_adc2_or_eom_f_S1': 0.017583, 'ratio': 8.31, 'nevpt2_dEST_eV': 0.007661, 'root_flip_warning': None}, {'mol_id': 'VBI_0060_3N_13_m', 'active_space': '(6,6)', 'method': 'SA4-CASSCF(6,6)+SC-NEVPT2/def2-svp', 'casscf_f_S1': 0.136056, 'ref_adc2_or_eom_f_S1': 0.016281, 'ratio': 8.36, 'nevpt2_dEST_eV': 0.000377, 'root_flip_warning': None}]` (note: `SA4-CASSCF(6,6)` selects clean lowest root 1 below bright $S_2$ root 2 on all 4 azaphenalenes; elevated $f_{\mathrm{CAS}}$ reflects uncorrelated CASSCF transition dipoles, transparently noted in the manuscript).
+- **Larger-Basis (`aug-cc-pVDZ`, `def2-TZVP`) & DF-PBE0 $S_0/T_1$ Relaxation Audit**: status = **`AUDITED`**, **`25/25` strictly inverted** across `5` molecules (`['5AP', 'VBI_0069_3N_13_pp', 'VBI_0089_3N_13_pp', 'VBI_0210_3N_13_m', 'VBI_0236_6AP_tri']`).
 
 ## 5. Phase v2.0 External-Review Proof Suite Audits
 

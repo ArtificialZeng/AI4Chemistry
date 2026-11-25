@@ -80,11 +80,12 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREAD
 ```
 
 ### 3. Full Independent Zero-Leak Adversarial Audit (~20 seconds)
-Re-verifies all 187 CV5 molecules, 6 OOD splits, 23 external cores, 520/320/Top-20 virtual candidates, Theorems 1–5, matched QM baselines, diffuse `def2-SVPD` proof, blind doubles, double-hybrid baselines, matched-root scaling, LOMO CIs, blind MECIs, FSSH dynamics, and three-tier blind INVEST caches:
+Re-verifies all 187 CV5 molecules, 6 OOD splits, 23 external cores, 520/320/Top-20 virtual candidates, Theorems 1–5, matched QM baselines, diffuse `def2-SVPD` proof, blind doubles, double-hybrid baselines, matched-root scaling, LOMO CIs, blind MECIs, 3/3 FSSH dynamics, and three-tier blind INVEST caches (works standalone on a fresh clone via tracked `.npz` 3D coordinates):
 ```bash
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
   PYTHONPATH=src .venv/bin/python src/lehmann_tddft/audit.py
 ```
+*(Optional: to additionally re-verify the 10 raw excluded `FL` fluorescence entries directly against upstream QUESTDB JSON files excluded from `.gitignore`, clone `https://github.com/pfloos/QUESTDB.git` at commit `1b184aec1ad435e3f0833ee23ebc7de564b69102` into `data/external/QUESTDB` and `https://github.com/varunrishi/HEPTA-INVEST.git` at commit `f0de90190f400686a374f66ca95d1371d242a627` into `data/external/HEPTA-INVEST`.)*
 
 ### 4. Re-generating Publication Figures, Main PDF & Supplementary Information PDF
 ```bash

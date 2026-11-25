@@ -23,6 +23,7 @@ import torch
 torch.set_num_threads(1)
 
 from lehmann_tddft.model import load_checkpoint, npz_to_mol_tensors
+from lehmann_tddft.theorems import make_exact_direct_sum_dimer
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -123,6 +124,49 @@ class TestLehmannPhysicalLaws(unittest.TestCase):
         self.assertLess(float((o_ref["T"]["energies_eV"] - o_flip["T"]["energies_eV"]).abs().max()), 1e-12)
         self.assertLess(float((o_ref["S"]["osc"] - o_flip["S"]["osc"]).abs().max()), 1e-12)
 
+    def test_theorem3_exact_size_intensivity(self) -> None:
+        """Exact direct-sum dimer Heptazine (+) Butadiene must shift local energies by < 1e-12 eV."""
+        raw_a = {k: v for k, v in np.load(self.hep_npz, allow_pickle=True).items()}
+        raw_b = {k: v for k, v in np.load(self.but_npz, allow_pickle=True).items()}
+        mol_a = npz_to_mol_tensors(raw_a)
+        mol_ab = npz_to_mol_tensors(make_exact_direct_sum_dimer(raw_a, raw_b))
+        with torch.no_grad():
+            out_a = self.model(mol_a)
+            out_ab = self.model(mol_ab)
+        for sp in ("S", "T"):
+            ea = out_a[sp]["energies_eV"][:6].double()
+            eab = out_ab[sp]["energies_eV"].double()
+            min_diffs = torch.stack([(eab - e).abs().min() for e in ea])
+            self.assertLess(float(min_diffs.max()), 1e-12, f"Theorem 3 size-intensivity drift in {sp}")
+        dest_a = float(out_a["S"]["energies_eV"][0] - out_a["T"]["energies_eV"][0])
+        s1_ab = float(out_ab["S"]["energies_eV"][torch.argmin((out_ab["S"]["energies_eV"] - out_a["S"]["energies_eV"][0]).abs())])
+        t1_ab = float(out_ab["T"]["energies_eV"][torch.argmin((out_ab["T"]["energies_eV"] - out_a["T"]["energies_eV"][0]).abs())])
+        self.assertLess(abs((s1_ab - t1_ab) - dest_a), 1e-12)
+
+    def test_theorem4_exact_dynamical_inversion_identity(self) -> None:
+        """Verify Theorem 4 exact identity dEST == dEST_stat - dSigma_ST and dynamical inversion on Heptazine."""
+        mol = npz_to_mol_tensors(self.hep_npz)
+        with torch.no_grad():
+            out = self.model(mol)
+        e_s1 = float(out["S"]["energies_eV"][0].double())
+        e_t1 = float(out["T"]["energies_eV"][0].double())
+        u_s1 = out["S"]["c_S"][:, 0].double()
+        u_s1 = u_s1 / u_s1.norm()
+        u_t1 = out["T"]["c_S"][:, 0].double()
+        u_t1 = u_t1 / u_t1.norm()
+        e_s1_stat = float(u_s1 @ out["S"]["H_SS"].double() @ u_s1)
+        e_t1_stat = float(u_t1 @ out["T"]["H_SS"].double() @ u_t1)
+        vs, ds = out["S"]["V"].double(), out["S"]["D"].double()
+        vt, dt = out["T"]["V"].double(), out["T"]["D"].double()
+        sig_s1 = float(u_s1 @ (vs @ torch.diag(1.0 / (e_s1 - ds)) @ vs.T) @ u_s1)
+        sig_t1 = float(u_t1 @ (vt @ torch.diag(1.0 / (e_t1 - dt)) @ vt.T) @ u_t1)
+        dest_stat = e_s1_stat - e_t1_stat
+        dsig_st = sig_t1 - sig_s1
+        self.assertLess(abs((e_s1 - e_t1) - (dest_stat - dsig_st)), 1e-12)
+        self.assertGreater(dest_stat, 0.0, "Heptazine must have positive static splitting in spin-complete v2.0")
+        self.assertLess(e_s1 - e_t1, 0.0, "Heptazine must dynamically invert (dEST < 0)")
+        self.assertLess(sig_s1, -0.1, "Antisymmetric ^1(TT)_- channel must strongly stabilize S1")
+
 
 class TestAuditedResultsAndZeroLeakage(unittest.TestCase):
     """Verify audited JSON invariants, zero leakage, and deliverable completeness."""
@@ -142,6 +186,31 @@ class TestAuditedResultsAndZeroLeakage(unittest.TestCase):
         self.assertEqual(p3["summary_cross_check"]["n_mismatches_vs_raw_cache"], 0)
         self.assertTrue(p3["summary_cross_check"]["exact_cache_match"])
         self.assertTrue(p3["live_leak_free_ensemble_sync_check"]["synced_with_leak_free_manifest"])
+        # Regression: basis_and_adiabatic_audit must confirm 25/25 strictly inverted
+        ba_aud = p3["basis_and_adiabatic_audit"]
+        self.assertEqual(ba_aud["n_molecules"], 5)
+        self.assertEqual(ba_aud["n_checks"], 25)
+        self.assertEqual(ba_aud["n_inverted"], 25)
+        self.assertTrue(ba_aud["all_strictly_inverted"])
+        # Regression: NEVPT2 triple-confirmed IDs must include all 5/8 EOM hits & exact 2 boron cores
+        nev_aud = p3["nevpt2_triple_verification_audit"]
+        self.assertEqual(len(nev_aud["triple_method_confirmed_ids"]), 5)
+        self.assertEqual(
+            nev_aud["triple_method_confirmed_boron_core_ids"],
+            ["VBI_0159_B0N_m", "VBI_0213_B0N_pp"],
+        )
+        # Regression: audit speedup table must use matched def2-SVP RI-ADC(2) times (not def2-TZVP!)
+        st_rows = {
+            r["mol_id"]: r
+            for r in audit["wave1_benchmarks_and_referee_audit"]["timing_and_scaling_audit"]["direct_measured_speedup_table"]
+        }
+        for mid in ("5AP", "VBI_0069_3N_13_pp", "VBI_0089_3N_13_pp", "VBI_0210_3N_13_m", "VBI_0236_6AP_tri"):
+            self.assertIn(mid, st_rows)
+            self.assertLess(
+                st_rows[mid]["ri_adc2_2roots_s"],
+                500.0,
+                f"Audit timing table mixed larger-basis ADC(2) time into def2-SVP row for {mid}",
+            )
         bm_audit = audit["phase_v2_reviewer_upgrades"]["pillar4_v2_upgrades"]["blind_meci_search"]
         self.assertEqual(bm_audit["status"], "AUDITED")
         self.assertEqual(len(bm_audit.get("blockers", [])), 0)
@@ -228,9 +297,19 @@ class TestAuditedResultsAndZeroLeakage(unittest.TestCase):
             (ROOT / "manuscript/NATCOMPUTSCI-26-5124/lehmann_tddft_SI.pdf").read_bytes(),
             "Submission SI PDF is out of sync with manuscript/lehmann_tddft_SI.pdf",
         )
+        import zipfile
+        with zipfile.ZipFile(ROOT / "manuscript/NATCOMPUTSCI-26-5124/lehmann_tddft_source_for_review.zip") as zf:
+            names = zf.namelist()
+            self.assertGreaterEqual(len(names), 30)
+            for name in names:
+                self.assertEqual(
+                    zf.read(name),
+                    (ROOT / name).read_bytes(),
+                    f"Source review zip out of sync with disk for {name}",
+                )
 
     def test_freeze_manifest_sha256_integrity(self) -> None:
-        """Every deliverable recorded in FREEZE_MANIFEST.json must match exact bytes & SHA-256."""
+        """Every deterministic deliverable in FREEZE_MANIFEST.json must match exact bytes & SHA-256."""
         import hashlib
         manifest_path = ROOT / "FREEZE_MANIFEST.json"
         self.assertTrue(manifest_path.exists(), "Missing FREEZE_MANIFEST.json")

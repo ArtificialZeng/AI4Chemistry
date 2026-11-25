@@ -27,14 +27,15 @@ def tex_esc(s: str) -> str:
     )
 
 
-def fmt_opt(v: Any, fmt: str = "{:+.3f}", dash: str = "---") -> str:
+def fmt_opt(v: Any, fmt: str = "{:+.3f}", dash: str = "---", math: bool = False) -> str:
     if v is None:
         return dash
     try:
         fv = float(v)
         if fv != fv:
             return dash
-        return fmt.format(fv)
+        s = fmt.format(fv)
+        return f"${s}$" if math else s
     except Exception:
         return dash
 
@@ -157,11 +158,11 @@ def build_si() -> None:
         dhs = dm.get("methods", {})
         def _dh_val(fn: str) -> str:
             entry = dhs.get(fn, {})
-            return fmt_opt(entry.get("delta_EST_eV"))
+            return fmt_opt(entry.get("delta_EST_eV"), math=True)
         st4_rows.append(
-            f"\\texttt{{{tex_esc(mid)}}} & {fmt_opt(zm.get('adc2_dEST_eV'))} & "
-            f"{fmt_opt(zm.get('tda_dEST_eV'))} & "
-            f"\\textbf{{{fmt_opt(zm.get('lehmann_dEST_eV'))}}} & "
+            f"\\texttt{{{tex_esc(mid)}}} & {fmt_opt(zm.get('adc2_dEST_eV'), math=True)} & "
+            f"{fmt_opt(zm.get('tda_dEST_eV'), math=True)} & "
+            f"$\\mathbf{{{fmt_opt(zm.get('lehmann_dEST_eV'))}}}$ & "
             f"{_dh_val('B2PLYP')} & {_dh_val('PBE-QIDH')} & "
             f"{_dh_val('SCS-PBE-QIDH')} & {_dh_val('SOS-PBE-QIDH')} \\\\"
         )
@@ -170,11 +171,11 @@ def build_si() -> None:
         r"\midrule" + "\n"
         f"\\textbf{{23-Core MAE (eV) / MCC}} & Ref. & "
         f"{zs['strictly_novel_non_benchmark']['DF-PBE0_RI-TDA']['dEST_MAE_eV']:.3f} & "
-        f"\\textbf{{{zs['strictly_novel_non_benchmark']['Lehmann-TDDFT']['dEST_MAE_eV']:.3f} (0.826)}} & "
-        f"{m23['B2PLYP']['dEST_MAE_eV']:.3f} ({m23['B2PLYP']['MCC']:+.3f}) & "
-        f"{m23['PBE-QIDH']['dEST_MAE_eV']:.3f} ({m23['PBE-QIDH']['MCC']:+.3f}) & "
-        f"{m23['SCS-PBE-QIDH']['dEST_MAE_eV']:.3f} ({m23['SCS-PBE-QIDH']['MCC']:+.3f}) & "
-        f"{m23['SOS-PBE-QIDH']['dEST_MAE_eV']:.3f} ({m23['SOS-PBE-QIDH']['MCC']:+.3f}) \\\\"
+        f"\\textbf{{{zs['strictly_novel_non_benchmark']['Lehmann-TDDFT']['dEST_MAE_eV']:.3f} ($+0.826$)}} & "
+        f"{m23['B2PLYP']['dEST_MAE_eV']:.3f} (${m23['B2PLYP']['MCC']:+.3f}$) & "
+        f"{m23['PBE-QIDH']['dEST_MAE_eV']:.3f} (${m23['PBE-QIDH']['MCC']:+.3f}$) & "
+        f"{m23['SCS-PBE-QIDH']['dEST_MAE_eV']:.3f} (${m23['SCS-PBE-QIDH']['MCC']:+.3f}$) & "
+        f"{m23['SOS-PBE-QIDH']['dEST_MAE_eV']:.3f} (${m23['SOS-PBE-QIDH']['MCC']:+.3f}$) \\\\"
     )
 
     # --- Supplementary Table 5: Complete 3x3 LOMO & Single-Molecule Transfer Matrix ---
@@ -332,16 +333,24 @@ whose single-exciton-coupled spectrum is the exact union $\mathrm{{spec}}(\Hlift
 
 \subsection*{{Proof of Theorem 4 (Exact Dynamical INVEST Phase Boundary) and $D_{{3h}}$ Selection Rules}}
 \begin{{proof}}
-Writing $E_{{S_1}} = E_{{S_1}}^{{\mathrm{{stat}}}} - \Sigma_{{S_1}}^{{\mathrm{{dyn}}}}$ and $E_{{T_1}} = E_{{T_1}}^{{\mathrm{{stat}}}} - \Sigma_{{T_1}}^{{\mathrm{{dyn}}}}$ with $\Sigma_n^{{\mathrm{{dyn}}}} \equiv E_n^{{\mathrm{{stat}}}} - E_n$ (non-negative for the lowest root by the Hylleraas--Undheim--MacDonald interlacing theorem), subtracting gives
+Left-multiplying the exact Schur-complement equation (Eq.~(S2)) for the lowest singlet ($S_1$) and triplet ($T_1$) eigenstates by the normalized single-exciton projections $\mathbf{{u}}_n \equiv c_n / \|c_n\|_2$ yields the exact Rayleigh-quotient decomposition
 \begin{{equation}}
-\dEST \equiv E_{{S_1}} - E_{{T_1}} = \dEST^{{\mathrm{{stat}}}} - \dSig, \qquad \dSig \equiv \Sigma_{{S_1}}^{{\mathrm{{dyn}}}} - \Sigma_{{T_1}}^{{\mathrm{{dyn}}}}.
+E_n = E_n^{{\mathrm{{stat}}}} + \Sigma_n^{{\mathrm{{dyn}}}}(E_n), \qquad
+E_n^{{\mathrm{{stat}}}} \equiv \mathbf{{u}}_n^\top \mathbf{{H}}_{{SS}}^{{(\sigma)}} \mathbf{{u}}_n, \qquad
+\Sigma_n^{{\mathrm{{dyn}}}}(E_n) \equiv \mathbf{{u}}_n^\top \Sig(E_n)\,\mathbf{{u}}_n = \sum_\mu \frac{{(\mathbf{{u}}_n^\top \mathbf{{v}}_\mu)^2}}{{E_n - D_{{\theta,\mu}}^{{(\sigma)}}}},
 \end{{equation}}
-Thus $\dEST < 0$ if and only if $\dSig > \dEST^{{\mathrm{{stat}}}}$. For $D_{{3h}}$ heptazine ($S_1, T_1 \in A_2'$; degenerate triplet doublet $T_2, T_3 \in E'$), decomposing the direct product $E'\otimes E'$ into symmetric and antisymmetric parts via the $D_{{3h}}$ character table ($\chi(E)=2, \chi(C_3)=-1, \chi(C_2')=0, \chi(\sigma_h)=2, \chi(S_3)=-1, \chi(\sigma_v)=0$) gives:
+where $\Sigma_n^{{\mathrm{{dyn}}}}(E_n) \le 0$ whenever $E_n < \min_\mu D_{{\theta,\mu}}^{{(\sigma)}}$ (strictly stabilizing the lowest root, consistent with Hylleraas--Undheim--MacDonald interlacing). Subtracting $E_{{T_1}}$ from $E_{{S_1}}$ gives the exact identity matching Main Text Eq.~(3):
+\begin{{equation}}
+\dEST \equiv E_{{S_1}} - E_{{T_1}} = \dEST^{{\mathrm{{stat}}}} - \dSig, \qquad
+\dEST^{{\mathrm{{stat}}}} \equiv E_{{S_1}}^{{\mathrm{{stat}}}} - E_{{T_1}}^{{\mathrm{{stat}}}}, \qquad
+\dSig \equiv \Sigma_{{T_1}}^{{\mathrm{{dyn}}}}(E_{{T_1}}) - \Sigma_{{S_1}}^{{\mathrm{{dyn}}}}(E_{{S_1}}).
+\end{{equation}}
+Thus singlet--triplet inversion ($\dEST < 0$) occurs if and only if differential dynamical stabilization $\dSig$ exceeds $\dEST^{{\mathrm{{stat}}}}$. For $D_{{3h}}$ heptazine ($S_1, T_1 \in A_2'$; degenerate triplet doublet $T_2, T_3 \in E'$), decomposing the direct product $E'\otimes E'$ into symmetric and antisymmetric parts via the $D_{{3h}}$ character table ($\chi(E)=2, \chi(C_3)=-1, \chi(C_2')=0, \chi(\sigma_h)=2, \chi(S_3)=-1, \chi(\sigma_v)=0$) gives:
 \begin{{equation}}
 [E'\otimes E']_S = A_1' \oplus E' \not\ni A_2', \qquad
 [E'\otimes E']_A = A_2'.
 \end{{equation}}
-Therefore, by the Wigner--Eckart theorem, the symmetric bi-exciton singlet $^1(T_2 T_3)_+$ has identically zero coupling to $S_1(A_2')$ (verified numerically on \texttt{{quest\_Heptazine.npz}}: $\|\mathbf{{W}}_{{SD}}^{{(S)}}[S_1,(T_2,T_3)_+]\| = 2.26\times 10^{{-6}}$\,eV), whereas the antisymmetric channel $^1(T_2 T_3)_-$ transforms as $A_2'$ and couples strongly ($\|\mathbf{{W}}_{{SD}}^{{(T)}}[T_1,(T_2,T_3)_-]\| = 1.4801$\,eV), explaining why spin-complete \leh{{}} v2.0 shifts 45/45 CV5 heptazines into the unified Dynamical-INVEST phase.
+Therefore, by the Wigner--Eckart theorem, the symmetric bi-exciton singlet $^1(T_2 T_3)_+$ has identically zero coupling to $S_1(A_2')$ (verified numerically on \texttt{{quest\_Heptazine.npz}}: $\|\mathbf{{W}}_{{SD}}^{{(S)}}[S_1,(T_2,T_3)_+]\| = 2.26\times 10^{{-6}}$\,eV), whereas the antisymmetric spatial channel $[E'\otimes E']_A = A_2'$ couples strongly ($\|\mathbf{{W}}_{{SD}}^{{\mathrm{{anti}}}}[S_1,(T_2,T_3)_-]\| = 1.4801$\,eV, evaluated via the shared antisymmetric spatial RI tensor contracted onto $S_1(A_2')$ through $w_{{S_1,T_1}}=|\mathrm{{Tr}}(\mathbf{{X}}_{{S_1}}^\top\mathbf{{X}}_{{T_1}})|^2\approx 1$), yielding $\Sigma_{{S_1}}^{{\mathrm{{dyn}}}} = -0.358$\,eV and shifting 45/45 CV5 heptazines into the unified Dynamical-INVEST phase.
 \end{{proof}}
 
 \subsection*{{Proof of Theorem 5 (Restoring $(3N-8)$ Codimension-2 Conical Intersections and $\gamma=\pi$)}}

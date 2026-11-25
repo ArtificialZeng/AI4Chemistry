@@ -263,7 +263,7 @@ $^\ddagger$Strict blind 3-fold leave-molecule-family-out GD MAE (zero Hungarian 
 \section*{Transferable conical intersections, blind MECI discovery, and FSSH dynamics}
 % ===========================================================================
 Non-radiative photochemical decay through $S_1/S_0$ conical intersections demands simultaneous accuracy in PES topology, exact spin purity ($\Ssq=0$), non-zero derivative coupling, and quantized geometric phase $\gamma=\pi$\cite{yarkony1996,domcke2004,levine2006,gozem2017}.
-To eliminate any manual ground-to-double coupling constant (such as an empirical $\beta_{\mathrm{coul}}$), we implemented a strictly transferable \textbf{leave-one-molecule-out (LOMO)} protocol across three canonical benchmarks---twisted-pyramidalized \textbf{ethylene} (SA2-CASSCF(2,2)+SC-NEVPT2, $15\times 15$ grid), twisted-bent \textbf{methanimine} (SA2-CASSCF(4,3)+SC-NEVPT2, $15\times 15$ grid), and planar exocyclic-stretch \textbf{fulvene} (SA2-CASSCF(6,6)+SC-NEVPT2, $11\times 11$ grid)---learning a single transferable scalar prefactor $\beta_{\mathrm{coul}}$ ($\in [0.660,0.717]$) solely from 10 points along the 1D $y_h$ SA2-CASSCF cut of the \emph{held-in} training molecules, with zero target-molecule geometries and zero NEVPT2 supervision (Fig.~\ref{fig:ci}, Extended Data Fig.~\ref{fig:ext_ci}, and Table~\ref{tab:ci}).
+To eliminate any manual ground-to-double coupling constant (such as an empirical $\beta_{\mathrm{coul}}$), we implemented a strictly transferable \textbf{leave-one-molecule-out (LOMO)} protocol across three canonical benchmarks---twisted-pyramidalized \textbf{ethylene} (SA2-CASSCF(2,2)+SC-NEVPT2, $15\times 15$ grid), twisted-bent \textbf{methanimine} (SA2-CASSCF(4,3)+SC-NEVPT2, $15\times 15$ grid), and planar exocyclic-stretch \textbf{fulvene} (SA2-CASSCF(6,6)+SC-NEVPT2, $11\times 11$ grid)---learning a single transferable scalar prefactor $\beta_{\mathrm{coul}}$ ($\in [0.662,0.716]$) solely from 10 points along the 1D $y_h$ SA2-CASSCF cut of the \emph{held-in} training molecules, with zero target-molecule geometries and zero NEVPT2 supervision (Fig.~\ref{fig:ci}, Extended Data Fig.~\ref{fig:ext_ci}, and Table~\ref{tab:ci}).
 Every LOMO checkpoint independently preserves exact exciton phase invariance ($0.0$\,eV) and size-intensivity ($v_{0D}=0.0$\,eV on disconnected fragments).
 
 % ---------------------------------------------------------------------------
@@ -300,7 +300,7 @@ Finally, propagating 300-trajectory \textbf{Tully fewest-switches surface hoppin
 % ---------------------------------------------------------------------------
 \begin{table*}[t!]
 \centering
-\caption{\textbf{Zero-manual-$\beta$ LOMO conical intersections, SF-TDDFT spin-purity comparison, blind MECI discovery, and 300-trajectory Tully FSSH dynamics.} All PES errors are evaluated vs SC-NEVPT2/def2-SVP. LOMO \leh{} learns a single scalar $\beta_{\mathrm{coul}}\in[0.660,0.717]$ solely from held-in 1D SA2-CASSCF cuts (zero target-molecule data).}
+\caption{\textbf{Zero-manual-$\beta$ LOMO conical intersections, SF-TDDFT spin-purity comparison, blind MECI discovery, and 300-trajectory Tully FSSH dynamics.} All PES errors are evaluated vs SC-NEVPT2/def2-SVP. LOMO \leh{} learns a single scalar $\beta_{\mathrm{coul}}\in[0.662,0.716]$ solely from held-in 1D SA2-CASSCF cuts (zero target-molecule data).}
 \label{tab:ci}
 \sffamily\fontsize{7.15}{8.5}\selectfont
 \setlength{\tabcolsep}{4.2pt}
