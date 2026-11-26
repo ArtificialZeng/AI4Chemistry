@@ -1,0 +1,248 @@
+{
+  "code_cleanliness": {
+    "file": "src/lehmann_namd/causal_operator.py",
+    "forbidden_identifiers_found": [],
+    "passed": true
+  },
+  "theorems_1_to_4": {
+    "exists": true,
+    "theorem_1_ok": true,
+    "theorem_1_max_z_err": 2.5091040356528538e-14,
+    "theorem_1_max_hf_err": 4.648226248349374e-13,
+    "theorem_2_ok": true,
+    "theorem_3_bp_ok": true,
+    "theorem_3_berry_ok": true,
+    "theorem_3_gamma_ci_over_pi": 1.0042933780125007,
+    "theorem_3_gamma_ctrl_over_pi": 4.250829210518023e-05,
+    "theorem_4_ok": true,
+    "theorem_4_exponent": 2.5832163447502268,
+    "passed": true
+  },
+  "blind_meci_3n": {
+    "exists": true,
+    "n_systems": 5,
+    "systems": {
+      "ethylene": {
+        "dof_3n": 18,
+        "gap_ev": 0.0016310922850254475,
+        "cas_gap_ev": 0.1800589186946153,
+        "nevpt2_gap_ev": 0.17347408015303112,
+        "gamma_ci_over_pi": 1.0217518028132042,
+        "gamma_ctrl_over_pi": 0.00022001536503789233,
+        "rmsd_heavy_ang": 0.0009843532299738504,
+        "holonomy_u0": -0.9983861778920581,
+        "converged_ci": true
+      },
+      "fulvene": {
+        "dof_3n": 36,
+        "gap_ev": 0.009938041631628166,
+        "cas_gap_ev": 0.08246092701892889,
+        "nevpt2_gap_ev": 0.13269466115295958,
+        "gamma_ci_over_pi": -1.0000652313773364,
+        "gamma_ctrl_over_pi": 0.0016736869486026762,
+        "rmsd_heavy_ang": 0.14129077272302323,
+        "holonomy_u0": -0.9893912171718258,
+        "converged_ci": true
+      },
+      "methanimine": {
+        "dof_3n": 15,
+        "gap_ev": 0.005139479666036428,
+        "cas_gap_ev": 0.11872224147262109,
+        "nevpt2_gap_ev": 0.1073912760151613,
+        "gamma_ci_over_pi": 1.0168939166777076,
+        "gamma_ctrl_over_pi": -0.09756488873408534,
+        "rmsd_heavy_ang": 0.004431653824569255,
+        "holonomy_u0": -0.9998667706138201,
+        "converged_ci": true
+      },
+      "psb3": {
+        "dof_3n": 42,
+        "gap_ev": 0.003938525773747183,
+        "cas_gap_ev": 0.30439101216804715,
+        "nevpt2_gap_ev": 0.6149987139190815,
+        "gamma_ci_over_pi": -1.2053230966349437,
+        "gamma_ctrl_over_pi": 0.00027838118990204213,
+        "rmsd_heavy_ang": null,
+        "holonomy_u0": -0.9997157270297551,
+        "converged_ci": true
+      },
+      "uracil": {
+        "dof_3n": 36,
+        "gap_ev": 0.12043459351260798,
+        "cas_gap_ev": 0.23836591123061524,
+        "nevpt2_gap_ev": 0.03527861732480994,
+        "gamma_ci_over_pi": 0.649974175119078,
+        "gamma_ctrl_over_pi": 0.0015337492179860052,
+        "rmsd_heavy_ang": null,
+        "holonomy_u0": -0.98259811441979,
+        "converged_ci": true
+      }
+    },
+    "passed": true
+  },
+  "namd_ensembles_3n": {
+    "exists": true,
+    "n_systems": 5,
+    "all_lehmann_stable": true,
+    "ultrafast_ci_decay_verified": true,
+    "live_sf_tda_contamination_detected": true,
+    "systems": {
+      "ethylene": {
+        "lehmann": {
+          "n_traj": 16,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 18,
+          "e_drift_median_mev": 354.0473793923323,
+          "final_s1_pop": 0.25,
+          "tau_total_fs": 44.50069220033177,
+          "sf_tda_s2_s1_mean": 0.6930934233449058,
+          "phi_trans_given_s0": null
+        },
+        "casscf": {
+          "n_traj": 16,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 13,
+          "e_drift_median_mev": 258.38118330703406,
+          "final_s1_pop": 0.1875,
+          "tau_total_fs": 25.56796522682819,
+          "sf_tda_s2_s1_mean": null,
+          "phi_trans_given_s0": null
+        },
+        "adiabatic_pbe0": {
+          "n_traj": 16,
+          "n_crashed": 0,
+          "n_instability_trajs": 8,
+          "total_hops": 0,
+          "e_drift_median_mev": 547.4439642247145,
+          "final_s1_pop": 1.0,
+          "tau_total_fs": 4735.100083183397,
+          "sf_tda_s2_s1_mean": null,
+          "phi_trans_given_s0": null
+        }
+      },
+      "fulvene": {
+        "casscf": {
+          "n_traj": 6,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 6,
+          "e_drift_median_mev": 43.79033227443861,
+          "final_s1_pop": 0.0,
+          "tau_total_fs": 14.787064780617087,
+          "sf_tda_s2_s1_mean": null,
+          "phi_trans_given_s0": null
+        },
+        "lehmann": {
+          "n_traj": 12,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 8,
+          "e_drift_median_mev": 82.4478700327222,
+          "final_s1_pop": 0.3333333333333333,
+          "tau_total_fs": 31.566558185006894,
+          "sf_tda_s2_s1_mean": 0.3186674878756564,
+          "phi_trans_given_s0": null
+        },
+        "adiabatic_pbe0": {
+          "n_traj": 12,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 0,
+          "e_drift_median_mev": 55.19621138677046,
+          "final_s1_pop": 1.0,
+          "tau_total_fs": 4430.294429071937,
+          "sf_tda_s2_s1_mean": null,
+          "phi_trans_given_s0": null
+        }
+      },
+      "methanimine": {
+        "lehmann": {
+          "n_traj": 16,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 13,
+          "e_drift_median_mev": 88.88767652674053,
+          "final_s1_pop": 0.3125,
+          "tau_total_fs": 64.23405211908388,
+          "sf_tda_s2_s1_mean": 0.31281931347813013,
+          "phi_trans_given_s0": null
+        },
+        "casscf": {
+          "n_traj": 16,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 14,
+          "e_drift_median_mev": 47.135474989551255,
+          "final_s1_pop": 0.25,
+          "tau_total_fs": 40.91449909007652,
+          "sf_tda_s2_s1_mean": null,
+          "phi_trans_given_s0": null
+        },
+        "adiabatic_pbe0": {
+          "n_traj": 16,
+          "n_crashed": 0,
+          "n_instability_trajs": 2,
+          "total_hops": 0,
+          "e_drift_median_mev": 37.40445143166694,
+          "final_s1_pop": 1.0,
+          "tau_total_fs": 4735.100083183397,
+          "sf_tda_s2_s1_mean": null,
+          "phi_trans_given_s0": null
+        }
+      },
+      "psb3": {
+        "lehmann": {
+          "n_traj": 8,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 0,
+          "e_drift_median_mev": 103.2239749770024,
+          "final_s1_pop": 1.0,
+          "tau_total_fs": 5038.6598424344975,
+          "sf_tda_s2_s1_mean": 0.43451727638206616,
+          "phi_trans_given_s0": 0.0
+        },
+        "adiabatic_pbe0": {
+          "n_traj": 8,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 0,
+          "e_drift_median_mev": 123.25636110621264,
+          "final_s1_pop": 1.0,
+          "tau_total_fs": 5038.6598424344975,
+          "sf_tda_s2_s1_mean": null,
+          "phi_trans_given_s0": 0.0
+        }
+      },
+      "uracil": {
+        "lehmann": {
+          "n_traj": 8,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 0,
+          "e_drift_median_mev": 120.53767622322563,
+          "final_s1_pop": 1.0,
+          "tau_total_fs": 4763.336822348225,
+          "sf_tda_s2_s1_mean": 1.063035795508531,
+          "phi_trans_given_s0": null
+        },
+        "adiabatic_pbe0": {
+          "n_traj": 8,
+          "n_crashed": 0,
+          "n_instability_trajs": 0,
+          "total_hops": 0,
+          "e_drift_median_mev": 120.80011000508388,
+          "final_s1_pop": 1.0,
+          "tau_total_fs": 4763.336822348225,
+          "sf_tda_s2_s1_mean": null,
+          "phi_trans_given_s0": null
+        }
+      }
+    },
+    "passed": true
+  },
+  "blockers": [],
+  "all_passed": true
+}

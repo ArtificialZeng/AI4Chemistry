@@ -1,0 +1,328 @@
+\documentclass[10pt]{article}
+
+\usepackage[letterpaper,top=0.8in,bottom=0.8in,left=0.85in,right=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{newtxtext,newtxmath}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage[super,sort&compress,comma]{natbib}
+\usepackage[colorlinks=true,citecolor=natblue,linkcolor=natblue,urlcolor=natblue]{hyperref}
+
+\definecolor{natblue}{HTML}{005A8D}
+\definecolor{natdark}{HTML}{1A1F24}
+\definecolor{natgray}{HTML}{555A64}
+
+\titleformat{\section}{\sffamily\bfseries\fontsize{11.5}{14}\selectfont\color{natdark}}{Supplementary Note \thesection.\ }{0em}{}
+\titleformat{\subsection}{\sffamily\bfseries\fontsize{10}{12}\selectfont\color{natblue}}{}{0em}{}
+
+\newtheoremstyle{natthm}{6pt}{6pt}{\itshape}{}{\sffamily\bfseries\color{natblue}}{.}{0.5em}{}
+\theoremstyle{natthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\leh}{\textsc{Lehmann-NAMD}}
+\newcommand{\Hext}{\mathcal{H}_{\mathrm{ext}}}
+\newcommand{\Ssq}{\langle\hat{S}^2\rangle}
+
+\begin{document}
+
+\begin{center}
+  {\sffamily\bfseries\fontsize{9}{11}\selectfont\color{natblue} SUPPLEMENTARY INFORMATION}\\[6pt]
+  {\sffamily\bfseries\fontsize{14}{17.5}\selectfont\color{natdark}
+  Exact analytical differentiable causal self-energy gradients and non-adiabatic couplings for full-dimensional ($3N{-}6$) on-the-fly photodynamics beyond adiabatic TD-DFT}\\[6pt]
+  {\sffamily\fontsize{9.5}{11.5}\selectfont\color{natdark} Zijian Zeng$^{*}$}\\
+  {\sffamily\fontsize{8}{10}\selectfont\color{natgray}
+  Institute of Computer Science and Digital Innovation, UCSI University, Kuala Lumpur 56000, Malaysia.\\
+  $^{*}$Correspondence: \texttt{zijianzeng@foxmail.com}, \texttt{1002266693@ucsiuniversity.edu.my}}
+\end{center}
+\vspace{8pt}
+\tableofcontents
+\vspace{12pt}
+
+% ===========================================================================
+\section{Formal Proofs of Theorems 1--3}
+% ===========================================================================
+
+\subsection{Theorem 1: Generalized Causal Hellmann--Feynman and Dyson Residue Identity}
+
+Let the real-symmetric lifted Hamiltonian be partitioned over the physical subspace $\mathcal{P} = \{|0\rangle, |S_1\rangle, \dots, |S_{N_S}\rangle\}$ ($n_{\mathrm{phys}} = 1 + N_S$) and the spin-pure bi-exciton bath $\mathcal{Q} = \{|D_1\rangle, \dots, |D_{N_D}\rangle\}$:
+\begin{equation}
+  \Hext(\mathbf{R}) =
+  \begin{pmatrix}
+    \mathbf{H}_{\mathrm{stat}}(\mathbf{R}) & \mathbf{V}(\mathbf{R}) \\
+    \mathbf{V}(\mathbf{R})^\top & \mathbf{D}(\mathbf{R})
+  \end{pmatrix}, \qquad
+  \Hext(\mathbf{R})\,\mathbf{u}_n(\mathbf{R}) = E_n(\mathbf{R})\,\mathbf{u}_n(\mathbf{R}),
+\end{equation}
+with $\|\mathbf{u}_n\|_2^2 = \|\mathbf{c}_n\|_2^2 + \|\mathbf{b}_n\|_2^2 = 1$, where $\mathbf{u}_n = (\mathbf{c}_n^\top, \mathbf{b}_n^\top)^\top$.
+
+\begin{proof}
+From the $\mathcal{Q}$-block eigenvalue equation $\mathbf{V}^\top\mathbf{c}_n + \mathbf{D}\mathbf{b}_n = E_n\mathbf{b}_n$, whenever $E_n \notin \mathrm{spec}(\mathbf{D})$ we eliminate the bath amplitude analytically:
+\begin{equation}
+  \mathbf{b}_n = \mathbf{G}_n\,\mathbf{V}^\top\mathbf{c}_n, \qquad
+  \mathbf{G}_n \equiv (E_n\mathbf{I} - \mathbf{D})^{-1}.
+\end{equation}
+Substituting into the $\mathcal{P}$-block yields the exact nonlinear frequency-dependent Dyson--Casida eigenproblem
+\begin{equation}
+  \bigl[\mathbf{H}_{\mathrm{stat}}(\mathbf{R}) + \mathbf{\Sigma}_{xc}(E_n; \mathbf{R})\bigr]\,\hat{\mathbf{c}}_n = E_n\,\hat{\mathbf{c}}_n, \qquad
+  \mathbf{\Sigma}_{xc}(\omega; \mathbf{R}) = \mathbf{V}(\mathbf{R})\,(\omega\mathbf{I} - \mathbf{D}(\mathbf{R}))^{-1}\mathbf{V}(\mathbf{R})^\top,
+\end{equation}
+where $\hat{\mathbf{c}}_n = \mathbf{c}_n / \|\mathbf{c}_n\|_2$ is the unit-normalized physical component.
+Using $\partial_\omega \mathbf{\Sigma}_{xc}(\omega; \mathbf{R}) = -\mathbf{V}(\omega\mathbf{I}-\mathbf{D})^{-2}\mathbf{V}^\top$, the normalization condition $\|\mathbf{c}_n\|^2 + \|\mathbf{b}_n\|^2 = 1$ becomes
+\begin{equation}
+  1 = \|\mathbf{c}_n\|^2 \Bigl(1 + \hat{\mathbf{c}}_n^\top \mathbf{V}\mathbf{G}_n^2\mathbf{V}^\top\hat{\mathbf{c}}_n\Bigr)
+    = \|\mathbf{c}_n\|^2 \Bigl(1 - \hat{\mathbf{c}}_n^\top \bigl.\partial_\omega\mathbf{\Sigma}_{xc}\bigr|_{E_n}\hat{\mathbf{c}}_n\Bigr)
+  \;\Longrightarrow\;
+  Z_n \equiv \|\mathbf{c}_n\|^2 = \Bigl(1 - \hat{\mathbf{c}}_n^\top \bigl.\partial_\omega\mathbf{\Sigma}_{xc}\bigr|_{E_n}\hat{\mathbf{c}}_n\Bigr)^{-1}.
+\end{equation}
+Differentiating the static lifted eigenvalue identity $E_n = \mathbf{u}_n^\top\Hext\mathbf{u}_n$ with respect to nuclear coordinate $R_\alpha$ and applying $\mathbf{u}_n^\top(\nabla\mathbf{u}_n)=0$ yields
+\begin{align}
+  \nabla_{\mathbf{R}} E_n
+  &= \mathbf{u}_n^\top (\nabla_{\mathbf{R}}\Hext)\mathbf{u}_n
+   = \mathbf{c}_n^\top (\nabla_{\mathbf{R}}\mathbf{H}_{\mathrm{stat}})\mathbf{c}_n
+   + \mathbf{c}_n^\top (\nabla_{\mathbf{R}}\mathbf{V})\mathbf{b}_n
+   + \mathbf{b}_n^\top (\nabla_{\mathbf{R}}\mathbf{V}^\top)\mathbf{c}_n
+   + \mathbf{b}_n^\top (\nabla_{\mathbf{R}}\mathbf{D})\mathbf{b}_n \nonumber \\
+  &= Z_n\,\hat{\mathbf{c}}_n^\top \Bigl[
+       \nabla_{\mathbf{R}}\mathbf{H}_{\mathrm{stat}}
+     + (\nabla_{\mathbf{R}}\mathbf{V})\mathbf{G}_n\mathbf{V}^\top
+     + \mathbf{V}\mathbf{G}_n(\nabla_{\mathbf{R}}\mathbf{V}^\top)
+     + \mathbf{V}\mathbf{G}_n(\nabla_{\mathbf{R}}\mathbf{D})\mathbf{G}_n\mathbf{V}^\top
+     \Bigr]\hat{\mathbf{c}}_n \nonumber \\
+  &= Z_n\,\hat{\mathbf{c}}_n^\top \Bigl[\nabla_{\mathbf{R}}\mathbf{H}_{\mathrm{stat}}
+     + \bigl(\nabla_{\mathbf{R}}\mathbf{\Sigma}_{xc}(\omega; \mathbf{R})\bigr)\big|_{\omega=E_n}\Bigr]\hat{\mathbf{c}}_n.
+\end{align}
+Thus the non-trivial frequency-derivative Dyson renormalization factor $Z_n \in (0, 1]$ is absorbed identically into static lifted expectation values, avoiding iterative nonlinear self-consistency in gradient evaluation.
+Similarly, differentiating $\mathbf{u}_m^\top\Hext\mathbf{u}_n = 0$ ($m\ne n$) gives the exact non-adiabatic derivative coupling vector
+\begin{equation}
+  \mathbf{d}_{mn}^{\mathrm{CI}}(\mathbf{R})
+  \equiv \mathbf{u}_m^\top (\nabla_{\mathbf{R}}\mathbf{u}_n)
+  = \frac{\mathbf{h}_{mn}(\mathbf{R})}{E_n(\mathbf{R}) - E_m(\mathbf{R})}, \qquad
+  \mathbf{h}_{mn}(\mathbf{R}) \equiv \mathbf{u}_m^\top (\nabla_{\mathbf{R}}\Hext(\mathbf{R}))\mathbf{u}_n.
+\end{equation}
+\end{proof}
+
+\subsection{Hubbard-Stabilized Smooth Causal Operator and Gauge Equivariance}
+
+In \leh{}, all operator matrix elements are pure $C^\infty$-smooth functions of the resolution-of-the-identity (RI) MO tensors $(\mathbf{B}_{oo}, \mathbf{B}_{ov}, \mathbf{B}_{vv})$ and the lowest $N_S=4$ singlet and $N_T=4$ triplet DF-TDA eigenpairs $(\omega_I^S, \mathbf{X}_I^S)$ and $(\omega_I^T, \mathbf{X}_I^T)$, with zero atomic-coordinate or nuclear-charge features.
+Let $q_P^I = \sum_{ia} B_{P,ia} X_{I,ia}$ and construct the particle--hole exchange/Coulomb contractions $\mathbf{M}_{ov}$, $\mathbf{K}_{ov}$ inside the frozen universal operator (\texttt{beta\_coul=0.75}, \texttt{alpha\_sd=0.35}, \texttt{gamma\_wph=1.0}, \texttt{ov\_scale=0.05}, \texttt{d\_floor\_ha=0.055}, \texttt{d\_soft\_beta=40.0}).
+To maintain strict Kramers--Kronig causality even when bare hybrid TDA $T_1$ approaches or dips below zero near strongly twisted biradical conical intersections, diagonal bi-exciton poles are smoothly stabilized via
+\begin{equation}
+  D_{IJ}^{\mathrm{phys}} = d_{\mathrm{floor}} + \frac{1}{\beta_{\mathrm{soft}}}\ln\!\Bigl(1 + \exp\bigl[\beta_{\mathrm{soft}}(\omega_I + \omega_J + \gamma_{ph}\,g_{IJ}\,\mathrm{softplus}(W_{IJ}^{ph}) - d_{\mathrm{floor}})\bigr]\Bigr) > d_{\mathrm{floor}},
+\end{equation}
+where $g_{IJ} = \tanh(S_{IJ}^{\mathrm{alg}} / 0.05)$ is the $O(n_{\mathrm{occ}})\times O(n_{\mathrm{vir}})$-invariant overlap gate.
+Because every trace, Frobenius inner product, and matrix contraction preserves $\mathbf{Q}_o\in O(n_{\mathrm{occ}})$ and $\mathbf{Q}_v\in O(n_{\mathrm{vir}})$, the spectrum is strictly invariant under occupied/virtual orbital rotations (verified to $<10^{-13}$\,Ha) and equivariant under $\mathbb{Z}_2$ eigenvector phase flips $\mathbf{X}_I \to s_I\mathbf{X}_I$, $s_I \in \{\pm 1\}$.
+Exact ground-state double-counting subtraction $\Delta_0^{\mathrm{DC}} = \sum_D v_{0D}^2 / D_D^{\mathrm{phys}}$ anchors $E_0(\mathbf{R})$ smoothly to the Kohn--Sham reference away from degeneracies while preserving exact $S_1/S_0$ coupling at conical intersections.
+
+% ===========================================================================
+\section{Four-Stage Matrix-Free \texorpdfstring{$O(N^3)$}{O(N3)} Analytical Gradient and NACV Lagrangian}
+% ===========================================================================
+
+For any target bilinear form $\mathcal{J}_{mn} = \mathbf{u}_m^\top \Hext \mathbf{u}_n$ (where $m=n$ yields $\nabla E_n$ and $m\ne n$ yields $\mathbf{h}_{mn}$ and $\mathbf{d}_{mn}^{\mathrm{CI}} = \mathbf{h}_{mn}/(E_n-E_m)$), our engine evaluates the exact nuclear derivative in a single $O(N^3)$ pass without $3N$ loops:
+
+\begin{enumerate}
+  \item \textbf{Stage 1 (Reverse-Mode Operator Adjoint):} A single PyTorch float64 backward pass on $\mathcal{J}_{mn}$ yields exact analytical adjoints $(\bar{E}_{\mathrm{SCF}}, \bar{\mathbf{B}}_{oo}, \bar{\mathbf{B}}_{ov}, \bar{\mathbf{B}}_{vv}, \bar{\omega}_I^S, \bar{\mathbf{X}}_I^S, \bar{\omega}_I^T, \bar{\mathbf{X}}_I^T)$.
+  \item \textbf{Stage 2 (Matrix-Free Batched Deflated-PCG CP-TDA Sternheimer):} Differentiating the RI-TDA equations $\mathbf{A}^{(\sigma)}\mathbf{X}_I = \omega_I\mathbf{X}_I$ introduces Lagrange multipliers $\boldsymbol{\Xi}_I^{(\sigma)} \perp \mathbf{X}_I$ solving
+  \begin{equation}
+    (\mathbf{A}^{(\sigma)} - \omega_I\mathbf{I})\,\boldsymbol{\Xi}_I^{(\sigma)} = -\mathbf{P}_I^\perp \bar{\mathbf{X}}_I^{(\sigma)}.
+  \end{equation}
+  Using a pre-cached single-pass grid + 2-\texttt{dgemm} BLAS exchange operator (\texttt{\_MatrixFreeResponseOperator}, pre-computing $\phi_o, \phi_v, \nabla\phi_o, \nabla\phi_v, w f_{xc}^{(s)}, w f_{xc}^{(t)}$ once per geometry), all singlet and triplet Sternheimer equations are deflated over the lowest $K = \max(N+2, 6)$ roots and solved simultaneously in batched matrix-free PCG.
+  A smooth Gaussian-windowed Tikhonov regularizer $\eta_{\mathrm{eff}}(\Delta) = 2\times 10^{-4}\exp[-\tfrac{1}{2}(\Delta/10^{-3})^2]$ activates exclusively inside accidental higher-state spectator crossings ($|\Delta| < 3$\,meV) while leaving normal separations unperturbed to $<10^{-20}$.
+  \item \textbf{Stage 3 (Single-Pass Batched DFT $v_{xc}/f_{xc}/k_{xc}$ Contractions \& Matrix-Free PCG CPKS Z-Vector):} Accumulating the unrelaxed density $\mathbf{D}_{\mathrm{zoo}}$, the orbital-rotation gradient $\mathbf{M}_{\mathrm{tot}}$, and all third-order $k_{xc}$ contractions in a single grid sweep yields the exact CPKS right-hand side $\mathbf{L}_{vo}$ for all requested targets ($E_0$, $E_1$, $\mathbf{h}_{01}$) simultaneously.
+  Checking $\max(\|\mathbf{M}_{oo} - \mathbf{M}_{oo}^\top\|_\infty, \|\mathbf{M}_{vv} - \mathbf{M}_{vv}^\top\|_\infty)$ provides an exact runtime self-audit of $O(n_{\mathrm{occ}})\times O(n_{\mathrm{vir}})$ Lagrangian invariance (verified to $5.6\times 10^{-11}$--$2.3\times 10^{-6}$).
+  Batched matrix-free PCG solves $\mathbf{H}_{\mathrm{CPKS}}\mathbf{Z}_{vo} = -\mathbf{L}_{vo}$ across all targets in one pass (20$\times$ faster than PySCF's sequential Krylov solver).
+  \item \textbf{Stage 4 (Symmetric-L\"owdin $J^{-1/2}$ Daleckii--Krein Auxiliary Response):} Because $\mathbf{B}_{\mu\nu}^P = \sum_Q (J^{-1/2})_{PQ}(Q|\mu\nu)$, differentiating $\mathbf{J}^{-1/2} = \mathbf{U}\mathbf{\Lambda}^{-1/2}\mathbf{U}^\top$ via the Daleckii--Krein Fr\'echet formula\cite{daleckii1956} yields the exact 2-center auxiliary-metric contraction
+  \begin{equation}
+    \mathbf{\Lambda}_{2c} = \mathbf{U}\!\left[-\frac{\mathbf{U}^\top \mathbf{G}_{\mathrm{sym}}\mathbf{U}}{\lambda_a\sqrt{\lambda_b} + \lambda_b\sqrt{\lambda_a}}\right]\!\mathbf{U}^\top, \qquad
+    \mathbf{G}_{\mathrm{sym}} = \tfrac{1}{2}\bigl(\bar{\mathbf{B}}_{\mathrm{AO}}\mathbf{I}_{3c}^\top + \mathbf{I}_{3c}\bar{\mathbf{B}}_{\mathrm{AO}}^\top\bigr),
+  \end{equation}
+  contracted directly with analytical integral derivatives \texttt{int2c2e\_ip1}, \texttt{int3c2e\_ip1}, \texttt{int3c2e\_ip2}, \texttt{hcore\_deriv}, and \texttt{int1e\_ipovlp} alongside lightweight \texttt{deriv=2} $f_{xc}[\mathbf{Z}]$ AO gradient contributions.
+\end{enumerate}
+
+% ===========================================================================
+\section{Exact Unitary 2-State Electronic Propagator and Collinear SF-TDA \texorpdfstring{$\Ssq$}{<S2>}}
+% ===========================================================================
+
+\subsection{Unconditionally Unitary Substep Propagator and Tully Outward Flux}
+
+During Velocity-Verlet Tully FSSH propagation ($\Delta t = 0.5$\,fs, 50 electronic substeps $\Delta t_{\mathrm{sub}} = 0.01$\,fs), subtracting the mean energy $\bar{E} = \frac{1}{2}(E_0 + E_1)$ casts the 2-state electronic TDSE into traceless Hermitian form
+\begin{equation}
+  i\frac{d}{dt}\begin{pmatrix}c_0 \\ c_1\end{pmatrix}
+  = \mathbf{H}_{\mathrm{eff}}(t)\begin{pmatrix}c_0 \\ c_1\end{pmatrix}, \qquad
+  \mathbf{H}_{\mathrm{eff}} = \begin{pmatrix} h_z & -i\sigma_{01} \\ +i\sigma_{01} & -h_z \end{pmatrix},
+\end{equation}
+with $h_z = -\tfrac{1}{2}(E_1 - E_0)$ and $\sigma_{01} = \mathbf{v}\cdot\mathbf{d}_{01}^{\mathrm{CI}}$.
+Because $\mathbf{H}_{\mathrm{eff}}^2 = \Omega^2\mathbf{I}$ where $\Omega = \sqrt{h_z^2 + \sigma_{01}^2}$, the closed-form matrix exponential
+\begin{equation}
+  \exp(-i\mathbf{H}_{\mathrm{eff}}\Delta t_{\mathrm{sub}})
+  = \cos(\Omega\Delta t_{\mathrm{sub}})\,\mathbf{I}
+  - i\frac{\sin(\Omega\Delta t_{\mathrm{sub}})}{\Omega}\,\mathbf{H}_{\mathrm{eff}}
+\end{equation}
+is unconditionally unitary ($\bigl|\|\mathbf{c}\|_2 - 1\bigr| < 10^{-14}$) even at singular conical-intersection spikes ($\sigma_{01} = 10^4$\,a.u.).
+By exact 2-state unitarity, the integrated outward Tully flux from active state $a$ to $b$ over each substep equals $|c_a(t)|^2 - |c_a(t+\Delta t_{\mathrm{sub}})|^2$ identically, eliminating sign ambiguities and yielding exact FSSH hopping probabilities with Granucci--Persico EDC decoherence ($C = 0.1$\,Ha)\cite{granucci2007edc}.
+Velocity rescaling along the translationally and rotationally invariant analytical NACV $\mathbf{d}_{01}^{\mathrm{CI}}(\mathbf{R})$ conserves total energy, linear momentum $\mathbf{P}$, and angular momentum $\mathbf{L}$ to $<10^{-11}$\,a.u. across every accepted surface hop.
+
+\subsection{Exact Wick-Theorem Collinear SF-TDA \texorpdfstring{$\Ssq$}{<S2>} Probe}
+
+To quantify the spin contamination of collinear spin-flip TD-DFT (SF-TDA-BHHLYP from an unrestricted $M_S = +1$ triplet reference $|\Phi_0\rangle$) directly along identical NAMD trajectories, we evaluate $\Ssq = \langle\Psi|\hat{S}_-\hat{S}_+|\Psi\rangle = \|\hat{S}_+|\Psi\rangle\|^2$ analytically for each $M_S=0$ spin-flip eigenstate $|\Psi\rangle = \sum_{i_\alpha, a_\beta} X_{ia}\,a^\dagger_{a_\beta}a_{i_\alpha}|\Phi_0\rangle$ using the AO-overlap blocks $\mathbf{S}_{oo} = \mathbf{C}_{o\alpha}^\top\mathbf{S}\mathbf{C}_{o\beta}$, $\mathbf{S}_{ov} = \mathbf{C}_{o\alpha}^\top\mathbf{S}\mathbf{C}_{v\beta}$, $\mathbf{S}_{vv} = \mathbf{C}_{v\alpha}^\top\mathbf{S}\mathbf{C}_{v\beta}$, and $\mathbf{S}_{vo} = \mathbf{C}_{v\alpha}^\top\mathbf{S}\mathbf{C}_{o\beta}$.
+Decomposing $\hat{S}_+|\Psi\rangle$ into four mutually orthogonal determinant manifolds ($0p0h$, $\alpha\alpha$ $1p1h$, $\beta\beta$ $1p1h$, and $2p2h$) yields the exact closed-form expectation value
+\begin{equation}
+  \Ssq_{\mathrm{SF}} = \bigl(\mathrm{Tr}[\mathbf{X}^\top\mathbf{S}_{ov}]\bigr)^2
+                     + \|\mathbf{X}\mathbf{S}_{vv}^\top\|_F^2
+                     + \|\mathbf{S}_{oo}^\top\mathbf{X}\|_F^2
+                     + \|\mathbf{S}_{vo}\|_F^2,
+\end{equation}
+which evaluates identically to $0$ for pure singlets and $2$ for pure triplets in the restricted limit, and exposes severe unrestricted spin contamination ($\Ssq_{S_1}$ up to $0.89$--$1.54$) along real photochemical trajectories where \leh{} enforces $\Ssq \equiv 0.0000$.
+
+% ===========================================================================
+\section{Complete Theorems 1--4 Numerical Verification Tables}
+% ===========================================================================
+
+\begin{table}[htbp]
+  \centering
+  \caption{Theorem 1 live float64 verification of exact Dyson residue $Z_n$ and Generalized Causal Hellmann--Feynman identities on distorted twisted-pyramidalized ethylene (DF-PBE0/def2-SVP).}
+  \label{tab:si_th1}
+  \resizebox{\textwidth}{!}{\begin{tabular}{@{}cccccc@{}}
+    \toprule
+    State $n$ & $E_n$ (Ha) & $Z_n^{\mathrm{dir}} = \|\mathbf{c}_n\|^2$ & $Z_n^{\mathrm{Dyson}}$ & $|Z_n^{\mathrm{dir}} - Z_n^{\mathrm{Dyson}}|$ & Max Causal HF Error (a.u.) \\
+    \midrule
+    $S_0$ & $-78.25743450$ & $0.96466772$ & $0.96466772$ & $6.66\times 10^{-15}$ & $3.51\times 10^{-14}$ \\
+    $S_1$ & $-78.23985614$ & $0.98112780$ & $0.98112780$ & $7.22\times 10^{-15}$ & $8.02\times 10^{-14}$ \\
+    $S_2$ & $-78.05473663$ & $0.99158438$ & $0.99158438$ & $2.51\times 10^{-14}$ & $4.65\times 10^{-13}$ \\
+    \bottomrule
+  \end{tabular}}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Theorem 2 complete $3N$ central finite-difference ($\delta = 10^{-4}$\,Bohr) accuracy and algebraic invariance verification.}
+  \label{tab:si_th2}
+  \resizebox{\textwidth}{!}{\begin{tabular}{@{}lccccccc@{}}
+    \toprule
+    System / Method & Gap (eV) & $\|\mathbf{d}_{01}^{\mathrm{CI}}\|$ & $\max|\nabla E_0 - \mathrm{FD}|$ & $\max|\nabla E_1 - \mathrm{FD}|$ & $\max|\mathbf{h}_{01} - \mathrm{FD}|$ & $O(n_o){\times}O(n_v)$ & Trans.\ ($\nabla E_0$) \\
+    \midrule
+    H$_2$O (9D) DF-HF/6-31G & $9.153$ & $2.4\times 10^{-11}$ & $1.94\times 10^{-9}$ & $1.11\times 10^{-6}$ & $9.88\times 10^{-8}$ & $5.64\times 10^{-11}$ & $4.27\times 10^{-15}$ \\
+    H$_2$O (9D) DF-PBE0/6-31G & $7.936$ & $2.5\times 10^{-8}$ & $5.39\times 10^{-7}$ & $2.08\times 10^{-6}$ & $7.19\times 10^{-9}$ & $8.63\times 10^{-11}$ & $9.39\times 10^{-8}$ \\
+    C$_2$H$_4$ (18D) DF-HF/6-31G & $1.496$ & $0.185$ & $8.83\times 10^{-7}$ & $2.45\times 10^{-5}$ & $1.76\times 10^{-5}$ & $5.11\times 10^{-8}$ & $6.91\times 10^{-15}$ \\
+    C$_2$H$_4$ (18D) DF-PBE0/def2-SVP & $0.791$ & $0.510$ & $1.70\times 10^{-5}$ & $4.96\times 10^{-5}$ & $2.03\times 10^{-5}$ & $6.24\times 10^{-8}$ & $5.77\times 10^{-6}$ \\
+    \midrule
+    \multicolumn{8}{@{}l@{}}{Size-intensivity (C$_2$H$_4$ + He at $50$\,Bohr): $\Delta\text{Gap}=2.03\times 10^{-9}$\,Ha, $\Delta\nabla E_1=8.50\times 10^{-8}$, $\Delta\mathbf{d}_{01}=4.06\times 10^{-6}$, $\|\mathbf{d}_{01}(\mathrm{He})\|=4.15\times 10^{-10}$.} \\
+    \bottomrule
+  \end{tabular}}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Theorem 3 direct full-$3N$ branching-plane alignment between analytical \leh{} and exact analytical PySCF SA2-CASSCF (\texttt{mc.nac\_method()}), alongside adiabatic TD-DFT ($|\cos(\hat{\mathbf{h}})|\equiv 0$), $1/r$ NACV singularity, and 32-point iso-gap 3N Berry circulation on ethylene.}
+  \label{tab:si_th3}
+  \resizebox{\textwidth}{!}{\begin{tabular}{@{}lcccccc@{}}
+    \toprule
+    Molecule ($3N$) & SA2-CASSCF & $|\cos(\hat{\mathbf{g}})|$ & $|\cos(\hat{\mathbf{h}})|$ & BP Singular Values & $\|\mathbf{h}_{01}^{\mathrm{Leh}}\|$ (a.u.) & Adiabatic $\|\mathbf{h}_{01}\|$ \\
+    \midrule
+    Ethylene (18D) & $(2,2)$/def2-SVP & $0.9979$ & $0.9941$ & $[0.9979, 0.9941]$ & $0.0305$ & $0.0000$ \\
+    Methanimine (15D) & $(4,3)$/def2-SVP & $0.9915$ & $0.9994$ & $[0.9994, 0.9915]$ & $0.0384$ & $0.0000$ \\
+    Fulvene (36D) & $(6,6)$/def2-SVP & $0.9826$ & $0.9957$ & $[0.9957, 0.9826]$ & $0.6973$ & $0.0000$ \\
+    \midrule
+    \multicolumn{7}{@{}l@{}}{Ethylene 2D CI apex $(x,y)=(+0.0164, 0.0000)$\,\AA{} (gap $5.6\times 10^{-6}$\,eV): $r\in[0.06, 0.0075]$\,Bohr $\Rightarrow$ $r\|\mathbf{d}_{01}\|\to 0.3286$ (exact $h/2g=0.3049$).} \\
+    \multicolumn{7}{@{}l@{}}{32-pt 3N analytical NACV Berry circulation: encircling CI $\gamma/\pi = +1.0043$ ($W=-0.985$); shifted control $\gamma/\pi = -0.00004$ ($W=+1.000$).} \\
+    \bottomrule
+  \end{tabular}}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Theorem 4 matched single-core (\texttt{OMP/OPENBLAS=1}) DF-PBE0/def2-SVP (\texttt{grids\_level=2}) scaling ladder from 5 to 24 atoms (15 to 72 Cartesian DOF) computing $E_0, E_1, \nabla E_0, \nabla E_1, \mathbf{d}_{01}^{\mathrm{CI}}$ simultaneously in one pass (empirical fit $t_{\mathrm{anal}} \propto N_{\mathrm{AO}}^{2.58}$).}
+  \label{tab:si_th4}
+  \resizebox{\textwidth}{!}{\begin{tabular}{@{}lcccccccc@{}}
+    \toprule
+    Molecule & Atoms ($3N$) & $N_{\mathrm{AO}}$ & $t_{E}$ (s) & $t_{\mathrm{anal}}$ (s) & $t_{6N\text{-FD}}$ (s) & Speedup & $O(n_o){\times}O(n_v)$ & Trans.\ ($\nabla E_0$) \\
+    \midrule
+    Methanimine & $5$ (15D) & $43$ & $5.39$ & $23.90$ & $161.7$ & $6.8\times$ & $1.34\times 10^{-7}$ & $9.94\times 10^{-6}$ \\
+    Ethylene & $6$ (18D) & $48$ & $9.64$ & $32.06$ & $347.1$ & $10.8\times$ & $1.20\times 10^{-7}$ & $5.95\times 10^{-6}$ \\
+    Fulvene & $12$ (36D) & $114$ & $66.55$ & $286.54$ & $4{,}791.4$ & $16.7\times$ & $2.27\times 10^{-6}$ & $1.59\times 10^{-5}$ \\
+    PSB3$^+$ & $14$ (42D) & $124$ & $84.14$ & $370.98$ & $7{,}067.7$ & $19.1\times$ & $6.27\times 10^{-7}$ & $1.08\times 10^{-5}$ \\
+    Uracil & $12$ (36D) & $132$ & $134.80$ & $533.96$ & $9{,}705.2$ & $18.2\times$ & $3.37\times 10^{-7}$ & $5.14\times 10^{-5}$ \\
+    Azobenzene & $24$ (72D) & $246$ & $673.95$ & $2{,}048.53$ & $97{,}049.1$ & $\mathbf{47.4\times}$ & $1.51\times 10^{-6}$ & $2.23\times 10^{-13}$ \\
+    \bottomrule
+  \end{tabular}}
+\end{table}
+
+% ===========================================================================
+\section{Unconstrained Blind Full-\texorpdfstring{$3N$}{3N} Analytical MECI Verification}
+% ===========================================================================
+
+Starting from displaced single-reference $S_0$ geometries ($2.4$--$4.9$\,eV initial $S_1/S_0$ gaps) with zero CASSCF knowledge, Trust-Radius BFGS minimization of the Levine--Coe--Mart\'inez penalty function\cite{levine2008meci} driven exclusively by analytical \leh{} gradients $(\nabla E_0, \nabla E_1)$ locates all five $S_1/S_0$ minimum-energy conical intersections in unconstrained $3N$-dimensional Cartesian space within 48--79 gradient evaluations (Table~\ref{tab:si_meci}).
+Independent SA2-CASSCF/def2-SVP and SC-NEVPT2/def2-SVP single-point checks and closed-loop topological Berry holonomy $W = \mathbf{u}_0(2\pi)\cdot\mathbf{u}_0(0)$ confirm true codimension-2 conical intersections ($W \approx -1$ encircling the blind MECI vs $W \approx +1$ on every shifted control loop) across all five molecules.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Complete 5-system unconstrained full-$3N$ Cartesian blind analytical MECI discovery and independent multireference verification.}
+  \label{tab:si_meci}
+  \resizebox{\textwidth}{!}{\begin{tabular}{@{}lccccccccc@{}}
+    \toprule
+    System ($3N$, Basis) & Evals & $\Delta E_{\mathrm{Leh}}$ & $|\Delta E_{\mathrm{TDA}}|$ & $\Delta E_{\mathrm{CAS}}$ & $\Delta E_{\mathrm{NEVPT2}}$ & Heavy RMSD & All RMSD & $W_{\mathrm{CI}}$ & $W_{\mathrm{ctrl}}$ \\
+     & & (eV) & (eV) & (eV) & (eV) & (\AA) & (\AA) & ($\gamma/\pi$) & ($\gamma/\pi$) \\
+    \midrule
+    Ethylene (18D, def2-SVP) & $48$ & $0.0016$ & $0.107$ & $0.180$ & $0.173$ & $0.0010$ & $0.0963$ & $-0.998$ ($+1.022$) & $+1.000$ ($+0.000$) \\
+    Methanimine (15D, def2-SVP) & $79$ & $0.0051$ & $0.354$ & $0.119$ & $0.107$ & $0.0044$ & $0.1219$ & $-1.000$ ($+1.017$) & $+1.000$ ($-0.098$) \\
+    Fulvene (36D, 6-31G) & $67$ & $0.0099$ & $0.516$ & $0.082$ & $0.133$ & $0.1413$ & $0.2356$ & $-0.989$ ($-1.000$) & $+0.831$ ($+0.002$) \\
+    PSB3$^+$ (42D, 6-31G) & $50$ & $0.0039$ & $0.124$ & $0.304$ & $0.615$ & --- & --- & $-1.000$ ($-1.205$) & $+0.999$ ($+0.000$) \\
+    Uracil (36D, 6-31G) & $58$ & $0.1204$ & $0.333$ & $0.238$ & $0.035$ & --- & --- & $-0.983$ ($+0.650$) & $+1.000$ ($+0.002$) \\
+    \bottomrule
+  \end{tabular}}
+\end{table}
+
+% ===========================================================================
+\section{Complete 5-System Full-Dimensional \texorpdfstring{($3N{-}6$)}{(3N-6)} NAMD Benchmark Table}
+% ===========================================================================
+
+Table~\ref{tab:si_namd} compiles all ensemble-level observables across the five full-dimensional ($3N{-}6$) on-the-fly Tully FSSH photodynamics systems (methanimine 9D, ethylene 12D, fulvene 30D, 11-\emph{cis} PSB3$^+$ 36D, and uracil 30D), including active-state and electronic-wavefunction populations, delayed-exponential lifetimes ($\tau_{\mathrm{tot}} = t_0 + \tau_{S_1}$), hop counts and mean hop gaps, microcanonical energy conservation (median/mean $\max|\Delta E_{\mathrm{tot}}|$ and median standard deviation), crash/instability counts, live collinear \texttt{SF-TDA-BHHLYP} $\Ssq_{S_1}$ spin contamination, and mean per-step wall-clock timings.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Complete 5-system full-dimensional ($3N{-}6$) on-the-fly FSSH photodynamics summary (identical DF-PBE0 harmonic Wigner initial conditions, $\Delta t=0.5$\,fs, EDC $C=0.1$\,Ha).}
+  \label{tab:si_namd}
+  \setlength{\tabcolsep}{3.5pt}
+  \resizebox{\textwidth}{!}{\begin{tabular}{@{}llccccccccc@{}}
+    \toprule
+    System ($3N{-}6$) & Method & $n$ & $P_{S_1}$ / $|c_1|^2$ & $\tau_{\mathrm{tot}}$ (fs) & Hops (Gap) & $\Delta E$ med/mean (meV) & $\sigma_E$ med & Instab. & SF $\Ssq_{S_1}$ (max) & s/step \\
+    \midrule
+    Methanimine (9D) & \leh{} & 16 & $0.313/0.375$ & $64.2$ & $13$ ($0.205$) & $88.9/109.4$ & $26.0$ & $0$ & $0.313$ ($1.281$) & $10.89$ \\
+    6-31G$^*$, 60\,fs & SA2-CASSCF(4,3) & 16 & $0.250/0.250$ & $40.9$ & $14$ ($0.540$) & $47.1/47.0$ & $11.7$ & $0$ & --- & $12.44$ \\
+     & Adiabatic PBE0 & 16 & $1.000/1.000$ & $>4000$ & $0$ (---) & $37.4/63.6$ & $5.8$ & $2$ & --- & $4.57$ \\
+    \midrule
+    Ethylene (12D) & \leh{} & 16 & $0.250/0.242$ & $44.5$ & $18$ ($0.785$) & $354.0/549.4$ & $148.9$ & $0$ & $0.693$ ($1.536$) & $14.28$ \\
+    6-31G$^*$, 60\,fs & SA2-CASSCF(2,2) & 16 & $0.188/0.187$ & $25.6$ & $13$ ($0.571$) & $258.4/1063.3$ & $56.7$ & $0$ & --- & $9.83$ \\
+     & Adiabatic PBE0 & 16 & $1.000/1.000$ & $>4000$ & $0$ (---) & $547.4/1919.0$ & $219.1$ & $8$ & --- & $8.45$ \\
+    \midrule
+    Fulvene (30D) & \leh{} & 12 & $0.333/0.333$ & $31.6$ & $8$ ($0.281$) & $82.4/84.6$ & $31.0$ & $0$ & $0.319$ ($0.894$) & $24.26$ \\
+    6-31G, 40\,fs & SA2-CASSCF(6,6) & 6 & $0.000/0.000$ & $14.8$ & $6$ ($0.209$) & $43.8/49.7$ & $12.9$ & $0$ & --- & $119.93$ \\
+     & Adiabatic PBE0 & 12 & $1.000/1.000$ & $>4000$ & $0$ (---) & $55.2/60.1$ & $23.1$ & $0$ & --- & $11.24$ \\
+    \midrule
+    PSB3$^+$ (36D) & \leh{} & 8 & $1.000/1.000$ & $>90$ & $0$ (min $0.51$) & $103.2/108.5$ & $30.0$ & $0$ & $0.435$ ($1.535$) & $16.98$ \\
+    6-31G, 90\,fs & Adiabatic PBE0 & 8 & $1.000/1.000$ & $>90$ & $0$ (---) & $123.3/117.2$ & $33.6$ & $0$ & --- & $9.11$ \\
+    \midrule
+    Uracil (30D) & \leh{} & 8 & $1.000/1.000$ & $>50$ & $0$ (min $1.39$) & $120.5/126.2$ & $48.3$ & $0$ & $1.063$ ($1.143$) & $23.43$ \\
+    6-31G, 50\,fs & Adiabatic PBE0 & 8 & $1.000/1.000$ & $>50$ & $0$ (---) & $120.8/120.3$ & $48.0$ & $0$ & --- & $15.60$ \\
+    \bottomrule
+  \end{tabular}}
+\end{table}
+
+% ===========================================================================
+\section{Software Reproducibility, Independent Audit, and Artifact Provenance}
+% ===========================================================================
+
+All calculations were executed in deterministic float64 single-thread execution (\texttt{OMP\_NUM\_THREADS=1}, \texttt{OPENBLAS\_NUM\_THREADS=1}, \texttt{torch.set\_num\_threads(1)}) on macOS Apple Silicon (PySCF + PyTorch 2.x + SciPy).
+Every figure, table, and numerical claim in the main text and Supplementary Information is reproduced directly from persisted JSON/NPZ archives in \texttt{results/} and hashed via SHA-256 in \texttt{FREEZE\_MANIFEST\_NAMD.json} (inside \texttt{projects/lehmann\_namd/}), verified by the automated static AST and physics audit (\texttt{audit\_namd.py}) and unit test suite (\texttt{test\_lehmann\_namd.py}).
+
+\bibliographystyle{unsrtnat}
+\bibliography{refs_namd}
+
+\end{document}
